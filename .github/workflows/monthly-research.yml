@@ -1,5 +1,8 @@
 name: Monthly sourcing research
 on:
+  push:
+    branches: [main]
+    paths: ['automation/run-request.json']
   schedule:
     # Beijing 10:17, checkpoints for staggered monthly statistical releases.
     - cron: '17 2 5,18,25 * *'
@@ -51,7 +54,16 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           TARGET_MONTH: ${{ inputs.month }}
-        run: python automation/monthly.py --month "$TARGET_MONTH"
+          TRIGGER_EVENT: ${{ github.event_name }}
+        run: |
+          python - <<'PY'
+          import json, os, subprocess, sys
+          month = os.environ.get('TARGET_MONTH', '')
+          if os.environ['TRIGGER_EVENT'] == 'push':
+              with open('automation/run-request.json', encoding='utf-8') as f:
+                  month = json.load(f)['month']
+          subprocess.run([sys.executable, 'automation/monthly.py', '--month', month], check=True)
+          PY
       - name: Keep review and usage records
         if: always() && steps.config.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
