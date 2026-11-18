@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "maxOutputTokens": 9000,
+  "maxSearchCallsPerCategory": 6,
+  "maxSourcePagesPerCategory": 18,
+  "allowedDomains": ["stats.gov.cn", "customs.gov.cn", "miit.gov.cn", "gov.cn", "ndrc.gov.cn", "nea.gov.cn", "csg.cn", "sgcc.com.cn", "smm.cn", "metal.com", "mysteel.com", "chinaiol.com", "chinaisa.org.cn", "cnia.org.cn", "aluminumchina.com", "shmet.com", "ccmn.cn", "lme.com"],
+  "categories": {
+    "aluminum": {
+      "name": "铝",
+      "metrics": [
+        ["price", "price", "A00铝锭当月下旬价格代理", "元/吨", "month_end_proxy"],
+        ["output", "supply", "原铝单月产量", "万吨/月", "monthly"],
+        ["outputYtd", "supply", "原铝年初至今累计产量", "万吨", "ytd"],
+        ["outputPriorYear", "supply", "原铝去年全年产量", "万吨", "annual"],
+        ["building", "demand", "房屋竣工面积", "万平方米/月", "monthly"],
+        ["electronics", "demand", "集成电路产量", "亿块/月", "monthly"],
+        ["applianceRetail", "demand", "家电音像零售额", "亿元/月", "monthly"],
+        ["auto", "demand", "汽车产量", "万辆/月", "monthly"],
+        ["stock", "demand", "铝锭社会库存月末值", "万吨", "month_end"],
+        ["alumina", "inputs", "氧化铝国内现货月均价", "元/吨", "monthly_average"],
+        ["powerShandong", "inputs", "山东代理购电价格分项", "元/千瓦时", "monthly"],
+        ["powerInnerMongolia", "inputs", "蒙西代理购电价格分项", "元/千瓦时", "monthly"],
+        ["powerXinjiang", "inputs", "新疆代理购电价格分项", "元/千瓦时", "monthly"],
+        ["powerYunnan", "inputs", "云南代理购电价格分项", "元/千瓦时", "monthly"],
+        ["primaryImport", "macro", "原铝进口", "万吨/月", "monthly"],
+        ["primaryExport", "macro", "原铝出口", "万吨/月", "monthly"],
+        ["aluminumExport", "macro", "未锻轧铝及铝材出口", "万吨/月", "monthly"],
+        ["pmi", "macro", "制造业PMI", "%", "index"]
+      ]
+    },
+    "copper": {
+      "name": "铜",
+      "metrics": [
+        ["price", "price", "1号电解铜当月下旬价格代理", "元/吨", "month_end_proxy"],
+        ["output", "supply", "电解铜单月产量", "万吨/月", "monthly"],
+        ["outputYtd", "supply", "电解铜年初至今累计产量", "万吨", "ytd"],
+        ["outputPriorYear", "supply", "电解铜去年全年产量", "万吨", "annual"],
+        ["building", "demand", "房屋竣工面积", "万平方米/月", "monthly"],
+        ["auto", "demand", "汽车产量", "万辆/月", "monthly"],
+        ["applianceRetail", "demand", "家电音像零售额", "亿元/月", "monthly"],
+        ["stock", "demand", "铜社会库存月末值", "万吨", "month_end"],
+        ["oreImport", "inputs", "铜矿砂及精矿进口实物量", "万吨/月", "monthly"],
+        ["smeltingProfit", "inputs", "现货铜冶炼模型盈亏", "元/吨", "monthly"],
+        ["refinedImport", "macro", "精炼铜进口", "万吨/月", "monthly"],
+        ["refinedExport", "macro", "精炼铜出口", "万吨/月", "monthly"],
+        ["pmi", "macro", "制造业PMI", "%", "index"]
+      ]
+    },
+    "iron": {
+      "name": "钢材",
+      "metrics": [
+        ["price", "price", "热轧普通板卷当月下旬价格代理", "元/吨", "month_end_proxy"],
+        ["output", "supply", "粗钢单月产量", "万吨/月", "monthly"],
+        ["outputYtd", "supply", "粗钢年初至今累计产量", "万吨", "ytd"],
+        ["outputPriorYear", "supply", "粗钢去年全年产量", "万吨", "annual"],
+        ["building", "demand", "房屋竣工面积", "万平方米/月", "monthly"],
+        ["machineTools", "demand", "金属切削机床产量", "万台/月", "monthly"],
+        ["auto", "demand", "汽车产量", "万辆/月", "monthly"],
+        ["applianceRetail", "demand", "家电音像零售额", "亿元/月", "monthly"],
+        ["stock", "demand", "重点企业钢材库存月末值", "万吨", "month_end"],
+        ["cokingCoal", "inputs", "焦煤当月下旬价格代理", "元/吨", "month_end_proxy"],
+        ["coke", "inputs", "准一级冶金焦当月下旬价格代理", "元/吨", "month_end_proxy"],
+        ["oreImport", "inputs", "铁矿砂及精矿进口实物量", "万吨/月", "monthly"],
+        ["steelImport", "macro", "钢材进口", "万吨/月", "monthly"],
+        ["steelExport", "macro", "钢材出口", "万吨/月", "monthly"],
+        ["pmi", "macro", "制造业PMI", "%", "index"]
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+name: Monthly sourcing research
+on:
+  schedule:
+    # Beijing 10:17, checkpoints for staggered monthly statistical releases.
+    - cron: '17 2 5,18,25 * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: '统计月份 YYYY-MM；留空为上一个完整月'
+        required: false
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: monthly-sourcing-research
+  cancel-in-progress: false
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate pipeline
+        run: python -m unittest discover -s automation/tests -v
+      - name: Check configuration
+        id: config
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+        run: |
+          python - <<'PY'
+          import os
+          ready = bool(os.environ.get('OPENAI_API_KEY') and os.environ.get('OPENAI_MODEL'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('ready=' + str(ready).lower() + '\n')
+          if not ready:
+              with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
+                  f.write('尚未启用付费AI调用：请配置 OPENAI_API_KEY secret 和 OPENAI_MODEL variable。\n')
+          PY
+      - name: Collect, validate and draft
+        if: steps.config.outputs.ready == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          TARGET_MONTH: ${{ inputs.month }}
+        run: python automation/monthly.py --month "$TARGET_MONTH"
+      - name: Keep review and usage records
+        if: always() && steps.config.outputs.ready == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: monthly-review-${{ github.run_number }}
+          path: automation/output/
+          if-no-files-found: ignore
+          retention-days: 90
+      - name: Open or update review draft
+        if: steps.config.outputs.ready == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const draft = JSON.parse(fs.readFileSync('automation/output/draft.json', 'utf8'));
+            if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(draft.month)) throw new Error('Invalid month');
+            const owner = context.repo.owner, repo = context.repo.repo;
+            const branch = 'ai/monthly-' + draft.month;
+            const file = 'data/ai-monthly.json';
+            const content = fs.readFileSync(file, 'utf8');
+            const base = context.payload.repository.default_branch;
+            let parent;
+            try {
+              parent = (await github.rest.git.getRef({owner, repo, ref: 'heads/' + branch})).data.object.sha;
+              const old = await github.rest.repos.getContent({owner, repo, path: file, ref: branch});
+              const oldJson = JSON.parse(Buffer.from(old.data.content, 'base64').toString('utf8'));
+              const next = JSON.parse(content);
+              // A retry with identical evidence needs no model-text-only update.
+              const hashes = j => JSON.stringify(Object.fromEntries(Object.entries(j.reports[draft.month]?.categories || {}).map(([k,v]) => [k, v.sourceHashes])));
+              if (hashes(oldJson) === hashes(next)) { core.notice('No new source evidence; keeping existing draft.'); return; }
+            } catch (e) {
+              if (e.status !== 404) throw e;
+            }
+            const head = (await github.rest.git.getRef({owner, repo, ref: 'heads/' + base})).data.object.sha;
+            const tree = await github.rest.git.createTree({owner, repo, base_tree: head, tree: [{path: file, mode:'100644', type:'blob', content}]});
+            const commit = await github.rest.git.createCommit({owner, repo, message:'Draft sourcing research ' + draft.month, tree: tree.data.sha, parents:[parent || head]});
+            if (parent) await github.rest.git.updateRef({owner, repo, ref:'heads/' + branch, sha:commit.data.sha, force:false});
+            else await github.rest.git.createRef({owner, repo, ref:'refs/heads/' + branch, sha:commit.data.sha});
+            const body = fs.readFileSync('automation/output/review.md', 'utf8') + '\n\n运行记录与用量见本次 Actions artifacts。请核验后将草稿标为可审核并合并；合并后工作台展示本月研究。';
+            const existing = await github.rest.pulls.list({owner, repo, head:owner + ':' + branch, state:'open'});
+            if (existing.data.length) await github.rest.pulls.update({owner, repo, pull_number:existing.data[0].number, body});
+            else await github.rest.pulls.create({owner, repo, head:branch, base, title:draft.month + ' 原材料月报与采购行动（待审核）', body, draft:true});
+            core.summary.addRaw('月报草稿已提交。合并前不会改变正式页面。').write();
