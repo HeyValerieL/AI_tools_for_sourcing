@@ -102,6 +102,36 @@ ANALYSIS_SCHEMA = obj({
 })
 
 
+class ApiFailure(RuntimeError):
+    """Safe diagnostic: only allowlisted codes, never server messages or headers."""
+
+
+def api_error(status, body):
+    reasons = {
+        'insufficient_quota': 'API额度不足或账单未启用',
+        'credit_balance_exhausted': 'API余额已耗尽',
+        'billing_not_active': 'API账单未启用',
+        'project_spend_limit_exceeded': '项目支出达到上限',
+        'organization_spend_limit_exceeded': '组织支出达到上限',
+        'organization_usage_limit_exceeded': '组织API使用额度达到上限',
+        'usage_limit_exceeded': 'API使用或账单额度达到上限',
+        'rate_limit_exceeded': '请求或token速率达到上限',
+        'slow_down': '请求速率增长过快',
+        'model_not_found': '模型不存在或账户没有调用权限',
+        'invalid_api_key': '密钥无效',
+        'unsupported_parameter': '模型不支持请求参数',
+        'invalid_request_error': '请求格式或参数不受支持',
+    }
+    try:
+        error = json.loads(body).get('error', {})
+        code = error.get('code') or error.get('type')
+    except (ValueError, AttributeError):
+        code = None
+    if code not in reasons:
+        code = 'unknown'
+    return ApiFailure(f'AI接口HTTP {status} [{code}]：' + reasons.get(code, '需检查API账户或请求配置'))
+
+
 class Client:
     def __init__(self):
         self.key = os.environ.get('OPENAI_API_KEY')
@@ -130,8 +160,8 @@ class Client:
             with urllib.request.urlopen(req, timeout=360) as response:
                 result = json.load(response)
         except urllib.error.HTTPError as exc:
-            # Do not log response bodies or headers, which could contain account details.
-            raise RuntimeError(f'AI接口返回HTTP {exc.code}；请检查模型权限、额度和配置。') from None
+            # Decode only to classify; never log body text, headers, key or account IDs.
+            raise api_error(exc.code, exc.read(8192)) from None
         if result.get('status') != 'completed':
             raise ValueError('模型响应未完成，停止生成；不使用截断内容')
         output = result.get('output', [])
@@ -362,6 +392,13 @@ def run(month, root=ROOT):
             }, ANALYSIS_SCHEMA)
             checked['analysis'] = validate_analysis(analysis, checked['facts'], checked['policies'])
             report['categories'][category] = checked
+        except ApiFailure as exc:
+            report['categories'][category] = {'error': str(exc)}
+            print(f"{config['name']}：{exc}")
+            for remaining in CONFIG['categories']:
+                if remaining not in report['categories']:
+                    report['categories'][remaining] = {'error': 'API请求已暂停，未继续调用：' + str(exc)}
+            break
         except (ValueError, RuntimeError, KeyError, TypeError, OSError) as exc:
             report['categories'][category] = {'error': str(exc)}
     output = root / 'automation/output'

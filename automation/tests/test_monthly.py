@@ -118,6 +118,27 @@ class ValidationTests(unittest.TestCase):
                 m.Client()
             network.assert_not_called()
 
+    def test_api_error_reports_cause_without_secrets(self):
+        error = m.api_error(429, json.dumps({'error': {'code':'insufficient_quota', 'message':'secret-account-data'}}))
+        self.assertIn('insufficient_quota', str(error))
+        self.assertNotIn('secret-account-data', str(error))
+        unknown = m.api_error(429, json.dumps({'error': {'code':'secret-sensitive-value', 'message':'private'}}))
+        self.assertNotIn('secret-sensitive-value', str(unknown))
+
+    def test_api_failure_stops_remaining_paid_calls(self):
+        calls = []
+        class QuotaClient:
+            usage = []
+            @property
+            def calls(self): return len(calls)
+            def request(self, *args, **kwargs):
+                calls.append(1)
+                raise m.api_error(429, '{"error":{"code":"insufficient_quota"}}')
+        with tempfile.TemporaryDirectory() as folder, patch.object(m, 'Client', QuotaClient):
+            with self.assertRaises(ValueError):
+                m.run('2026-10', Path(folder))
+            self.assertEqual(len(calls), 1)
+
     def test_dates_and_year_boundary(self):
         self.assertEqual(m.previous_month('2026-01'), '2025-12')
         self.assertEqual(m.expected_period('2024-02', 'month_end_proxy'), '2024-02-29')
