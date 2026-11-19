@@ -38,6 +38,14 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_padded_chinese_publication_date_and_period_in_numeric_quote(self):
+        item = observation(publishedAt='2026-11-06',
+            quote='2026年10月份原铝产量385万吨，同比增长1.8%', periodEvidence='10月份原铝产量')
+        page = '2026年11月06日。' + item['quote']
+        result = m.validate_research('aluminum','2026-10',{'observations':[item]}, {URL}, fetch=lambda _:page)
+        self.assertEqual(result['facts'][0]['periodEvidence'],item['quote'])
+        self.assertEqual(result['facts'][0]['originalPeriodEvidence'],item['periodEvidence'])
+
     def test_one_invalid_model_row_does_not_drop_valid_observations(self):
         raw = {'observations':[observation(),observation(id='alumina',value=None)],
                'policies':[],'missing':['stock']}
