@@ -1,4 +1,5 @@
 import copy
+import io
 import importlib.util
 import json
 import os
@@ -36,6 +37,46 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_deepseek_selection_never_uses_openai_key(self):
+        env = {'DEEPSEEK_API_KEY':'deepseek-test', 'DEEPSEEK_MODEL':'deepseek-v4-pro',
+               'OPENAI_API_KEY':'openai-test', 'OPENAI_MODEL':'gpt-6.1-terra'}
+        with patch.dict(os.environ, env, clear=True):
+            client = m.Client()
+            self.assertEqual(client.provider, 'deepseek')
+            self.assertEqual(client.key, 'deepseek-test')
+            self.assertEqual(client.api, 'https://api.deepseek.com/responses')
+
+    def test_legacy_model_variable_can_hold_deepseek_name(self):
+        with patch.dict(os.environ, {'DEEPSEEK_API_KEY':'test', 'OPENAI_MODEL':'deepseek-v4-pro'}, clear=True):
+            self.assertEqual(m.configuration()[2], 'deepseek-v4-pro')
+        with patch.dict(os.environ, {'DEEPSEEK_API_KEY':'test', 'OPENAI_MODEL':'gpt-6.1-terra'}, clear=True):
+            with self.assertRaises(ValueError): m.configuration()
+
+    def test_deepseek_omits_incompatible_openai_parameters(self):
+        result = {'status':'completed', 'output':[{'type':'message','content':[{'type':'output_text','text':'{"value":1}'}]}]}
+        with patch.dict(os.environ, {'DEEPSEEK_API_KEY':'test','DEEPSEEK_MODEL':'deepseek-v4-pro'}, clear=True):
+            client = m.Client()
+            with patch('urllib.request.urlopen', return_value=io.BytesIO(json.dumps(result).encode())) as network:
+                output, urls = client.request('instructions', {}, m.obj({'value':{'type':'number'}}))
+                request = network.call_args.args[0]
+                body = json.loads(request.data)
+                self.assertEqual(request.full_url, 'https://api.deepseek.com/responses')
+                self.assertEqual(output, {'value':1})
+                for field in ('store','include','max_tool_calls','tools'): self.assertNotIn(field, body)
+
+    def test_deepseek_sources_come_only_from_search_results(self):
+        result = {'status':'completed', 'output':[{'type':'message','content':[{'type':'output_text','text':'{"value":1}'}]}]}
+        with patch.dict(os.environ, {'DEEPSEEK_API_KEY':'test','DEEPSEEK_MODEL':'deepseek-v4-pro'}, clear=True):
+            client = m.Client()
+            with patch.object(client, 'search_sources', return_value=[{'url':URL,'content':PAGE}]), patch('urllib.request.urlopen', return_value=io.BytesIO(json.dumps(result).encode())):
+                _, urls = client.request('instructions', {}, m.obj({'value':{'type':'number'}}), search=True)
+                self.assertEqual(urls, {URL})
+
+    def test_schema_validation_rejects_invalid_shape(self):
+        schema = m.obj({'value':{'type':'number'}})
+        for output in ({'value':True}, {'value':None}, {}, {'value':1,'extra':2}, {'value':float('nan')}):
+            with self.assertRaises(ValueError): m.validate_schema(output,schema)
+
     def check(self, item, page=PAGE):
         return m.validate_research('aluminum', '2026-10', {'observations': [item]}, {URL}, fetch=lambda _: page)
 

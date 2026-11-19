@@ -4,6 +4,18 @@
 
 ## 启用（仓库所有者一次配置）
 
+### DeepSeek（可选，当前接入）
+
+- 在Actions Secrets添加 `DEEPSEEK_API_KEY`，在Variables添加 `DEEPSEEK_MODEL`，填写账户 `/models` 列表中可用的模型，如 `deepseek-v4-pro` 或 `deepseek-flash`。密钥不能发到聊天或放入仓库。
+- 有DeepSeek密钥时优先使用DeepSeek，不会自动回退到OpenAI。也可显式设置变量 `AI_PROVIDER=deepseek` 或 `openai`。
+- 兼容把DeepSeek模型名填在旧 `OPENAI_MODEL` 变量的情况，但不会把旧GPT模型名传给DeepSeek。
+- 独立Search API每品类最多6次搜索，每次4个结果；最多18个白名单来源、每品类最多100000正文字符进入提取模型。原文仍需独立请求核验，模型输出再经过本地JSON字段及业务校验。
+- 单次最多6个模型请求、18次独立搜索；搜索与模型均按DeepSeek账户规则计费。运行先检查模型可用性，不记录密钥或余额信息。
+- 本实现不使用DeepSeek兼容层不支持的OpenAI `store`、`include`、`max_tool_calls` 参数，也不依赖模型内置搜索来限制调用次数。
+- 首次试采通过更新 `automation/run-request.json` 发起；结果仍先到草稿PR，不直接发布。
+
+### OpenAI（保留）
+
 1. 打开仓库 Settings → Secrets and variables → Actions → Secrets，添加 `OPENAI_API_KEY`。只在GitHub密钥框粘贴，不放到聊天、代码或网页。需要可用API额度；建议先在服务商项目里设置用量提醒/限额。
 2. 在同一页 Variables 添加 `OPENAI_MODEL`，值为你账户支持联网搜索和结构化输出的模型ID。配置前任务仅运行测试，不发送模型请求。
 3. Settings → Actions → General → Workflow permissions：允许 **Read and write permissions**，勾选 **Allow GitHub Actions to create and approve pull requests**。本任务只创建草稿PR，不批准或自动合并。

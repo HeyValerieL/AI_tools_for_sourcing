@@ -38,21 +38,37 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
         run: |
           python - <<'PY'
-          import os
-          ready = bool(os.environ.get('OPENAI_API_KEY') and os.environ.get('OPENAI_MODEL'))
+          import os, sys
+          sys.path.insert(0, 'automation')
+          from monthly import configuration
+          try:
+              provider, _, model = configuration()
+              ready = True
+              print('Configured provider:', provider, 'model:', model)
+          except ValueError as error:
+              ready = False
+              print(str(error))
           with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
               f.write('ready=' + str(ready).lower() + '\n')
           if not ready:
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
-                  f.write('尚未启用付费AI调用：请配置 OPENAI_API_KEY secret 和 OPENAI_MODEL variable。\n')
+                  f.write('尚未启用付费AI调用：请配置对应服务商的API_KEY secret和MODEL variable，见配置步骤日志。\n')
           PY
       - name: Collect, validate and draft
         if: steps.config.outputs.ready == 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          AI_PROVIDER: ${{ vars.AI_PROVIDER }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
           TARGET_MONTH: ${{ inputs.month }}
           TRIGGER_EVENT: ${{ github.event_name }}
         run: |
