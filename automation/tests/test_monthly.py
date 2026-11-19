@@ -1,4 +1,5 @@
 import copy
+import contextlib
 import io
 import importlib.util
 import json
@@ -175,7 +176,7 @@ class ValidationTests(unittest.TestCase):
             def request(self, *args, **kwargs):
                 calls.append(1)
                 raise m.api_error(429, '{"error":{"code":"insufficient_quota"}}')
-        with tempfile.TemporaryDirectory() as folder, patch.object(m, 'Client', QuotaClient):
+        with tempfile.TemporaryDirectory() as folder, patch.object(m, 'Client', QuotaClient), contextlib.redirect_stdout(io.StringIO()):
             with self.assertRaises(ValueError):
                 m.run('2026-10', Path(folder))
             self.assertEqual(len(calls), 1)

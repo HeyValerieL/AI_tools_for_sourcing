@@ -59,6 +59,7 @@ jobs:
           if not ready:
               with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as f:
                   f.write('尚未启用付费AI调用：请配置对应服务商的API_KEY secret和MODEL variable，见配置步骤日志。\n')
+              raise SystemExit('配置缺失，采集尚未启动；请核对仓库级变量。')
           PY
       - name: Collect, validate and draft
         if: steps.config.outputs.ready == 'true'

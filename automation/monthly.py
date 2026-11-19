@@ -29,8 +29,10 @@ def configuration():
         previous = os.environ.get('OPENAI_MODEL', '')
         if previous.startswith('deepseek-'):
             model = previous
-    if not key or not model:
-        raise ValueError(f'请配置 {provider.upper()}_API_KEY 密钥和 {provider.upper()}_MODEL 变量；未发送付费请求。')
+    if not key:
+        raise ValueError(f'未读取到 {provider.upper()}_API_KEY 仓库密钥；未发送付费请求。')
+    if not model:
+        raise ValueError(f'已读取服务商密钥，但未读取到 {provider.upper()}_MODEL 仓库变量；未发送付费请求。')
     return provider, key, model
 
 
