@@ -38,6 +38,19 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_one_invalid_model_row_does_not_drop_valid_observations(self):
+        raw = {'observations':[observation(),observation(id='alumina',value=None)],
+               'policies':[],'missing':['stock']}
+        checked, rejected = m.check_research_rows(raw)
+        self.assertEqual(len(checked['observations']),1)
+        self.assertEqual(rejected[0]['id'],'alumina')
+        self.assertIn('.value', rejected[0]['reason'])
+        self.assertIsNone(raw['observations'][1]['value'])
+
+    def test_no_monthly_comparison_cannot_be_called_sideways(self):
+        with self.assertRaises(ValueError):
+            m.validate_analysis(analysis(trend='震荡'), [dict(observation(id='price'),mom=None)], [])
+
     def test_fetch_compresses_blank_space_before_prompt_limit(self):
         from email.message import Message
         response = io.BytesIO((' ' * 20000 + '<table><td>385</td><td>1.8</td></table>').encode())
