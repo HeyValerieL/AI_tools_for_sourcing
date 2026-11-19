@@ -1,1 +1,5 @@
-{"month": "2026-10", "request": "verify-table-and-source-fix-2026-11-19"}
+{
+  "month": "2026-10",
+  "mode": "publish_existing",
+  "request": "verify-github-review-permission-2026-11-19"
+}

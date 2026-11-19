@@ -33,6 +33,22 @@ jobs:
           python-version: '3.12'
       - name: Validate pipeline
         run: python -m unittest discover -s automation/tests -v
+      - name: Read run mode
+        id: mode
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, 'automation')
+          from monthly import target_month
+          request = {}
+          if os.environ['GITHUB_EVENT_NAME'] == 'push':
+              with open('automation/run-request.json', encoding='utf-8') as f:
+                  request = json.load(f)
+          month = target_month(request.get('month'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as f:
+              f.write('publish_existing=' + str(request.get('mode') == 'publish_existing').lower() + '\n')
+              f.write('month=' + month + '\n')
+          PY
       - name: Check configuration
         id: config
         env:
@@ -62,7 +78,7 @@ jobs:
               raise SystemExit('配置缺失，采集尚未启动；请核对仓库级变量。')
           PY
       - name: Collect, validate and draft
-        if: steps.config.outputs.ready == 'true'
+        if: steps.config.outputs.ready == 'true' && steps.mode.outputs.publish_existing != 'true'
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
@@ -85,6 +101,35 @@ jobs:
                   command += ['--category', request['category']]
           subprocess.run(command + ['--month', month], check=True)
           PY
+      - name: Reuse existing reviewed-source draft
+        if: steps.mode.outputs.publish_existing == 'true'
+        uses: actions/github-script@v7
+        env:
+          REPORT_MONTH: ${{ steps.mode.outputs.month }}
+        with:
+          script: |
+            const fs = require('fs');
+            const month = process.env.REPORT_MONTH;
+            if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(month)) throw new Error('Invalid month');
+            const response = await github.rest.repos.getContent({...context.repo, path:'data/ai-monthly.json', ref:'ai/monthly-' + month});
+            const content = Buffer.from(response.data.content, 'base64').toString('utf8');
+            const data = JSON.parse(content), report = data.reports[month];
+            if (!report) throw new Error('No existing report');
+            fs.mkdirSync('automation/output', {recursive:true});
+            fs.writeFileSync('data/ai-monthly.json', content);
+            fs.writeFileSync('automation/output/draft.json', JSON.stringify(report, null, 2));
+            fs.writeFileSync('automation/output/usage.json', JSON.stringify({mode:'publish_existing',modelRequests:0,searchRequests:0}));
+      - name: Rebuild review text without model calls
+        if: steps.mode.outputs.publish_existing == 'true'
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'automation')
+          from monthly import markdown
+          report = json.loads(Path('automation/output/draft.json').read_text(encoding='utf-8'))
+          Path('automation/output/review.md').write_text(markdown(report), encoding='utf-8')
+          PY
       - name: Keep review and usage records
         if: always() && steps.config.outputs.ready == 'true'
         uses: actions/upload-artifact@v4
@@ -96,6 +141,8 @@ jobs:
       - name: Open or update review draft
         if: steps.config.outputs.ready == 'true'
         uses: actions/github-script@v7
+        env:
+          PUBLISH_EXISTING: ${{ steps.mode.outputs.publish_existing }}
         with:
           script: |
             const fs = require('fs');
@@ -114,7 +161,7 @@ jobs:
               const next = JSON.parse(content);
               // A retry with identical evidence needs no model-text-only update.
               const hashes = j => JSON.stringify(Object.fromEntries(Object.entries(j.reports[draft.month]?.categories || {}).map(([k,v]) => [k, v.sourceHashes])));
-              if (hashes(oldJson) === hashes(next)) { core.notice('No new source evidence; keeping existing draft.'); return; }
+              if (hashes(oldJson) === hashes(next) && process.env.PUBLISH_EXISTING !== 'true') { core.notice('No new source evidence; keeping existing draft.'); return; }
             } catch (e) {
               if (e.status !== 404) throw e;
             }
