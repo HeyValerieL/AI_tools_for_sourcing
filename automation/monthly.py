@@ -258,7 +258,9 @@ class Client:
         if self.provider == 'openai':
             body['store'] = False
         else:
-            body['reasoning'] = {'effort': 'low'}
+            # Extraction is transcription from supplied sources. Reserve the output
+            # budget for observations instead of long hidden reasoning traces.
+            body['reasoning'] = {'effort': 'none' if search else 'low'}
             body['text']['format'].pop('strict', None)
         if search and self.provider == 'openai':
             body.update(tools=[{'type': 'web_search', 'filters': {'allowed_domains': CONFIG['allowedDomains']}}],
@@ -272,8 +274,12 @@ class Client:
         except urllib.error.HTTPError as exc:
             # Decode only to classify; never log body text, headers, key or account IDs.
             raise api_error(exc.code, exc.read(8192)) from None
+        self.usage.append(result.get('usage', {}))
         if result.get('status') != 'completed':
-            raise ValueError('模型响应未完成，停止生成；不使用截断内容')
+            reason = (result.get('incomplete_details') or {}).get('reason', '')
+            if reason not in ('max_output_tokens', 'content_filter'):
+                reason = 'unknown'
+            raise ValueError(f'模型响应未完成 [{reason}]，停止生成；不使用截断内容')
         output = result.get('output', [])
         text = ''.join(c.get('text', '') for item in output if item.get('type') == 'message'
                        for c in item.get('content', []) if c.get('type') == 'output_text')
@@ -281,7 +287,6 @@ class Client:
                               for s in item.get('action', {}).get('sources', []) if s.get('url')}
         sources.update(a['url'] for item in output if item.get('type') == 'message'
                        for c in item.get('content', []) for a in c.get('annotations', []) if a.get('url'))
-        self.usage.append(result.get('usage', {}))
         return validate_schema(json.loads(text), schema), sources
 
 
