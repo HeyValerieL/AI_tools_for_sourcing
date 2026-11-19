@@ -447,6 +447,11 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
                 raise ValueError('未知或重复指标')
             if item['unit'] != metric[3] or item['basis'] != metric[4]:
                 raise ValueError('单位或统计口径不符')
+            if item['id'] == 'building':
+                description = normalize(item['definition'] + item['quote'] + item['periodEvidence'])
+                if ('累计' in description or re.search(r'1[—–－至-]0?\d{1,2}月', description)
+                        or '/zxfbhjd/' in item['url'] or '房地产' in item.get('title','')):
+                    raise ValueError('房屋竣工累计值不能标为单月值；累计差分须另行核验计算')
             if item['period'] != expected_period(month, item['basis']):
                 raise ValueError('统计期不符；不沿用旧月值')
             if not isinstance(item['value'], (float, int)) or isinstance(item['value'], bool) or not math.isfinite(item['value']):
