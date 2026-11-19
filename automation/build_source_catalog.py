@@ -35,6 +35,8 @@ def build(root=ROOT):
             'method':source.get('method',''), 'caveat':source.get('caveat',''),
             'categories':[], 'recordedMonths':[], 'sourceKeys':[], 'metricIds':[],
             'reviewStatus':'previous_manual_source_record_not_revalidated_by_catalog_export'})
+        if source.get('published') and not entry.get('publishedAt'):
+            entry['publishedAt'] = source['published']
         for field, value in [('categories',category), ('recordedMonths',month), ('sourceKeys',key)]:
             if value and value not in entry[field]: entry[field].append(value)
         return sid
@@ -61,7 +63,7 @@ def build(root=ROOT):
         'gridInvestment':['gridDemand'], 'lme3mAvg':['review'],
         'steelExport':['trade','tradeRate'], 'steelImport':['trade'], 'steelNetExport':['trade'],
         'aluminumExport':['tradeLatest','tradeHistory'], 'aluminumImport':['importHistory'],
-        'primaryImport':['tradeAnalysis','importHistory'], 'primaryExport':['tradeAnalysis','tradeHistory'],
+        'primaryImport':['tradeAnalysis'], 'primaryExport':['tradeAnalysis'],
         'oreImport':['trade','oreImport'], 'refinedImport':['refinedImport'], 'refinedExport':['refinedExport'],
         'cokingCoal':['price'], 'coke':['price'], 'smeltingProfit':['smmProduction'],
     }
@@ -113,7 +115,25 @@ def build(root=ROOT):
                                     'calculation':item.get('calculation'),'caveat':item.get('caveat'),
                                     'use':'historical_reference_only'})
         catalog['categories'][category] = {'name':config['categories'][category]['name'],
-                                           'metrics':profiles,'historicalReferences':history}
+                                           'metrics':profiles}
+        monthly_bindings = {}
+        for month, d in data['months'].items():
+            # Shared official terminal-demand publications apply to all three materials.
+            common = aluminum['months'].get(month, {}).get('sources', {})
+            own = data.get('sources', {}) | d.get('sources', {})
+            shared_keys = ('nbs', 'retail', 'property', 'propertyBase9', 'propertyBase10', 'pmi', 'pmiBase')
+            sources = own | {k:common[k] for k in shared_keys if k in common}
+            month_map = {}
+            for mid, profile in profiles.items():
+                keys = bindings.get(mid, [])
+                if category == 'copper' and mid in ('output','outputYtd','outputPriorYear'):
+                    keys = ['smmProduction','productionHistory']
+                ids = [add(sources[k],category,month,k) for k in keys if k in sources]
+                if ids:
+                    month_map[mid] = list(dict.fromkeys(x for x in ids if x))
+                    profile['sourceIds'] = list(dict.fromkeys(profile['sourceIds'] + month_map[mid]))
+            monthly_bindings[month] = month_map
+        catalog['categories'][category]['monthlySourceIds'] = monthly_bindings
     for source in catalog['sources'].values():
         for key in ('categories','recordedMonths','sourceKeys','metricIds'): source[key].sort()
     (root/'automation/source-catalog.json').write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

@@ -99,7 +99,13 @@ def normalize(value):
 def fetch_page(url):
     if not allowed(url):
         raise ValueError('来源不在采集白名单')
-    request = urllib.request.Request(url, headers={'User-Agent': 'SourcingMonthlyResearch/1.0'})
+    original = urllib.parse.urlsplit(url)
+    energy = original.hostname == 'energydc.cn' and re.fullmatch(
+        r'/policy/[a-z-]+/\d{4}-\d{2}/[a-f0-9-]{36}', original.path)
+    # Public endpoint used by the site's own page; never use bundled mock data.
+    read_url = ('https://energydc.cn/edc/api/v1/eprice/policy/' + original.path.rsplit('/', 1)[1]
+                if energy else url)
+    request = urllib.request.Request(read_url, headers={'User-Agent': 'SourcingMonthlyResearch/1.0'})
     with urllib.request.build_opener(SafeRedirect()).open(request, timeout=30) as response:
         content_type = response.headers.get_content_type()
         if content_type not in ('text/html', 'text/plain', 'application/json'):
@@ -112,8 +118,15 @@ def fetch_page(url):
         match = re.search(rb'charset=["\s]*([\w-]+)', raw[:4000], re.I)
         charset = match.group(1).decode('ascii') if match else 'utf-8'
     text = raw.decode(charset, errors='replace')
+    if energy:
+        document = json.loads(text)
+        data = document.get('data') or {}
+        if document.get('code') != 200 or not isinstance(data.get('content'), str) or not data['content'].strip():
+            raise ValueError('电价公告接口未返回正文')
+        text = data.get('title', '') + '\n' + data.get('publish', '') + '\n' + data['content']
     text = re.sub(r'<(script|style)\b[^>]*>.*?</\1>', '', text, flags=re.S | re.I)
-    return html.unescape(re.sub(r'<[^>]+>', ' ', text))
+    # Compress before prompt truncation, retaining cell boundaries between numbers.
+    return re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', text))).strip()
 
 
 def obj(properties):
@@ -306,6 +319,8 @@ class Client:
         output = result.get('output', [])
         text = ''.join(c.get('text', '') for item in output if item.get('type') == 'message'
                        for c in item.get('content', []) if c.get('type') == 'output_text')
+        if not text.strip():
+            raise ValueError('模型响应已结束但未返回JSON正文；本品类不生成结论')
         sources = citations | {s['url'] for item in output if item.get('type') == 'web_search_call'
                               for s in item.get('action', {}).get('sources', []) if s.get('url')}
         sources.update(a['url'] for item in output if item.get('type') == 'message'
@@ -319,9 +334,14 @@ RESEARCH_INSTRUCTIONS = '''你是中国铝铜钢材月度数据采集员。只�
 每个指标最多一条，单位必须与清单完全一致。不做未经核验的单位换算或累计差分；找不到就缺失。
 period: monthly/index/monthly_average为YYYY-MM；month_end/month_end_proxy为当月最后一天YYYY-MM-DD；
 ytd为YYYY-01/YYYY-MM；annual为上一年YYYY。periodEvidence逐字引用原文中说明统计期的文字。
+period必须与expectedPeriods中该指标的字符串完全一致；统计原文不支持时缺失，不能改填上月。
+periodEvidence必须包含年份和月份，优先逐字引用完整文章标题，例如“2026年10月份规模以上工业增加值增长4.8%”；
+只引用“10月份”或“1—10月份”会被拒绝；年度指标须逐字引用含2025年的年度标题。
 月末价格代理只接受国家统计局21日至月底下旬数据，不能取整月/上旬/中旬；年度值只能作背景。
 definition写清规格/口径/含税/样本范围。库存区分企业/社会；PMI是指数，非产量。
+山东电价只取当月平均购电价格分项；其他地区也固定原购电价格分项，不能误取电度总价或1.5倍列。
 quote逐字摘录包含名称、数值、单位的原文表格行/句；publishedAt使用原文发布日期YYYY-MM-DD。
+仅energydc.cn地区电价公告未标注发布日期时publishedAt填空字符串，不能用执行期代替发布日期。
 同比/环比只有原文明示时填，需给各自逐字引用，comparisonDefinition说明可比口径；指数变动单位为百分点。
 政策只收录影响国内供给的仍有效政策，影响需基于quote，最多3条；不得采集所选月末以后才公布的政策。
 数据发布允许晚于统计月，但不得使用当前日期之后的发布。失联、PDF、无正文、找不到数值都写入missing。
@@ -376,6 +396,10 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
         if len(normalize(item['quote'])) < 10 or normalize(item['quote']) not in normalize(text):
             raise ValueError('引用未逐字匹配可读取原文')
         published = item['publishedAt']
+        if (published == '' and item.get('id', '').startswith('power')
+                and urllib.parse.urlsplit(url).hostname == 'energydc.cn'
+                and re.fullmatch(r'/policy/[a-z-]+/\d{4}-\d{2}/[a-f0-9-]{36}', urllib.parse.urlsplit(url).path)):
+            return text  # Execution month is still checked separately below.
         dt.date.fromisoformat(published)
         if published > today:
             raise ValueError('发布日期在未来')
@@ -415,6 +439,8 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
                             or '下旬' in item['periodEvidence'])):
                 raise ValueError('月末代理必须来自国家统计局下旬原始发布')
             value = dict(item, label=metric[2], section=metric[1], validation='machine_checked')
+            if not item['publishedAt']:
+                value.update(publicationStatus='not_stated', retrievedAt=today)
             for change in ('yoy', 'mom'):
                 if item.get(change) is not None:
                     quote = item.get(change + 'Quote', '')
@@ -527,6 +553,7 @@ def run(month, root=ROOT, only_category=None):
                 'category': config['name'], 'month': month,
                 'today': dt.date.today().isoformat(),
                 'metricColumns': ['id', 'section', 'label', 'unit', 'basis'], 'metrics': config['metrics'],
+                'expectedPeriods': {row[0]:expected_period(month,row[4]) for row in config['metrics']},
                 'sourcePlan': source_plan(category, month),
             }, RESEARCH_SCHEMA, search=True)
             dump(root / f'automation/output/extraction-{category}.json', research)

@@ -255,6 +255,7 @@
       "caveat": "",
       "categories": [
         "aluminum",
+        "copper",
         "iron"
       ],
       "recordedMonths": [
@@ -470,7 +471,9 @@
       "method": "",
       "caveat": "",
       "categories": [
-        "aluminum"
+        "aluminum",
+        "copper",
+        "iron"
       ],
       "recordedMonths": [
         "2026-09",
@@ -566,8 +569,7 @@
         "tradeHistory"
       ],
       "metricIds": [
-        "aluminumExport",
-        "primaryExport"
+        "aluminumExport"
       ],
       "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
     },
@@ -599,9 +601,7 @@
         "importHistory",
         "observations"
       ],
-      "metricIds": [
-        "primaryImport"
-      ],
+      "metricIds": [],
       "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
     },
     "sa74bc0f8b56c": {
@@ -1308,6 +1308,7 @@
       "caveat": "",
       "categories": [
         "aluminum",
+        "copper",
         "iron"
       ],
       "recordedMonths": [
@@ -1362,6 +1363,7 @@
       "caveat": "",
       "categories": [
         "aluminum",
+        "copper",
         "iron"
       ],
       "recordedMonths": [
@@ -1386,7 +1388,9 @@
       "method": "",
       "caveat": "",
       "categories": [
-        "aluminum"
+        "aluminum",
+        "copper",
+        "iron"
       ],
       "recordedMonths": [
         "2026-10"
@@ -1410,6 +1414,7 @@
       "caveat": "",
       "categories": [
         "aluminum",
+        "copper",
         "iron"
       ],
       "recordedMonths": [
@@ -3598,7 +3603,7 @@
       "title": "",
       "host": "www.miit.gov.cn",
       "format": "html",
-      "publishedAt": null,
+      "publishedAt": "2025-02-11",
       "access": "public",
       "method": "",
       "caveat": "",
@@ -3759,7 +3764,7 @@
       "title": "SMM月度产量历史核验",
       "host": "www.yhqh.com.cn",
       "format": "pdf",
-      "publishedAt": null,
+      "publishedAt": "2025-12-01",
       "access": "partial",
       "method": "SMM同系列实际值；2025年1—12月与2026年已核验月份按月份对齐。缺月跨点连线，不插值；虚线表示中间有缺月。不同报告版本可能修订。",
       "caveat": "排除报告中E预测值；2025年10—12月另用事后实际发布；不与NBS产量拼接",
@@ -4683,8 +4688,7 @@
           "unit": "万吨/月",
           "basis": "monthly",
           "sourceIds": [
-            "s5e3d694883fd",
-            "sa7958be48209"
+            "s5e3d694883fd"
           ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
@@ -4695,8 +4699,7 @@
           "unit": "万吨/月",
           "basis": "monthly",
           "sourceIds": [
-            "s5e3d694883fd",
-            "s36568366f25c"
+            "s5e3d694883fd"
           ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
@@ -4740,1141 +4743,295 @@
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
         }
       },
-      "historicalReferences": [
-        {
-          "id": "output",
-          "recordedMonth": "2026-09",
-          "label": "原铝产量",
-          "value": 391,
-          "unit": "万吨/月",
-          "sourceId": "s1fca86713972",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-09",
-          "label": "原铝累计产量 · 2026年1—9月",
-          "value": 3503,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s1fca86713972",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将舍入后的单月值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-09",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "building",
-          "recordedMonth": "2026-09",
-          "label": "建筑 · 房屋竣工面积（单月估算）",
-          "value": 2174,
-          "unit": "万平方米/月",
-          "sourceId": "s4d87c08de021",
-          "method": "cumulative_difference",
-          "calculation": null,
-          "caveat": "单月由累计差分：2026年23271−21097=2174；2025年31129−27694=3435；同比约−36.7%。为跨发布差分估算，可能受历史修订影响。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "gridInvestment",
-          "recordedMonth": "2026-09",
-          "label": "电力电子 · 电网工程投资",
-          "value": 662.3,
-          "unit": "亿元/月",
-          "sourceId": "sa74bc0f8b56c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "线缆与电网建设需求代理。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-09",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 881,
-          "unit": "亿元/月",
-          "sourceId": "s5adad2311ecc",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位家用电器和音像器材类；零售金额包含价格、政策与渠道变化，不代表产量或铝需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-09",
-          "label": "汽车总产量",
-          "value": 306.3,
-          "unit": "万辆/月",
-          "sourceId": "s1fca86713972",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-09",
-          "label": "铝锭社会库存（月末）",
-          "value": 63.8,
-          "unit": "万吨",
-          "sourceId": "sb11569c50212",
-          "method": "month_end_stock",
-          "calculation": null,
-          "caveat": "9月30日63.8万吨，8月31日83.7万吨，均为SMM国内主流消费地口径。仅证明两个月末净变化，不代表月内每天去库或全部去库由消费带动。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "processingReleaseMean",
-          "recordedMonth": "2026-09",
-          "label": "加工龙头开工率（月内调查均值）",
-          "value": 61.35999999999999,
-          "unit": "% · 5次发布均值",
-          "sourceId": "sbf7d265f7c2a",
-          "method": "monthly_release_arithmetic_mean",
-          "calculation": null,
-          "caveat": "(61.0+61.3+61.9+62.1+60.5)÷5=61.36%。按9月发布日期归组，非工时加权，非SMM原生月度行业率；9月30日含国庆排产影响。逐期来源见台账。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "alumina",
-          "recordedMonth": "2026-09",
-          "label": "氧化铝加权月均价",
-          "value": 2690,
-          "unit": "元/吨",
-          "sourceId": "s3cc88bcd5750",
-          "method": "provider_monthly_average",
-          "calculation": null,
-          "caveat": "提供方国内加权月均口径；未从日价自行计算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-09",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 28,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-09",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 66,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "netImport",
-          "recordedMonth": "2026-09",
-          "label": "原铝净进口",
-          "value": 12.7,
-          "unit": "万吨/月（约）",
-          "sourceId": "s5e3d694883fd",
-          "method": "provider_monthly",
-          "calculation": null,
-          "caveat": "本卡统一采用SMM约值与其发布增速；原海关精确差分仍留来源台账，不与另一版本增速拼接。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-09",
-          "label": "制造业PMI",
-          "value": 50.1,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-09",
-          "label": "制造业新订单",
-          "value": 50.5,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-01",
-          "label": "铝锭社会库存",
-          "value": 80,
-          "unit": "万吨（月末代理）",
-          "sourceId": "s88dd4b43cd65",
-          "method": "month_end_report_snapshot",
-          "calculation": null,
-          "caveat": "采用提供方月报统计日；不是精确月末，不能与SHFE相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-01",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 31,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-01",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 54,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-01",
-          "label": "制造业PMI",
-          "value": 49.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-01",
-          "label": "制造业新订单",
-          "value": 49.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "capacity",
-          "recordedMonth": "2026-02",
-          "label": "运行产能（阿拉丁）",
-          "value": 4492,
-          "unit": "万吨/年（月末）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_month_end",
-          "calculation": null,
-          "caveat": "经五矿研报引用；非统计局产能。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-02",
-          "label": "铝锭社会库存",
-          "value": 117.5,
-          "unit": "万吨（月末代理）",
-          "sourceId": "s88dd4b43cd65",
-          "method": "month_end_report_snapshot",
-          "calculation": null,
-          "caveat": "采用提供方月报统计日；不是精确月末，不能与SHFE相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "opPlate",
-          "recordedMonth": "2026-02",
-          "label": "铝板带月度开工率",
-          "value": 62.2,
-          "unit": "%（月度）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_rate",
-          "calculation": null,
-          "caveat": "SMM月度率，经五矿研报引用；不是周度龙头企业率的简单平均。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "opFoil",
-          "recordedMonth": "2026-02",
-          "label": "铝箔月度开工率",
-          "value": 66.6,
-          "unit": "%（月度）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_rate",
-          "calculation": null,
-          "caveat": "SMM月度率，经五矿研报引用；不是周度龙头企业率的简单平均。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "opConstruction",
-          "recordedMonth": "2026-02",
-          "label": "建筑型材月度开工率",
-          "value": 22.1,
-          "unit": "%（月度）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_rate",
-          "calculation": null,
-          "caveat": "SMM月度率，经五矿研报引用；不是周度龙头企业率的简单平均。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "opIndustrial",
-          "recordedMonth": "2026-02",
-          "label": "工业型材月度开工率",
-          "value": 35.7,
-          "unit": "%（月度）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_rate",
-          "calculation": null,
-          "caveat": "SMM月度率，经五矿研报引用；不是周度龙头企业率的简单平均。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "opCable",
-          "recordedMonth": "2026-02",
-          "label": "铝线缆月度开工率",
-          "value": 45.5,
-          "unit": "%（月度）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_rate",
-          "calculation": null,
-          "caveat": "SMM月度率，经五矿研报引用；不是周度龙头企业率的简单平均。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "fullCost",
-          "recordedMonth": "2026-02",
-          "label": "电解铝加权完全成本",
-          "value": 15565,
-          "unit": "元/吨（月均）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_model",
-          "calculation": null,
-          "caveat": "行业模型，不是供应商账单。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "modelProfit",
-          "recordedMonth": "2026-02",
-          "label": "理论加权盈利",
-          "value": 7821,
-          "unit": "元/吨（月均）",
-          "sourceId": "sfc988f4521d0",
-          "method": "provider_monthly_model",
-          "calculation": null,
-          "caveat": "理论模型，不代表采购企业利润。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-02",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 29,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-02",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 43,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-02",
-          "label": "制造业PMI",
-          "value": 49,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-02",
-          "label": "制造业新订单",
-          "value": 48.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-03",
-          "label": "原铝产量",
-          "value": 385,
-          "unit": "万吨/月",
-          "sourceId": "sab861e1f6762",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-03",
-          "label": "原铝累计产量 · 2026年1—3月",
-          "value": 1141,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "sab861e1f6762",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将舍入后的单月值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-03",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-03",
-          "label": "汽车总产量",
-          "value": 306.7,
-          "unit": "万辆/月",
-          "sourceId": "sab861e1f6762",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-03",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 36,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-03",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 49,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-03",
-          "label": "制造业PMI",
-          "value": 50.4,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-03",
-          "label": "制造业新订单",
-          "value": 51.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-04",
-          "label": "原铝产量",
-          "value": 387,
-          "unit": "万吨/月",
-          "sourceId": "s251d616465e6",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-04",
-          "label": "原铝累计产量 · 2026年1—4月",
-          "value": 1533,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s251d616465e6",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将单月舍入值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-04",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-04",
-          "label": "汽车总产量",
-          "value": 256.4,
-          "unit": "万辆/月",
-          "sourceId": "s251d616465e6",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-04",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 36,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-04",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 60,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-04",
-          "label": "制造业PMI",
-          "value": 50.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-04",
-          "label": "制造业新订单",
-          "value": 50.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-05",
-          "label": "原铝产量",
-          "value": 389,
-          "unit": "万吨/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-05",
-          "label": "原铝累计产量 · 2026年1—5月",
-          "value": 1922,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s72cc5c0d6f51",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将舍入后的单月值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-05",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-05",
-          "label": "汽车总产量",
-          "value": 258.2,
-          "unit": "万辆/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-05",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 30,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-05",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 63,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-05",
-          "label": "制造业PMI",
-          "value": 50,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-05",
-          "label": "制造业新订单",
-          "value": 49.9,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-06",
-          "label": "原铝产量",
-          "value": 398,
-          "unit": "万吨/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-06",
-          "label": "原铝累计产量 · 2026年1—6月",
-          "value": 2319,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s3887ca4d8c7d",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将舍入后的单月值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-06",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-06",
-          "label": "汽车总产量",
-          "value": 282.4,
-          "unit": "万辆/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-06",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 25,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-06",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 71,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-06",
-          "label": "制造业PMI",
-          "value": 50.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-06",
-          "label": "制造业新订单",
-          "value": 51.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-07",
-          "label": "原铝产量",
-          "value": 390,
-          "unit": "万吨/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-07",
-          "label": "原铝累计产量 · 2026年1—7月",
-          "value": 2717,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s41309f5c5ae0",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将单月舍入值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-07",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-07",
-          "label": "汽车总产量",
-          "value": 252.9,
-          "unit": "万辆/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-07",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 28,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-07",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 64,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-07",
-          "label": "制造业PMI",
-          "value": 49.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-07",
-          "label": "制造业新订单",
-          "value": 48.5,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-08",
-          "label": "原铝产量",
-          "value": 398,
-          "unit": "万吨/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "采用该次官方新闻表精度；同比按官方可比口径，不以旧发布值重算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-08",
-          "label": "原铝累计产量 · 2026年1—8月",
-          "value": 3112,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s2cf97d1fad70",
-          "method": "official_year_to_date",
-          "calculation": null,
-          "caveat": "官方累计发布值，不将舍入后的单月值相加。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-08",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-08",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 858,
-          "unit": "亿元/月",
-          "sourceId": "s55d605a68a49",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位家用电器和音像器材类；零售金额包含价格、政策与渠道变化，不代表产量或铝需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-08",
-          "label": "汽车总产量",
-          "value": 269.7,
-          "unit": "万辆/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铝吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-08",
-          "label": "铝锭社会库存（月末）",
-          "value": 83.7,
-          "unit": "万吨",
-          "sourceId": "sd65f513825ef",
-          "method": "month_end_stock",
-          "calculation": null,
-          "caveat": "与9月使用同一提供方和主流消费地口径；不与三地日度样本拼接。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumImport",
-          "recordedMonth": "2026-08",
-          "label": "未锻轧铝及铝材进口（约）",
-          "value": 29,
-          "unit": "万吨/月",
-          "sourceId": "sa7958be48209",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于原铝进口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-08",
-          "label": "未锻轧铝及铝材出口（约）",
-          "value": 63,
-          "unit": "万吨/月",
-          "sourceId": "s36568366f25c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "包含未锻轧铝及铝材，不等于纯加工铝材出口。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-08",
-          "label": "制造业PMI",
-          "value": 49.8,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-08",
-          "label": "制造业新订单",
-          "value": 50.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-10",
-          "label": "原铝产量",
-          "value": 385,
-          "unit": "万吨/月",
-          "sourceId": "s0f60da69beef",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-10",
-          "label": "原铝累计产量 · 2026年1—10月",
-          "value": 3885,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s0f60da69beef",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-10",
-          "label": "原铝产量 · 2025全年",
-          "value": 4501.6,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": "official_annual_reference",
-          "calculation": null,
-          "caveat": "上年全年背景；不与当年部分月份累计直接计算增长率。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "building",
-          "recordedMonth": "2026-10",
-          "label": "建筑 · 房屋竣工面积（单月估算）",
-          "value": 2273,
-          "unit": "万平方米/月",
-          "sourceId": "s66897a80ed40",
-          "method": "derived_difference",
-          "calculation": {
-            "currentCumulative": 25544,
-            "previousCumulative": 23271,
-            "priorYearCumulative": 34861,
-            "priorYearPreviousCumulative": 31129
-          },
-          "caveat": "当年和上年分别累计差分；跨发布版本估算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "gridInvestment",
-          "recordedMonth": "2026-10",
-          "label": "电力电子 · 电网工程投资（9月最新）",
-          "value": 662.3,
-          "unit": "亿元/月",
-          "sourceId": "sa74bc0f8b56c",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "最新已核验观测为9月，非10月值。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-10",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 884,
-          "unit": "亿元/月",
-          "sourceId": "sc754e31e6205",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位当月零售额。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-10",
-          "label": "汽车总产量",
-          "value": 304.5,
-          "unit": "万辆/月",
-          "sourceId": "s0f60da69beef",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "aluminumExport",
-          "recordedMonth": "2026-10",
-          "label": "未锻轧铝及铝材出口",
-          "value": 59.4,
-          "unit": "万吨/月",
-          "sourceId": "s6c0cd0a637f4",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "海关汇总口径；1—10月累计591.4万吨。原铝进出口分项尚待10月明细核验。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-10",
-          "label": "制造业PMI",
-          "value": 49.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-10",
-          "label": "制造业新订单",
-          "value": 49.4,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "使用该发布版本的历史表；不得替代铝行业专用指标。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "lme3mAvg",
-          "recordedMonth": "2026-10",
-          "label": "LME 3M月均（报告引用）",
-          "value": 3061.95,
-          "unit": "美元/吨",
-          "sourceId": "s97bd6245ba88",
-          "method": "provider_monthly_average",
-          "calculation": null,
-          "caveat": "公开摘要引用；不是LME库存或实时接口，连续历史权限仍未确认。",
-          "use": "historical_reference_only"
+      "monthlySourceIds": {
+        "2026-09": {
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d"
+          ],
+          "electronics": [
+            "s1fca86713972"
+          ],
+          "applianceRetail": [
+            "s5adad2311ecc"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "sb11569c50212"
+          ],
+          "alumina": [
+            "s3cc88bcd5750"
+          ],
+          "primaryImport": [
+            "s5e3d694883fd"
+          ],
+          "primaryExport": [
+            "s5e3d694883fd"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-01": {
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-02": {
+          "alumina": [
+            "sfc988f4521d0"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-03": {
+          "output": [
+            "sab861e1f6762"
+          ],
+          "outputYtd": [
+            "sab861e1f6762"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "sab861e1f6762"
+          ],
+          "auto": [
+            "sab861e1f6762"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-04": {
+          "output": [
+            "s251d616465e6"
+          ],
+          "outputYtd": [
+            "s251d616465e6"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s251d616465e6"
+          ],
+          "auto": [
+            "s251d616465e6"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-05": {
+          "output": [
+            "s72cc5c0d6f51"
+          ],
+          "outputYtd": [
+            "s72cc5c0d6f51"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s72cc5c0d6f51"
+          ],
+          "auto": [
+            "s72cc5c0d6f51"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-06": {
+          "output": [
+            "s3887ca4d8c7d"
+          ],
+          "outputYtd": [
+            "s3887ca4d8c7d"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s3887ca4d8c7d"
+          ],
+          "auto": [
+            "s3887ca4d8c7d"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-07": {
+          "output": [
+            "s41309f5c5ae0"
+          ],
+          "outputYtd": [
+            "s41309f5c5ae0"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s41309f5c5ae0"
+          ],
+          "auto": [
+            "s41309f5c5ae0"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-08": {
+          "output": [
+            "s2cf97d1fad70"
+          ],
+          "outputYtd": [
+            "s2cf97d1fad70"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s2cf97d1fad70"
+          ],
+          "applianceRetail": [
+            "s55d605a68a49"
+          ],
+          "auto": [
+            "s2cf97d1fad70"
+          ],
+          "stock": [
+            "sd65f513825ef"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-10": {
+          "output": [
+            "s0f60da69beef"
+          ],
+          "outputYtd": [
+            "s0f60da69beef"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "electronics": [
+            "s0f60da69beef"
+          ],
+          "applianceRetail": [
+            "sc754e31e6205"
+          ],
+          "auto": [
+            "s0f60da69beef"
+          ],
+          "aluminumExport": [
+            "s6c0cd0a637f4",
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ]
         }
-      ]
+      }
     },
     "copper": {
       "name": "铜",
@@ -5947,7 +5104,12 @@
           "section": "demand",
           "unit": "万平方米/月",
           "basis": "monthly",
-          "sourceIds": [],
+          "sourceIds": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d",
+            "s66897a80ed40",
+            "sfe5de75779f3"
+          ],
           "method": "cumulative_difference_estimate",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值",
           "calculation": {
@@ -5974,7 +5136,8 @@
             "s72cc5c0d6f51",
             "s3887ca4d8c7d",
             "s41309f5c5ae0",
-            "s2cf97d1fad70"
+            "s2cf97d1fad70",
+            "s0f60da69beef"
           ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
@@ -5986,7 +5149,8 @@
           "basis": "monthly",
           "sourceIds": [
             "s5adad2311ecc",
-            "s55d605a68a49"
+            "s55d605a68a49",
+            "sc754e31e6205"
           ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
@@ -6067,560 +5231,366 @@
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
         }
       },
-      "historicalReferences": [
-        {
-          "id": "output",
-          "recordedMonth": "2026-01",
-          "label": "电解铜产量",
-          "value": 117.93,
-          "unit": "万吨/月",
-          "sourceId": "sc16ac1158831",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
+      "monthlySourceIds": {
+        "2026-01": {
+          "price": [
+            "s8ae05ec0d5a4"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-01",
-          "label": "制造业PMI",
-          "value": 49.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
+        "2026-02": {
+          "price": [
+            "sba41d1bd5c34"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-01",
-          "label": "制造业新订单",
-          "value": 49.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
+        "2026-03": {
+          "price": [
+            "s349277796536"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "sab861e1f6762"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "output",
-          "recordedMonth": "2026-02",
-          "label": "电解铜产量",
-          "value": 114.24,
-          "unit": "万吨/月",
-          "sourceId": "s79b610d13571",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
+        "2026-04": {
+          "price": [
+            "s809633bcdbca"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s251d616465e6"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-02",
-          "label": "制造业PMI",
-          "value": 49,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
+        "2026-05": {
+          "price": [
+            "s4d06fd47df9b"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s72cc5c0d6f51"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-02",
-          "label": "制造业新订单",
-          "value": 48.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
+        "2026-06": {
+          "price": [
+            "s7ca11f99303a"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s3887ca4d8c7d"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "output",
-          "recordedMonth": "2026-03",
-          "label": "电解铜产量",
-          "value": 120.61,
-          "unit": "万吨/月",
-          "sourceId": "sc5398548a86e",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
+        "2026-07": {
+          "price": [
+            "s2b909bc0e0dd"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s41309f5c5ae0"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-03",
-          "label": "电气机械制造业增加值",
-          "value": 5.4,
-          "unit": "% 同比",
-          "sourceId": "sab861e1f6762",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
+        "2026-08": {
+          "price": [
+            "sa54216845a05"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s2cf97d1fad70"
+          ],
+          "applianceRetail": [
+            "s55d605a68a49"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-03",
-          "label": "汽车总产量",
-          "value": 306.7,
-          "unit": "万辆/月",
-          "sourceId": "sab861e1f6762",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
+        "2026-09": {
+          "price": [
+            "sfc6845edf94d"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "building": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "applianceRetail": [
+            "s5adad2311ecc"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
         },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-03",
-          "label": "制造业PMI",
-          "value": 50.4,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-03",
-          "label": "制造业新订单",
-          "value": 51.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-04",
-          "label": "电解铜产量",
-          "value": 117.89,
-          "unit": "万吨/月",
-          "sourceId": "sf2b65cf12a7a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-04",
-          "label": "电气机械制造业增加值",
-          "value": 3.1,
-          "unit": "% 同比",
-          "sourceId": "s251d616465e6",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-04",
-          "label": "汽车总产量",
-          "value": 256.4,
-          "unit": "万辆/月",
-          "sourceId": "s251d616465e6",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-04",
-          "label": "制造业PMI",
-          "value": 50.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-04",
-          "label": "制造业新订单",
-          "value": 50.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-05",
-          "label": "电解铜产量",
-          "value": 116.94,
-          "unit": "万吨/月",
-          "sourceId": "sd885769521e5",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-05",
-          "label": "电气机械制造业增加值",
-          "value": 4.7,
-          "unit": "% 同比",
-          "sourceId": "s72cc5c0d6f51",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-05",
-          "label": "汽车总产量",
-          "value": 258.2,
-          "unit": "万辆/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-05",
-          "label": "制造业PMI",
-          "value": 50,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-05",
-          "label": "制造业新订单",
-          "value": 49.9,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-06",
-          "label": "电解铜产量",
-          "value": 114.5,
-          "unit": "万吨/月",
-          "sourceId": "s0a1e84e67d10",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-06",
-          "label": "电气机械制造业增加值",
-          "value": 7,
-          "unit": "% 同比",
-          "sourceId": "s3887ca4d8c7d",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-06",
-          "label": "汽车总产量",
-          "value": 282.4,
-          "unit": "万辆/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-06",
-          "label": "制造业PMI",
-          "value": 50.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-06",
-          "label": "制造业新订单",
-          "value": 51.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-07",
-          "label": "电气机械制造业增加值",
-          "value": 8.8,
-          "unit": "% 同比",
-          "sourceId": "s41309f5c5ae0",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-07",
-          "label": "汽车总产量",
-          "value": 252.9,
-          "unit": "万辆/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-07",
-          "label": "制造业PMI",
-          "value": 49.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-07",
-          "label": "制造业新订单",
-          "value": 48.5,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-08",
-          "label": "电解铜产量",
-          "value": 114.7,
-          "unit": "万吨/月",
-          "sourceId": "scec1d3590e08",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-08",
-          "label": "电气机械制造业增加值",
-          "value": 9.9,
-          "unit": "% 同比",
-          "sourceId": "s2cf97d1fad70",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-08",
-          "label": "汽车总产量",
-          "value": 269.7,
-          "unit": "万辆/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-08",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 858,
-          "unit": "亿元/月",
-          "sourceId": "s55d605a68a49",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位家用电器和音像器材类；零售金额包含价格、政策与渠道变化，不代表产量或铜需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-08",
-          "label": "制造业PMI",
-          "value": 49.8,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-08",
-          "label": "制造业新订单",
-          "value": 50.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-09",
-          "label": "电解铜产量",
-          "value": 112.06,
-          "unit": "万吨/月",
-          "sourceId": "s44b6bce4240b",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "electrical",
-          "recordedMonth": "2026-09",
-          "label": "电气机械制造业增加值",
-          "value": 8.1,
-          "unit": "% 同比",
-          "sourceId": "s1fca86713972",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-09",
-          "label": "汽车总产量",
-          "value": 306.3,
-          "unit": "万辆/月",
-          "sourceId": "s1fca86713972",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗铜吨数。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-09",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 881,
-          "unit": "亿元/月",
-          "sourceId": "s5adad2311ecc",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位家用电器和音像器材类；零售金额包含价格、政策与渠道变化，不代表产量或铜需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-09",
-          "label": "主流地区铜社会库存",
-          "value": 7.37,
-          "unit": "万吨 · 9月30日",
-          "sourceId": "s2a568b2fa773",
-          "method": null,
-          "calculation": null,
-          "caveat": "公开发布摘要核验；无前月同口径基期，不计算月环比。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "smeltingProfit",
-          "recordedMonth": "2026-09",
-          "label": "现货原料冶炼盈亏（估算）",
-          "value": -4129.28,
-          "unit": "元/吨",
-          "sourceId": "s44b6bce4240b",
-          "method": null,
-          "calculation": null,
-          "caveat": "这是特定原料采购条件下的模型，不是所有铜厂的实际利润。采购关注减产是否兑现，不将此金额直接作为铜件涨价依据。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-09",
-          "label": "制造业PMI",
-          "value": 50.1,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-09",
-          "label": "制造业新订单",
-          "value": 50.5,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-10",
-          "label": "制造业PMI",
-          "value": 49.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-10",
-          "label": "制造业新订单",
-          "value": 49.4,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
+        "2026-10": {
+          "price": [
+            "s6e41cc8ee4b7"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "building": [
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "auto": [
+            "s0f60da69beef"
+          ],
+          "applianceRetail": [
+            "sc754e31e6205"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ]
         }
-      ]
+      }
     },
     "iron": {
       "name": "钢材",
@@ -6700,7 +5670,9 @@
           "sourceIds": [
             "s4d87c08de021",
             "s1524fe764b15",
-            "s66897a80ed40"
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
           ],
           "method": "cumulative_difference_estimate",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值",
@@ -6881,1249 +5853,410 @@
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
         }
       },
-      "historicalReferences": [
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-01",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1489.3,
-          "unit": "元/吨",
-          "sourceId": "s8ae05ec0d5a4",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-01",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1346.4,
-          "unit": "元/吨",
-          "sourceId": "s8ae05ec0d5a4",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-01",
-          "label": "制造业PMI",
-          "value": 49.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-01",
-          "label": "制造业新订单",
-          "value": 49.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-02",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1453.8,
-          "unit": "元/吨",
-          "sourceId": "sba41d1bd5c34",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-02",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1396.4,
-          "unit": "元/吨",
-          "sourceId": "sba41d1bd5c34",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-02",
-          "label": "制造业PMI",
-          "value": 49,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-02",
-          "label": "制造业新订单",
-          "value": 48.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-03",
-          "label": "粗钢产量",
-          "value": 8704,
-          "unit": "万吨/月",
-          "sourceId": "sab861e1f6762",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-03",
-          "label": "粗钢累计产量 · 1—3月",
-          "value": 24755,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "sab861e1f6762",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-03",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-03",
-          "label": "生铁产量",
-          "value": 7328,
-          "unit": "万吨/月",
-          "sourceId": "sab861e1f6762",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-03",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 9,
-          "unit": "万台/月",
-          "sourceId": "sab861e1f6762",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-03",
-          "label": "汽车总产量",
-          "value": 306.7,
-          "unit": "万辆/月",
-          "sourceId": "sab861e1f6762",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-03",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1495.8,
-          "unit": "元/吨",
-          "sourceId": "s349277796536",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-03",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1346.4,
-          "unit": "元/吨",
-          "sourceId": "s349277796536",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-03",
-          "label": "制造业PMI",
-          "value": 50.4,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-03",
-          "label": "制造业新订单",
-          "value": 51.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-04",
-          "label": "粗钢产量",
-          "value": 8363,
-          "unit": "万吨/月",
-          "sourceId": "s251d616465e6",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-04",
-          "label": "粗钢累计产量 · 1—4月",
-          "value": 33112,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s251d616465e6",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-04",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-04",
-          "label": "生铁产量",
-          "value": 7069,
-          "unit": "万吨/月",
-          "sourceId": "s251d616465e6",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-04",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 9,
-          "unit": "万台/月",
-          "sourceId": "s251d616465e6",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-04",
-          "label": "汽车总产量",
-          "value": 256.4,
-          "unit": "万辆/月",
-          "sourceId": "s251d616465e6",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-04",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1500,
-          "unit": "元/吨",
-          "sourceId": "s809633bcdbca",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-04",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1446.4,
-          "unit": "元/吨",
-          "sourceId": "s809633bcdbca",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-04",
-          "label": "制造业PMI",
-          "value": 50.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-04",
-          "label": "制造业新订单",
-          "value": 50.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-05",
-          "label": "粗钢产量",
-          "value": 8436,
-          "unit": "万吨/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-05",
-          "label": "粗钢累计产量 · 1—5月",
-          "value": 41553,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s72cc5c0d6f51",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-05",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-05",
-          "label": "生铁产量",
-          "value": 7297,
-          "unit": "万吨/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-05",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 8,
-          "unit": "万台/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-05",
-          "label": "汽车总产量",
-          "value": 258.2,
-          "unit": "万辆/月",
-          "sourceId": "s72cc5c0d6f51",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-05",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1581.4,
-          "unit": "元/吨",
-          "sourceId": "s4d06fd47df9b",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-05",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1525,
-          "unit": "元/吨",
-          "sourceId": "s4d06fd47df9b",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-05",
-          "label": "制造业PMI",
-          "value": 50,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-05",
-          "label": "制造业新订单",
-          "value": 49.9,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-06",
-          "label": "粗钢产量",
-          "value": 8367,
-          "unit": "万吨/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-06",
-          "label": "粗钢累计产量 · 1—6月",
-          "value": 49995,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s3887ca4d8c7d",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-06",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-06",
-          "label": "生铁产量",
-          "value": 7199,
-          "unit": "万吨/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-06",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 9,
-          "unit": "万台/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-06",
-          "label": "汽车总产量",
-          "value": 282.4,
-          "unit": "万辆/月",
-          "sourceId": "s3887ca4d8c7d",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-06",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1925,
-          "unit": "元/吨",
-          "sourceId": "s7ca11f99303a",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-06",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1746.4,
-          "unit": "元/吨",
-          "sourceId": "s7ca11f99303a",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-06",
-          "label": "制造业PMI",
-          "value": 50.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-06",
-          "label": "制造业新订单",
-          "value": 51.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-07",
-          "label": "粗钢产量",
-          "value": 7693,
-          "unit": "万吨/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-07",
-          "label": "粗钢累计产量 · 1—7月",
-          "value": 57704,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s41309f5c5ae0",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-07",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-07",
-          "label": "生铁产量",
-          "value": 6835,
-          "unit": "万吨/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-07",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 8,
-          "unit": "万台/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-07",
-          "label": "汽车总产量",
-          "value": 252.9,
-          "unit": "万辆/月",
-          "sourceId": "s41309f5c5ae0",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-07",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 1875,
-          "unit": "元/吨",
-          "sourceId": "s2b909bc0e0dd",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-07",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1740.2,
-          "unit": "元/吨",
-          "sourceId": "s2b909bc0e0dd",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-07",
-          "label": "制造业PMI",
-          "value": 49.2,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-07",
-          "label": "制造业新订单",
-          "value": 48.5,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-08",
-          "label": "粗钢产量",
-          "value": 7461,
-          "unit": "万吨/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-08",
-          "label": "粗钢累计产量 · 1—8月",
-          "value": 65185,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s2cf97d1fad70",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-08",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-08",
-          "label": "生铁产量",
-          "value": 6765,
-          "unit": "万吨/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-08",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 7,
-          "unit": "万台/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-08",
-          "label": "汽车总产量",
-          "value": 269.7,
-          "unit": "万辆/月",
-          "sourceId": "s2cf97d1fad70",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-08",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 858,
-          "unit": "亿元/月",
-          "sourceId": "s55d605a68a49",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位家用电器和音像器材类；零售金额包含价格、政策与渠道变化，不代表产量或实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-08",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 2371.4,
-          "unit": "元/吨",
-          "sourceId": "sa54216845a05",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-08",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1760.7,
-          "unit": "元/吨",
-          "sourceId": "sa54216845a05",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-08",
-          "label": "制造业PMI",
-          "value": 49.8,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-08",
-          "label": "制造业新订单",
-          "value": 50.6,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-09",
-          "label": "粗钢产量",
-          "value": 7359,
-          "unit": "万吨/月",
-          "sourceId": "s1fca86713972",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-09",
-          "label": "粗钢累计产量 · 1—9月",
-          "value": 72477,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s1fca86713972",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-09",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-09",
-          "label": "生铁产量",
-          "value": 6534,
-          "unit": "万吨/月",
-          "sourceId": "s1fca86713972",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "building",
-          "recordedMonth": "2026-09",
-          "label": "建筑 · 房屋竣工面积（单月估算）",
-          "value": 2174,
-          "unit": "万平方米/月",
-          "sourceId": "s4d87c08de021",
-          "method": "cumulative_difference",
-          "calculation": null,
-          "caveat": "当年与上年累计差分估算同比。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-09",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 8,
-          "unit": "万台/月",
-          "sourceId": "s1fca86713972",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-09",
-          "label": "汽车总产量",
-          "value": 306.3,
-          "unit": "万辆/月",
-          "sourceId": "s1fca86713972",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "终端产出／行业景气代理，不代表实际耗钢量。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-09",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 881,
-          "unit": "亿元/月",
-          "sourceId": "s5adad2311ecc",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位当月零售额。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-09",
-          "label": "重点企业钢材库存",
-          "value": 1565,
-          "unit": "万吨 · 9月末",
-          "sourceId": "s78562858cf87",
-          "method": null,
-          "calculation": null,
-          "caveat": "重点企业厂内钢材库存，非全国社会库存。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-09",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 2470,
-          "unit": "元/吨",
-          "sourceId": "sfc6845edf94d",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-09",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 2096.4,
-          "unit": "元/吨",
-          "sourceId": "sfc6845edf94d",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "oreImport",
-          "recordedMonth": "2026-09",
-          "label": "铁矿砂及其精矿进口",
-          "value": 10981.7,
-          "unit": "万吨/月",
-          "sourceId": "s22e973c11420",
-          "method": null,
-          "calculation": null,
-          "caveat": "原料实物量，非铁含量或价格。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "steelExport",
-          "recordedMonth": "2026-09",
-          "label": "钢材出口",
-          "value": 1049.2,
-          "unit": "万吨/月",
-          "sourceId": "s22e973c11420",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "steelImport",
-          "recordedMonth": "2026-09",
-          "label": "钢材进口",
-          "value": 49.2,
-          "unit": "万吨/月",
-          "sourceId": "s22e973c11420",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "steelNetExport",
-          "recordedMonth": "2026-09",
-          "label": "钢材净出口",
-          "value": 1000,
-          "unit": "万吨/月",
-          "sourceId": "s22e973c11420",
-          "method": null,
-          "calculation": null,
-          "caveat": "本页按当月出口减进口计算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-09",
-          "label": "制造业PMI",
-          "value": 50.1,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-09",
-          "label": "制造业新订单",
-          "value": 50.5,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "output",
-          "recordedMonth": "2026-10",
-          "label": "粗钢产量",
-          "value": 7083,
-          "unit": "万吨/月",
-          "sourceId": "s0f60da69beef",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputYtd",
-          "recordedMonth": "2026-10",
-          "label": "粗钢累计产量 · 1—10月",
-          "value": 79561,
-          "unit": "万吨 · 年初至今",
-          "sourceId": "s0f60da69beef",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "outputPriorYear",
-          "recordedMonth": "2026-10",
-          "label": "粗钢产量 · 2025全年",
-          "value": 96081.2,
-          "unit": "万吨 · 全年",
-          "sourceId": "s9f0fb4e9893a",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pig",
-          "recordedMonth": "2026-10",
-          "label": "生铁产量",
-          "value": 6307,
-          "unit": "万吨/月",
-          "sourceId": "s0f60da69beef",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "building",
-          "recordedMonth": "2026-10",
-          "label": "建筑 · 房屋竣工面积（单月估算）",
-          "value": 2273,
-          "unit": "万平方米/月",
-          "sourceId": "s66897a80ed40",
-          "method": "derived_difference",
-          "calculation": {
-            "currentCumulative": 25544,
-            "previousCumulative": 23271,
-            "priorYearCumulative": 34861,
-            "priorYearPreviousCumulative": 31129
-          },
-          "caveat": "当年与上年累计差分估算同比。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "machineTools",
-          "recordedMonth": "2026-10",
-          "label": "机械设备 · 金属切削机床产量",
-          "value": 8,
-          "unit": "万台/月",
-          "sourceId": "s0f60da69beef",
-          "method": null,
-          "calculation": null,
-          "caveat": "机械制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "auto",
-          "recordedMonth": "2026-10",
-          "label": "汽车总产量",
-          "value": 304.5,
-          "unit": "万辆/月",
-          "sourceId": "s0f60da69beef",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "汽车制造景气代表。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "applianceRetail",
-          "recordedMonth": "2026-10",
-          "label": "耐用消费 · 家电音像零售额",
-          "value": 884,
-          "unit": "亿元/月",
-          "sourceId": "sc754e31e6205",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "限额以上单位当月零售额。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "stock",
-          "recordedMonth": "2026-10",
-          "label": "重点企业钢材库存",
-          "value": 1490,
-          "unit": "万吨 · 10月末",
-          "sourceId": "s59aa0644133b",
-          "method": null,
-          "calculation": null,
-          "caveat": "重点企业厂内钢材库存，非全国社会库存；环比对比9月下旬。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "cokingCoal",
-          "recordedMonth": "2026-10",
-          "label": "主焦煤 · 月末价格代理",
-          "value": 2260.7,
-          "unit": "元/吨",
-          "sourceId": "s6e41cc8ee4b7",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "coke",
-          "recordedMonth": "2026-10",
-          "label": "准一级冶金焦 · 月末价格代理",
-          "value": 1896.4,
-          "unit": "元/吨",
-          "sourceId": "s6e41cc8ee4b7",
-          "method": null,
-          "calculation": null,
-          "caveat": "当月下旬均价，非全月均价。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "oreImport",
-          "recordedMonth": "2026-10",
-          "label": "铁矿砂及其精矿进口",
-          "value": 10565.8,
-          "unit": "万吨/月",
-          "sourceId": "sd750545346a3",
-          "method": null,
-          "calculation": null,
-          "caveat": "原料实物量，非铁含量或价格。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "steelExport",
-          "recordedMonth": "2026-10",
-          "label": "钢材出口",
-          "value": 985.4,
-          "unit": "万吨/月",
-          "sourceId": "sd750545346a3",
-          "method": null,
-          "calculation": null,
-          "caveat": "同比环比由SMM海关整理交叉核验。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "steelImport",
-          "recordedMonth": "2026-10",
-          "label": "钢材进口",
-          "value": 39.5,
-          "unit": "万吨/月",
-          "sourceId": "sd750545346a3",
-          "method": null,
-          "calculation": null,
-          "caveat": null,
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "steelNetExport",
-          "recordedMonth": "2026-10",
-          "label": "钢材净出口",
-          "value": 945.9,
-          "unit": "万吨/月",
-          "sourceId": "sd750545346a3",
-          "method": null,
-          "calculation": null,
-          "caveat": "本页按当月出口减进口计算。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "pmi",
-          "recordedMonth": "2026-10",
-          "label": "制造业PMI",
-          "value": 49.3,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
-        },
-        {
-          "id": "newOrders",
-          "recordedMonth": "2026-10",
-          "label": "制造业新订单",
-          "value": 49.4,
-          "unit": "%",
-          "sourceId": "sadb000cde584",
-          "method": "official_monthly",
-          "calculation": null,
-          "caveat": "制造业背景，不代表本品类需求。",
-          "use": "historical_reference_only"
+      "monthlySourceIds": {
+        "2026-01": {
+          "price": [
+            "s8ae05ec0d5a4"
+          ],
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "machineTools": [
+            "s1fca86713972"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s8ae05ec0d5a4"
+          ],
+          "coke": [
+            "s8ae05ec0d5a4"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-02": {
+          "price": [
+            "sba41d1bd5c34"
+          ],
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "machineTools": [
+            "s1fca86713972"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "sba41d1bd5c34"
+          ],
+          "coke": [
+            "sba41d1bd5c34"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-03": {
+          "price": [
+            "s349277796536"
+          ],
+          "output": [
+            "sab861e1f6762"
+          ],
+          "outputYtd": [
+            "sab861e1f6762"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "sab861e1f6762"
+          ],
+          "auto": [
+            "sab861e1f6762"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s349277796536"
+          ],
+          "coke": [
+            "s349277796536"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-04": {
+          "price": [
+            "s809633bcdbca"
+          ],
+          "output": [
+            "s251d616465e6"
+          ],
+          "outputYtd": [
+            "s251d616465e6"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s251d616465e6"
+          ],
+          "auto": [
+            "s251d616465e6"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s809633bcdbca"
+          ],
+          "coke": [
+            "s809633bcdbca"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-05": {
+          "price": [
+            "s4d06fd47df9b"
+          ],
+          "output": [
+            "s72cc5c0d6f51"
+          ],
+          "outputYtd": [
+            "s72cc5c0d6f51"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s72cc5c0d6f51"
+          ],
+          "auto": [
+            "s72cc5c0d6f51"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s4d06fd47df9b"
+          ],
+          "coke": [
+            "s4d06fd47df9b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-06": {
+          "price": [
+            "s7ca11f99303a"
+          ],
+          "output": [
+            "s3887ca4d8c7d"
+          ],
+          "outputYtd": [
+            "s3887ca4d8c7d"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s3887ca4d8c7d"
+          ],
+          "auto": [
+            "s3887ca4d8c7d"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s7ca11f99303a"
+          ],
+          "coke": [
+            "s7ca11f99303a"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-07": {
+          "price": [
+            "s2b909bc0e0dd"
+          ],
+          "output": [
+            "s41309f5c5ae0"
+          ],
+          "outputYtd": [
+            "s41309f5c5ae0"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s41309f5c5ae0"
+          ],
+          "auto": [
+            "s41309f5c5ae0"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s2b909bc0e0dd"
+          ],
+          "coke": [
+            "s2b909bc0e0dd"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-08": {
+          "price": [
+            "sa54216845a05"
+          ],
+          "output": [
+            "s2cf97d1fad70"
+          ],
+          "outputYtd": [
+            "s2cf97d1fad70"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s2cf97d1fad70"
+          ],
+          "auto": [
+            "s2cf97d1fad70"
+          ],
+          "applianceRetail": [
+            "s55d605a68a49"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "sa54216845a05"
+          ],
+          "coke": [
+            "sa54216845a05"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-09": {
+          "price": [
+            "sfc6845edf94d"
+          ],
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d"
+          ],
+          "machineTools": [
+            "s1fca86713972"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "applianceRetail": [
+            "s5adad2311ecc"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "sfc6845edf94d"
+          ],
+          "coke": [
+            "sfc6845edf94d"
+          ],
+          "oreImport": [
+            "s22e973c11420"
+          ],
+          "steelImport": [
+            "s22e973c11420"
+          ],
+          "steelExport": [
+            "s22e973c11420",
+            "s6485d0c6d07a"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-10": {
+          "price": [
+            "s6e41cc8ee4b7"
+          ],
+          "output": [
+            "s0f60da69beef"
+          ],
+          "outputYtd": [
+            "s0f60da69beef"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "machineTools": [
+            "s0f60da69beef"
+          ],
+          "auto": [
+            "s0f60da69beef"
+          ],
+          "applianceRetail": [
+            "sc754e31e6205"
+          ],
+          "stock": [
+            "s59aa0644133b"
+          ],
+          "cokingCoal": [
+            "s6e41cc8ee4b7"
+          ],
+          "coke": [
+            "s6e41cc8ee4b7"
+          ],
+          "oreImport": [
+            "sd750545346a3"
+          ],
+          "steelImport": [
+            "sd750545346a3"
+          ],
+          "steelExport": [
+            "sd750545346a3",
+            "s6485d0c6d07a"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ]
         }
-      ]
+      }
     }
   }
 }

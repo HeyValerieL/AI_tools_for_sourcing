@@ -20,8 +20,8 @@
 |蒙西代理购电价格分项|monthly · 元/千瓦时|[既有来源](https://energydc.cn/policy/mengxi-grid/2026-10/01aa8f0f-bb4a-11f1-959b-ce30ac533824)；[既有来源](https://energydc.cn/policy/mengxi-grid/2026-09/11fc848a-a73a-11f1-9da3-0661777383c9)；[既有来源](https://energydc.cn/policy/mengxi-grid/2026-08/d8896b8e-8b96-11f1-b774-1a4b378581f8)|
 |新疆代理购电价格分项|monthly · 元/千瓦时|[既有来源](https://energydc.cn/policy/xinjiang/2026-10/a24ac153-bbb0-11f1-a54e-ae2e08d0762d)；[既有来源](https://energydc.cn/policy/xinjiang/2026-07/8fd74776-7422-11f1-bb9e-2611e034f7df)；[既有来源](https://energydc.cn/policy/xinjiang/2026-06/0fcff7ed-5aec-11f1-8013-ce4eb8e14712)|
 |云南代理购电价格分项|monthly · 元/千瓦时|[既有来源](https://energydc.cn/policy/yunnan/2026-10/9b409413-bcd8-11f1-959b-ce30ac533824)；[既有来源](https://energydc.cn/policy/yunnan/2026-09/c4194e71-a520-11f1-9ff5-360f4ea078a2)；[既有来源](https://energydc.cn/policy/yunnan/2026-08/bb1d53a4-8cc0-11f1-9faa-32d10e18cf67)|
-|原铝进口|monthly · 万吨/月|[世铝网 · 海关铝产品进口历史表（万吨取整）](https://market.cnal.com/historical/lcjkl.html)；[SMM · 9月原铝进出口分析](https://news.smm.cn/news/104166685)|
-|原铝出口|monthly · 万吨/月|[世铝网 · 海关铝产品进出口历史表（万吨取整）](https://market.cnal.com/historical/lcckl.html)；[SMM · 9月原铝进出口分析](https://news.smm.cn/news/104166685)|
+|原铝进口|monthly · 万吨/月|[SMM · 9月原铝进出口分析](https://news.smm.cn/news/104166685)|
+|原铝出口|monthly · 万吨/月|[SMM · 9月原铝进出口分析](https://news.smm.cn/news/104166685)|
 |未锻轧铝及铝材出口|monthly · 万吨/月|[世铝网 · 海关铝产品进出口历史表（万吨取整）](https://market.cnal.com/historical/lcckl.html)；[SMM · 10月铝产品出口海关数据](https://news.smm.cn/live/detail/HUIC3LPK7647IUMQGOKEWJWK7OQ442SKR73XHFI)|
 |制造业PMI|index · %|[国家统计局 · PMI历史月表](https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202509/t20250930_1961438.html)|
 |制造业新订单指数|index · %|[国家统计局 · PMI历史月表](https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202509/t20250930_1961438.html)|
@@ -34,9 +34,9 @@
 |电解铜单月产量|monthly · 万吨/月|[SMM · 9月电解铜产量](https://news.smm.cn/news/104142858)；[SMM月度产量历史核验](https://www.yhqh.com.cn/upload/cn/file/2025-12/col23/1764575825319.pdf)；[SMM · 8月实际产量](https://m.smm.cn/copper/content/104179419)|
 |电解铜年初至今累计产量|ytd · 万吨|[SMM · 9月电解铜产量](https://news.smm.cn/news/104142858)；[SMM月度产量历史核验](https://www.yhqh.com.cn/upload/cn/file/2025-12/col23/1764575825319.pdf)|
 |电解铜去年全年产量|annual · 万吨|[SMM · 9月电解铜产量](https://news.smm.cn/news/104142858)；[SMM月度产量历史核验](https://www.yhqh.com.cn/upload/cn/file/2025-12/col23/1764575825319.pdf)|
-|房屋竣工面积|monthly · 万平方米/月|现有台账无直接来源，按固定提供方补查|
-|汽车产量|monthly · 万辆/月|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)；[国家统计局 · 7月工业生产](https://www.stats.gov.cn/sj/zxfbhjd/202608/t20260817_1965055.html)|
-|家电音像零售额|monthly · 亿元/月|[国家统计局 · 9月社会消费品零售](https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html)；[国家统计局 · 8月社会消费品零售](https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965311.html)|
+|房屋竣工面积|monthly · 万平方米/月|[国家统计局 · 8、9月房屋竣工累计原表](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965615.html)；[国家统计局 · 2025年1—9月房地产](https://www.stats.gov.cn/sj/zxfbhjd/202510/t20251020_1961609.html)；[国家统计局 · 10月房屋竣工累计](https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html)|
+|汽车产量|monthly · 万辆/月|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 10月工业生产](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)|
+|家电音像零售额|monthly · 亿元/月|[国家统计局 · 10月社会消费品零售](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html)；[国家统计局 · 9月社会消费品零售](https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html)；[国家统计局 · 8月社会消费品零售](https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965311.html)|
 |铜社会库存月末值|month_end · 万吨|[SMM铜社会库存](https://news.smm.cn/keywords/%E5%BA%93%E5%AD%98?page=35)|
 |铜矿砂及精矿进口实物量|monthly · 万吨/月|现有台账无直接来源，按固定提供方补查|
 |现货铜冶炼模型盈亏|monthly · 元/吨|[SMM · 9月电解铜产量](https://news.smm.cn/news/104142858)|
@@ -53,7 +53,7 @@
 |粗钢单月产量|monthly · 万吨/月|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 10月工业生产](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)|
 |粗钢年初至今累计产量|ytd · 万吨|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 10月工业生产](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)|
 |粗钢去年全年产量|annual · 万吨|[国家统计局 · 2025年统计公报](https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html)|
-|房屋竣工面积|monthly · 万平方米/月|[国家统计局 · 8、9月房屋竣工累计原表](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965615.html)；[国家统计局 · 10月房屋竣工累计](https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html)；[国家统计局 · 8、9月房屋竣工累计原表](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965310.html)|
+|房屋竣工面积|monthly · 万平方米/月|[国家统计局 · 8、9月房屋竣工累计原表](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965615.html)；[国家统计局 · 10月房屋竣工累计](https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html)；[国家统计局 · 2025年1—9月房地产](https://www.stats.gov.cn/sj/zxfbhjd/202510/t20251020_1961609.html)|
 |金属切削机床产量|monthly · 万台/月|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 10月工业生产](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)|
 |汽车产量|monthly · 万辆/月|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 10月工业生产](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)|
 |家电音像零售额|monthly · 亿元/月|[国家统计局 · 10月社会消费品零售](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html)；[国家统计局 · 9月社会消费品零售](https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html)；[国家统计局 · 8月社会消费品零售](https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965311.html)|

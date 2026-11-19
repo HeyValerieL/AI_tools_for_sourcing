@@ -16,7 +16,7 @@ class SourcePlanTests(unittest.TestCase):
                        'sourceIds':['old','future','current'],'unit':'万吨/月'}}}}}
         result = plan('aluminum','2026-10',catalog)
         self.assertEqual(result['seeds'][0]['url'],'https://www.stats.gov.cn/2026-10')
-        self.assertEqual(len(result['seeds']),2)
+        self.assertEqual(len(result['seeds']),1)
         self.assertNotIn('historicalReferences',result)
 
     def test_real_catalog_covers_all_categories(self):

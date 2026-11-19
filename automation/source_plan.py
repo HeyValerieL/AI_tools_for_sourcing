@@ -11,13 +11,14 @@ def plan(category, month, catalog=None):
     selected = {}
     profiles = {}
     for mid, profile in group['metrics'].items():
-        candidates = [catalog['sources'][sid] for sid in profile['sourceIds']
+        exact_ids = group.get('monthlySourceIds', {}).get(month, {}).get(mid, [])
+        candidates = [catalog['sources'][sid] for sid in (exact_ids or profile['sourceIds'])
                       if not catalog['sources'][sid]['recordedMonths'] or
                       any(m <= month for m in catalog['sources'][sid]['recordedMonths'])]
-        candidates.sort(key=lambda s: (month in s['recordedMonths'],
+        candidates.sort(key=lambda s: (s.get('publishedAt') or '', month in s['recordedMonths'],
                                       max(s['recordedMonths'] or [''])), reverse=True)
         # Two seeds per indicator: exact-month publication, then historical/provider reference.
-        chosen = candidates[:2]
+        chosen = candidates[:1]  # Keep a current provider seed; search discovers replacements.
         profiles[mid] = {k:v for k,v in profile.items() if k != 'sourceIds'}
         profiles[mid]['sourceUrls'] = [s['url'] for s in chosen]
         for source in chosen:
@@ -25,6 +26,6 @@ def plan(category, month, catalog=None):
             entry['targetMetricIds'].append(mid)
     seeds = sorted(selected.values(), key=lambda s: (
         month in s['recordedMonths'], len(s['targetMetricIds']),
-        max(s['recordedMonths'] or [''])), reverse=True)
+        s.get('publishedAt') or '', max(s['recordedMonths'] or [''])), reverse=True)
     return {'rules':catalog['rules'], 'metrics':profiles, 'seeds':seeds,
             'note':'recordedMonths仅表示旧台账记录，必须从原文重新核验目标统计期；旧数字不传给模型。'}
