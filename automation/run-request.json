@@ -1,4 +1,5 @@
 {
   "month": "2026-10",
-  "request": "verify-row-isolation-and-evidence-constrained-analysis-2026-11-19"
+  "mode": "publish_existing",
+  "request": "verify-final-tests-without-new-model-calls-2026-11-19"
 }

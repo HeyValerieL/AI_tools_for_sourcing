@@ -434,7 +434,9 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
             raise ValueError('发布日期在未来')
         date_tokens = [published, published.replace('-', '/'), published.replace('-', '.'),
                        f'{int(published[:4])}年{int(published[5:7])}月{int(published[8:])}日']
-        if not any(normalize(token) in normalize(text) for token in date_tokens):
+        chinese_date = rf'{int(published[:4])}年0?{int(published[5:7])}月0?{int(published[8:])}日'
+        if not (any(normalize(token) in normalize(text) for token in date_tokens)
+                or re.search(chinese_date, normalize(text))):
             raise ValueError('发布日期未匹配原文，需人工确认')
         return text
 
@@ -457,6 +459,11 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
             year, mon = map(int, month.split('-'))
             evidence = normalize(item['periodEvidence'])
             required_year = year - 1 if item['basis'] == 'annual' else year
+            # The number's already matched verbatim quote can itself supply the
+            # period. Never infer a statistical year from publication metadata.
+            if str(required_year) not in evidence and str(required_year) in normalize(item['quote']):
+                evidence = normalize(item['quote'])
+                item = dict(item, originalPeriodEvidence=item['periodEvidence'], periodEvidence=item['quote'])
             if str(required_year) not in evidence:
                 raise ValueError('统计期证据未明确对应年份')
             if item['basis'] != 'annual' and not (any(token in evidence for token in
