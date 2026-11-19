@@ -167,7 +167,7 @@ jobs:
             }
             const head = (await github.rest.git.getRef({owner, repo, ref: 'heads/' + base})).data.object.sha;
             const tree = await github.rest.git.createTree({owner, repo, base_tree: head, tree: [{path: file, mode:'100644', type:'blob', content}]});
-            const commit = await github.rest.git.createCommit({owner, repo, message:'Draft sourcing research ' + draft.month, tree: tree.data.sha, parents:[parent || head]});
+            const commit = await github.rest.git.createCommit({owner, repo, message:'Draft sourcing research ' + draft.month, tree: tree.data.sha, parents:parent && parent !== head ? [parent, head] : [head]});
             if (parent) await github.rest.git.updateRef({owner, repo, ref:'heads/' + branch, sha:commit.data.sha, force:false});
             else await github.rest.git.createRef({owner, repo, ref:'refs/heads/' + branch, sha:commit.data.sha});
             const body = fs.readFileSync('automation/output/review.md', 'utf8') + '\n\n运行记录与用量见本次 Actions artifacts。请核验后将草稿标为可审核并合并；合并后工作台展示本月研究。';
