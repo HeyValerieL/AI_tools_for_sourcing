@@ -3,70 +3,286 @@
   "reports": {
     "2026-10": {
       "month": "2026-10",
-      "generatedAt": "2026-11-19T08:32:31.058262+00:00",
+      "generatedAt": "2026-11-19T10:06:29.657264+00:00",
       "categories": {
-        "aluminum": {
+        "copper": {
           "facts": [
             {
+              "id": "price",
+              "value": 110175.0,
+              "unit": "元/吨",
+              "period": "2026-10-31",
+              "basis": "month_end_proxy",
+              "definition": "国家统计局流通领域重要生产资料市场价格中'电解铜（1#）'当月下旬（10月21日至月底）监测价格，规格为铜与银质量分数≥99.95%，为批发和销售价格（含流通费用、利润和税费），非出厂价。",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
+              "title": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "publishedAt": "2026-11-04",
+              "quote": "电解铜（ 1# ） 吨 110175.0 -746.4 -0.7",
+              "periodEvidence": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "旬环比：本期为2026年10月下旬，上期为2026年10月中旬，同规格（电解铜1#）价格变动百分比。",
+              "label": "1号电解铜当月下旬价格代理",
+              "section": "price",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "auto",
+              "value": 304.5,
+              "unit": "万辆/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "国家统计局规模以上工业企业汽车当月产量，统计范围为年主营业务收入2000万元及以上工业企业，含新能源汽车，不含规模以下企业。",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "汽车（万辆） 304.5 -7.7 2641.2 -4.1",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": -7.7,
+              "yoyQuote": "汽车 304.5 万辆，下降 7.7% ，其中新能源汽车 202.7 万辆，增长 17.1%",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为规模以上工业企业汽车产量与上年同期同口径比较，报告未公布该分项环比。",
+              "label": "汽车产量",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "applianceRetail",
+              "value": 884,
+              "unit": "亿元/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "社会消费品零售总额中'家用电器和音像器材类'当月零售额，为限额以上单位商品零售额（年主营业务收入500万元及以上零售业企业/单位/个体户），未扣除价格因素的名义值。",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html",
+              "title": "2026年1—10月份社会消费品零售总额增长1.0%",
+              "publishedAt": "2026-11-16",
+              "quote": "家用电器和音像器材类 884 2.5 8902 -4.2",
+              "periodEvidence": "2026年1—10月份社会消费品零售总额增长1.0%",
+              "yoy": 2.5,
+              "yoyQuote": "家用电器和音像器材类 884 2.5 8902 -4.2",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为限额以上单位家用电器和音像器材类零售额与上年同期同口径名义增速；未公布该分项环比。",
+              "label": "家电音像零售额",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "pmi",
+              "value": 49.3,
+              "unit": "%",
+              "period": "2026-10",
+              "basis": "index",
+              "definition": "中国制造业采购经理指数（经季节调整），调查范围覆盖制造业31个行业大类约3200家样本企业，为扩散指数加权合成，50%为荣枯线。",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+              "title": "2026年10月中国采购经理指数运行情况",
+              "publishedAt": "2026-10-31",
+              "quote": "10 月份，制造业采购经理指数（ PMI ）为 49.3% ，比上月下降 0.8 个百分点，制造业景气水平有所回落。",
+              "periodEvidence": "2026年10月中国采购经理指数运行情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": -0.8,
+              "momQuote": "10 月份，制造业采购经理指数（ PMI ）为 49.3% ，比上月下降 0.8 个百分点",
+              "comparisonDefinition": "环比为PMI指数与上月之差（百分点），指数经季节调整。",
+              "label": "制造业PMI",
+              "section": "macro",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "newOrders",
+              "value": 49.4,
+              "unit": "%",
+              "period": "2026-10",
+              "basis": "index",
+              "definition": "中国制造业PMI构成指数中的新订单指数（经季节调整），扩散指数，反映制造业市场需求景气度，50%为荣枯线。",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+              "title": "2026年10月中国采购经理指数运行情况",
+              "publishedAt": "2026-10-31",
+              "quote": "新订单指数为 49.4% ，比上月下降 1.1 个百分点，表明制造业市场需求景气度下降。",
+              "periodEvidence": "2026年10月中国采购经理指数运行情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": -1.1,
+              "momQuote": "新订单指数为 49.4% ，比上月下降 1.1 个百分点",
+              "comparisonDefinition": "环比为新订单指数与上月之差（百分点），经季节调整。",
+              "label": "制造业新订单指数",
+              "section": "macro",
+              "validation": "machine_checked"
+            }
+          ],
+          "policies": [],
+          "missing": [
+            "output",
+            "outputYtd",
+            "outputPriorYear",
+            "building",
+            "stock",
+            "oreImport",
+            "smeltingProfit",
+            "refinedImport",
+            "refinedExport"
+          ],
+          "rejected": [],
+          "sourceHashes": {
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html": "2a71a74beb001f0f960063ee3f39a80538b713ec08085a2d0636526a9265b7f6",
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html": "1de1fab68e182a65bbccdbee9e2417d2c5b33cee35520f352fdb1f722730df81",
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html": "625df923b02a8414f1c6e2c0285498c82fd0d0c316ca84772a49e948ad0d7b94",
+            "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html": "876c72fb38d283d3db5da4c934ac555a2c101756cb5a63e8cd00c77e4208d8ed"
+          },
+          "analysis": {
+            "trend": "震荡",
+            "summary": "10月下旬电解铜（1#）监测价为110175元/吨，旬环比-0.7%，较10月中旬小幅回落；但缺少同比和月环比，不能据此判定中长期方向。需求端分化：制造业PMI为49.3%、新订单指数为49.4%，均低于荣枯线且环比下降；汽车产量304.5万辆、同比-7.7%，其中新能源汽车202.7万辆、同比+17.1%；家电音像零售额884亿元、同比+2.5%。供给、库存、冶炼利润及进出口数据缺失，当前只能确认短期偏弱震荡与需求分化，供需缺口尚无法确认。",
+            "shortTerm": "1—3个月：宏观需求指标偏弱，铜价短期偏弱震荡；但单旬跌幅有限，家电零售和新能源车用铜需求仍有支撑，方向需后续旬度价格与订单数据确认。",
+            "mediumTerm": "3—6个月：待观察。缺少产量、库存、冶炼利润、铜精矿及精铜进出口数据，无法判断供给约束与需求回落的相对强弱，不能由单一月度数据推断长期趋势。",
+            "supportingEvidenceIds": [
+              "price",
+              "pmi",
+              "newOrders",
+              "auto"
+            ],
+            "conflictingEvidenceIds": [
+              "applianceRetail",
+              "auto"
+            ],
+            "actions": [
+              {
+                "title": "缩短定价窗口并分批锁价",
+                "action": "对已确定订单的近期交付量采用分批单边锁价，未锁部分随旬度价格重定价，不一次性覆盖全部确定订单。",
+                "evidenceIds": [
+                  "price",
+                  "pmi",
+                  "newOrders"
+                ],
+                "adjustWhen": "若电解铜旬环比连续两旬转正且新订单指数回到50%以上，恢复常规定价窗口；若旬环比继续为负且新订单指数低于50%，维持短窗口分批。"
+              },
+              {
+                "title": "按需求分化保障交付",
+                "action": "对已确定订单中新能源汽车相关铜用料优先保障交付，传统汽车相关用料放慢补库节奏，不超出确定订单囤货。",
+                "evidenceIds": [
+                  "auto",
+                  "applianceRetail"
+                ],
+                "adjustWhen": "若汽车总产量同比降幅收窄或新能源汽车产量增速回落，重新评估两类用料的补库节奏。"
+              },
+              {
+                "title": "等待供给与库存数据再校准",
+                "action": "暂不因单旬价格回落扩大锁量，维持按确定订单分批采购；跟踪产量、库存、冶炼利润和进出口数据后再调整。",
+                "evidenceIds": [
+                  "price"
+                ],
+                "adjustWhen": "后续公布产量、库存、冶炼利润或进出口数据且价格连续两旬同向变化时调整采购节奏；数据仍缺失则维持条件式分批。"
+              }
+            ],
+            "riskNote": "单旬价格与月度需求口径不同，且供给库存数据缺失，结论不确定性较高。"
+          }
+        },
+        "iron": {
+          "facts": [
+            {
+              "id": "price",
+              "value": 3236.1,
+              "unit": "元/吨",
+              "period": "2026-10-31",
+              "basis": "month_end_proxy",
+              "definition": "流通领域重要生产资料市场价格：热轧普通板卷（4.75—11.5mm，Q235，屈服强度≥235MPa，宽度1500mm），全国300多个交易市场近2000家批发商/代理商/经销商批发和销售价格（含流通费用、利润和税费），为10月下旬（10月21—31日）本期价格",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
+              "title": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "publishedAt": "2026-11-04",
+              "quote": "热轧普通板卷（ 4.75 — 11.5mm ， Q235 ） 吨 3236.1 -32.0 -1.0",
+              "periodEvidence": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "比上期为10月中旬，属旬环比而非月度环比，故不填环比",
+              "label": "热轧普通板卷当月下旬价格代理",
+              "section": "price",
+              "validation": "machine_checked"
+            },
+            {
               "id": "output",
-              "value": 385,
+              "value": 7083,
               "unit": "万吨/月",
               "period": "2026-10",
               "basis": "monthly",
-              "definition": "规模以上工业企业原铝（电解铝）当月产量，统计范围为年主营业务收入2000万元及以上工业企业，单位万吨/月。",
-              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "definition": "规模以上工业企业（年主营业务收入2000万元及以上）粗钢当月产量，全国口径",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
               "title": "2026年10月份规模以上工业增加值增长4.8%",
               "publishedAt": "2026-11-16",
-              "quote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "quote": "粗钢（万吨） 7083 -1.6 79561 -2.8",
               "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
-              "yoy": 1.8,
-              "yoyQuote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "yoy": -1.6,
+              "yoyQuote": "粗钢（万吨） 7083 -1.6 79561 -2.8",
               "mom": null,
               "momQuote": "",
-              "comparisonDefinition": "同比为原铝（电解铝）产量与上年同期可比口径比较（统计范围尽可能一致），单位%；原文未给出环比。",
-              "label": "原铝单月产量",
+              "comparisonDefinition": "同比为与上年同期同口径规上企业范围比较，原文注明增速按可比口径计算；环比原文未发布",
+              "label": "粗钢单月产量",
               "section": "supply",
               "validation": "machine_checked"
             },
             {
               "id": "outputYtd",
-              "value": 3885,
+              "value": 79561,
               "unit": "万吨",
               "period": "2026-01/2026-10",
               "basis": "ytd",
-              "definition": "规模以上工业企业原铝（电解铝）1—10月累计产量，年主营业务收入2000万元及以上工业企业，单位万吨。",
-              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "definition": "规模以上工业企业粗钢1—10月累计产量，全国口径",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
               "title": "2026年10月份规模以上工业增加值增长4.8%",
               "publishedAt": "2026-11-16",
-              "quote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "quote": "粗钢（万吨） 7083 -1.6 79561 -2.8",
               "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
-              "yoy": 3.5,
-              "yoyQuote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "yoy": -2.8,
+              "yoyQuote": "粗钢（万吨） 7083 -1.6 79561 -2.8",
               "mom": null,
               "momQuote": "",
-              "comparisonDefinition": "同比为累计产量与上年同期可比口径比较，单位%；原文未给出环比。",
-              "label": "原铝年初至今累计产量",
+              "comparisonDefinition": "累计同比与上年同期累计同口径比较；无环比",
+              "label": "粗钢年初至今累计产量",
               "section": "supply",
               "validation": "machine_checked"
             },
             {
-              "id": "electronics",
-              "value": 532,
-              "unit": "亿块/月",
-              "period": "2026-10",
-              "basis": "monthly",
-              "definition": "规模以上工业企业集成电路当月产量，年主营业务收入2000万元及以上工业企业，单位亿块/月。",
-              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
-              "title": "2026年10月份规模以上工业增加值增长4.8%",
-              "publishedAt": "2026-11-16",
-              "quote": "集成电路（亿块）\n\n532\n\n21.9\n\n4976\n\n23.0",
-              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
-              "yoy": 21.9,
-              "yoyQuote": "集成电路（亿块）\n\n532\n\n21.9\n\n4976\n\n23.0",
+              "id": "outputPriorYear",
+              "value": 96081.2,
+              "unit": "万吨",
+              "period": "2025",
+              "basis": "annual",
+              "definition": "2025年规模以上工业粗钢全年产量",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html",
+              "title": "中华人民共和国2025年国民经济和社会发展统计公报",
+              "publishedAt": "2026-02-28",
+              "quote": "粗钢 万吨 96081.2 -4.4",
+              "periodEvidence": "中华人民共和国2025年国民经济和社会发展统计公报",
+              "yoy": -4.4,
+              "yoyQuote": "粗钢 万吨 96081.2 -4.4",
               "mom": null,
               "momQuote": "",
-              "comparisonDefinition": "同比为与上年同期可比口径比较（%）；原文未给出环比。",
-              "label": "集成电路产量",
+              "comparisonDefinition": "全年比上年同口径增速",
+              "label": "粗钢去年全年产量",
+              "section": "supply",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "machineTools",
+              "value": 8,
+              "unit": "万台/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "规模以上工业企业金属切削机床当月产量，全国口径",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "金属切削机床（万台） 8 19.0 74 10.4",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": 19.0,
+              "yoyQuote": "金属切削机床（万台） 8 19.0 74 10.4",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为与上年同期同口径规上企业范围比较；环比未发布",
+              "label": "金属切削机床产量",
               "section": "demand",
               "validation": "machine_checked"
             },
@@ -76,134 +292,213 @@
               "unit": "万辆/月",
               "period": "2026-10",
               "basis": "monthly",
-              "definition": "规模以上工业企业汽车当月产量（含轿车、SUV、新能源汽车等全部汽车），年主营业务收入2000万元及以上工业企业，单位万辆/月。",
-              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "definition": "规模以上工业企业汽车当月产量（含新能源汽车），全国口径",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
               "title": "2026年10月份规模以上工业增加值增长4.8%",
               "publishedAt": "2026-11-16",
-              "quote": "汽车（万辆）\n\n304.5\n\n-7.7\n\n2641.2\n\n-4.1",
+              "quote": "汽车（万辆） 304.5 -7.7 2641.2 -4.1",
               "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
               "yoy": -7.7,
-              "yoyQuote": "汽车（万辆）\n\n304.5\n\n-7.7\n\n2641.2\n\n-4.1",
+              "yoyQuote": "汽车（万辆） 304.5 -7.7 2641.2 -4.1",
               "mom": null,
               "momQuote": "",
-              "comparisonDefinition": "同比为与上年同期可比口径比较（%）；原文未给出环比。",
+              "comparisonDefinition": "同比为与上年同期同口径规上企业范围比较；环比未发布",
               "label": "汽车产量",
               "section": "demand",
               "validation": "machine_checked"
             },
             {
-              "id": "aluminumExport",
-              "value": 59,
-              "unit": "万吨/月",
+              "id": "applianceRetail",
+              "value": 884,
+              "unit": "亿元/月",
               "period": "2026-10",
               "basis": "monthly",
-              "definition": "海关总署口径，中国出口未锻轧铝及铝材当月数量，单位万吨/月。",
-              "url": "https://news.mysteel.com/a/26111811/E7A9AB47B5AB5D5B.html",
-              "title": "海关总署：10月中国出口未锻轧铝及铝材59万吨，同比增18.0%",
-              "publishedAt": "2026-11-18",
-              "quote": "海关总署最新数据显示，2026年10月，中国出口未锻轧铝及铝材59万吨，同比增18.0%；1-10月累计出口591万吨，同比增17.8%。",
-              "periodEvidence": "2026年10月，中国出口未锻轧铝及铝材59万吨",
-              "yoy": 18.0,
-              "yoyQuote": "2026年10月，中国出口未锻轧铝及铝材59万吨，同比增18.0%",
+              "definition": "限额以上单位家用电器和音像器材类零售额（名义值，未扣除价格因素），全国口径",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html",
+              "title": "2026年1—10月份社会消费品零售总额增长1.0%",
+              "publishedAt": "2026-11-16",
+              "quote": "家用电器和音像器材类 884 2.5 8902 -4.2",
+              "periodEvidence": "2026年1—10月份社会消费品零售总额增长1.0%",
+              "yoy": 2.5,
+              "yoyQuote": "家用电器和音像器材类 884 2.5 8902 -4.2",
               "mom": null,
               "momQuote": "",
-              "comparisonDefinition": "同比为与上年同月比较（%），原文明确给出；原文未给出环比。",
-              "label": "未锻轧铝及铝材出口",
+              "comparisonDefinition": "同比为限额以上单位同口径企业范围比较，名义增速；环比未发布",
+              "label": "家电音像零售额",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "cokingCoal",
+              "value": 2260.7,
+              "unit": "元/吨",
+              "period": "2026-10-31",
+              "basis": "month_end_proxy",
+              "definition": "流通领域重要生产资料价格：焦煤（主焦煤，含硫量<1%），全国批发和销售价格，10月下旬（10月21—31日）本期价格",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
+              "title": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "publishedAt": "2026-11-04",
+              "quote": "焦煤（主焦煤） 吨 2260.7 28.6 1.3",
+              "periodEvidence": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "比上期为10月中旬，属旬环比非月度环比，故不填",
+              "label": "焦煤当月下旬价格代理",
+              "section": "inputs",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "coke",
+              "value": 1896.4,
+              "unit": "元/吨",
+              "period": "2026-10-31",
+              "basis": "month_end_proxy",
+              "definition": "流通领域重要生产资料价格：焦炭（准一级冶金焦，12.01%≤灰分≤13.50%），全国批发和销售价格，10月下旬（10月21—31日）本期价格",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
+              "title": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "publishedAt": "2026-11-04",
+              "quote": "焦炭（准一级冶金焦） 吨 1896.4 0.0 0.0",
+              "periodEvidence": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "比上期为10月中旬，属旬环比非月度环比，故不填",
+              "label": "准一级冶金焦当月下旬价格代理",
+              "section": "inputs",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "pmi",
+              "value": 49.3,
+              "unit": "%",
+              "period": "2026-10",
+              "basis": "index",
+              "definition": "中国制造业采购经理指数（经季节调整），指数非产量",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+              "title": "2026年10月中国采购经理指数运行情况",
+              "publishedAt": "2026-10-31",
+              "quote": "10 月份，制造业采购经理指数（ PMI ）为 49.3% ，比上月下降 0.8 个百分点，制造业景气水平有所回落。",
+              "periodEvidence": "2026年10月中国采购经理指数运行情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "比上月下降 0.8 个百分点",
+              "comparisonDefinition": "环比以上月为基期，差异以百分点表示，指数经季节调整",
+              "label": "制造业PMI",
+              "section": "macro",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "newOrders",
+              "value": 49.4,
+              "unit": "%",
+              "period": "2026-10",
+              "basis": "index",
+              "definition": "制造业PMI分类指数——新订单指数（经季节调整），扩散指数",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+              "title": "2026年10月中国采购经理指数运行情况",
+              "publishedAt": "2026-10-31",
+              "quote": "新订单指数为 49.4% ，比上月下降 1.1 个百分点，表明制造业市场需求景气度下降。",
+              "periodEvidence": "2026年10月中国采购经理指数运行情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "比上月下降 1.1 个百分点",
+              "comparisonDefinition": "环比以上月为基期，差异以百分点表示，指数经季节调整",
+              "label": "制造业新订单指数",
               "section": "macro",
               "validation": "machine_checked"
             }
           ],
-          "policies": [
-            {
-              "title": "工信部：深化产能治理，严格执行电解铝产能置换政策，严控氧化铝、铜等冶炼新增产能，修订铜、铝等行业规范条例",
-              "impact": "限制国内电解铝及氧化铝冶炼新增供给、遏制低水平重复建设，对国内原铝供给形成约束。",
-              "url": "https://list1.m.mysteel.com/zhishi/ljjghhlm.html#1",
-              "quote": "其中提到重点深化产能治理，实施重点产品产能风险监测预警，严格执行电解铝产能置换政策，严控氧化铝、铜等冶炼新增产能，修订铜、铝等行业规范条例，坚决遏制低水平重复建设，营造公平健康有序的市场环境。",
-              "publishedAt": "2026-10-20",
-              "id": "policy1",
-              "validation": "machine_checked"
-            }
-          ],
+          "policies": [],
           "missing": [
-            "price",
-            "outputPriorYear",
             "building",
-            "applianceRetail",
             "stock",
-            "alumina",
-            "powerShandong",
-            "powerInnerMongolia",
-            "powerXinjiang",
-            "powerYunnan",
-            "primaryImport",
-            "primaryExport",
-            "pmi"
+            "oreImport",
+            "steelImport",
+            "steelExport"
           ],
           "rejected": [
             {
-              "id": "price",
-              "reason": "统计期不符；不沿用旧月值"
+              "id": "stock",
+              "reason": "发布日期未匹配原文，需人工确认"
             },
             {
-              "id": "building",
+              "id": "oreImport",
               "reason": "统计期证据未明确对应年份"
             },
             {
-              "id": "pmi",
-              "reason": "HTTP Error 404: Not Found"
+              "id": "steelImport",
+              "reason": "统计期证据未明确对应年份"
+            },
+            {
+              "id": "steelExport",
+              "reason": "统计期证据未明确对应年份"
             }
           ],
           "sourceHashes": {
-            "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2": "cb551c4db192e6a8ec60e852a97daa6071c5cddbdc5012224a11d9866aa1bd92",
-            "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html#1": "962ab189a8707df22b8a72568ead37f775fbd031382b3afcede42f3efa12fe62",
-            "https://news.mysteel.com/a/26111811/E7A9AB47B5AB5D5B.html": "435270699c563e21e734149b4e8a349fef4513052d2a33d75e7866a1f6682169",
-            "https://list1.m.mysteel.com/zhishi/ljjghhlm.html#1": "8a900cdfa3f8cb6fea39c0b200e6975517093e08cf1c78fac8b25e20e599e2a6"
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html": "2a71a74beb001f0f960063ee3f39a80538b713ec08085a2d0636526a9265b7f6",
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html": "1de1fab68e182a65bbccdbee9e2417d2c5b33cee35520f352fdb1f722730df81",
+            "https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html": "4c104829ea374e84dd5e761bb25903953c2e67edfa174b431479d61762e948dd",
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html": "625df923b02a8414f1c6e2c0285498c82fd0d0c316ca84772a49e948ad0d7b94",
+            "https://www.cnfin.com/dz-lb/detail/20261106/4492370_1.html": "9a8f31eab21df66e40296f3e31d5551bfcff89bd091f470a36bf16f38ab4ce34",
+            "https://news.mysteel.com/a/26111010/E44E5EE5F321C7DD.html": "ee13a549252d1670cdf510f6232568ea7a1833b8cb3382bba4c5f51877002740",
+            "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html": "876c72fb38d283d3db5da4c934ac555a2c101756cb5a63e8cd00c77e4208d8ed"
           },
           "analysis": {
-            "trend": "待观察",
-            "summary": "2026年10月铝市可见供需分化：原铝单月产量385万吨、同比增1.8%，1—10月累计3885万吨、同比增3.5%，供给端保持增长；需求端集成电路产量同比增21.9%、未锻轧铝及铝材出口同比增18.0%，但汽车产量同比降7.7%，终端拉动不一致。政策面强调严格执行电解铝产能置换、严控新增冶炼产能，对中期供给形成约束。输入缺少价格、库存、氧化铝及电力等关键数据，无法确认价格涨跌方向，短期与中期均需待观察。",
-            "shortTerm": "1—3个月，原铝产量同比小幅增长、出口和电子相关需求偏强，但汽车产量同比下降形成拖累；因无价格和库存数据，不能判定上涨或下跌，方向待观察。",
-            "mediumTerm": "3—6个月，电解铝产能置换和严控新增政策对供给形成约束，但需求端汽车走弱与电子、出口偏强并存；缺乏连续月度产量、库存和价格数据，尚不能证明长期趋势，维持待观察。",
+            "trend": "震荡",
+            "summary": "10月下旬热轧板卷3236.1元/吨，较10月中旬-32.0元、-1.0%，为旬环比而非月度环比，不能据此确认月度涨跌。10月粗钢产量7083万吨、同比-1.6%，累计同比-2.8%，供给同比收缩；需求端机床产量同比+19.0%、家电零售额名义同比+2.5%，汽车产量同比-7.7%，分化明显。焦煤旬环比+1.3%、焦炭持平，成本端略有支撑。制造业PMI 49.3、新订单49.4均处收缩区间且环比下降，景气偏弱。综合呈震荡，方向待观察。",
+            "shortTerm": "1—3个月：热卷旬价回落显示短期价格偏弱；粗钢产量同比收缩和焦煤旬环比上涨提供一定支撑，但PMI与新订单低于50、汽车产量同比下降，预计震荡偏弱。因仅有旬环比，月度方向待观察。",
+            "mediumTerm": "3—6个月：累计粗钢产量同比-2.8%延续供给收缩，机床产量和家电零售名义增长部分对冲汽车走弱；但库存、建筑需求、铁矿进口及钢材进出口数据缺失，无法确认供需缺口方向，维持待观察。",
             "supportingEvidenceIds": [
-              "electronics",
-              "aluminumExport",
-              "policy1"
+              "price",
+              "pmi",
+              "newOrders",
+              "auto"
             ],
             "conflictingEvidenceIds": [
-              "auto",
-              "output"
+              "output",
+              "outputYtd",
+              "machineTools",
+              "applianceRetail",
+              "cokingCoal"
             ],
             "actions": [
               {
-                "title": "分批定价、缩短窗口",
-                "action": "对11—12月确定订单按周或半月分批询价定价，不因单月出口和电子数据偏强而单边锁价；出口和电子相关订单优先保障交付。",
+                "title": "确定订单分批锁价",
+                "action": "仅对已确定的订单分批单边锁价，不一次性锁定全月用量；以10月下旬热卷旬价回落、PMI新订单收缩作为当前观察窗口。",
                 "evidenceIds": [
-                  "electronics",
-                  "aluminumExport",
+                  "price",
+                  "pmi",
+                  "newOrders"
+                ],
+                "adjustWhen": "若下一期热卷旬环比由降转升且新订单指数回到50以上，转为缩短锁价窗口并复核。"
+              },
+              {
+                "title": "缩短定价窗口并跟踪焦煤成本",
+                "action": "将热卷定价复核窗口缩短至旬度，跟踪焦煤、焦炭对成本的传导；当前焦煤旬环比+1.3%、焦炭持平，暂不据此扩大锁量。",
+                "evidenceIds": [
+                  "price",
+                  "cokingCoal",
+                  "coke"
+                ],
+                "adjustWhen": "若焦煤旬环比连续两期上涨且热卷旬价止跌，再评估提前锁量；若焦煤转跌则放慢补库。"
+              },
+              {
+                "title": "按需求分化保障关键交付",
+                "action": "对机床、家电相关确定订单保障关键规格热卷交付；对汽车相关订单因产量同比-7.7%保持分批补库，不超出确定订单囤货。",
+                "evidenceIds": [
+                  "machineTools",
+                  "applianceRetail",
                   "auto"
                 ],
-                "adjustWhen": "若后续出现可核验的价格连续回落或库存累积，放慢补库；若出口和电子产量增速维持而汽车降幅收窄，再维持分批锁量。"
-              },
-              {
-                "title": "核实中期供给弹性",
-                "action": "结合电解铝产能置换和严控新增政策，与供应商确认合规产能及3—6个月交付弹性，提前锁量仅覆盖确定订单，不超订单囤货。",
-                "evidenceIds": [
-                  "policy1",
-                  "outputYtd"
-                ],
-                "adjustWhen": "若后续月度产量同比持续高于累计增速或政策执行出现松动，放宽锁量；若交付周期拉长，则对确定订单提前锁量。"
-              },
-              {
-                "title": "汽车相关需求放慢补库",
-                "action": "汽车产量同比降7.7%，对汽车相关铝需求按确定订单放慢补库并缩短定价窗口，避免把库存单点变化当作消费回暖。",
-                "evidenceIds": [
-                  "auto",
-                  "output"
-                ],
-                "adjustWhen": "若汽车产量同比转正或降幅明显收窄，恢复常规补库；若降幅扩大，进一步缩短定价窗口并压降非确定订单备货。"
+                "adjustWhen": "若汽车产量同比降幅收窄或家电零售名义增速转负，调整分批补库节奏。"
               }
             ],
-            "riskNote": "价格与库存数据缺失，当前方向判断可靠性有限，需防单月数据误读。"
+            "riskNote": "旬环比不等于月度环比，且建筑、库存及进出口数据缺失，结论待人工审核。"
           }
         }
       }

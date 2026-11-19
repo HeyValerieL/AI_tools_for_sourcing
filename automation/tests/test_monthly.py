@@ -38,6 +38,40 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_fetch_compresses_blank_space_before_prompt_limit(self):
+        from email.message import Message
+        response = io.BytesIO((' ' * 20000 + '<table><td>385</td><td>1.8</td></table>').encode())
+        response.headers = Message()
+        response.headers['Content-Type'] = 'text/html; charset=utf-8'
+        with patch('urllib.request.build_opener') as opener:
+            opener.return_value.open.return_value = response
+            self.assertEqual(m.fetch_page(URL), '385 1.8')
+
+    def test_energy_fetch_reads_public_api_not_empty_shell(self):
+        from email.message import Message
+        url = 'https://energydc.cn/policy/shandong/2026-10/fef4ddf4-bb12-11f1-959b-ce30ac533824'
+        response = io.BytesIO(json.dumps({'code':200,'data':{'title':'2026年10月电价',
+            'publish':'','content':'当月平均购电价格 0.3405 元/千瓦时'}}).encode())
+        response.headers = Message()
+        response.headers['Content-Type'] = 'application/json; charset=utf-8'
+        with patch('urllib.request.build_opener') as opener:
+            opener.return_value.open.return_value = response
+            text = m.fetch_page(url)
+            self.assertIn('0.3405', text)
+            self.assertIn('/edc/api/v1/eprice/policy/', opener.return_value.open.call_args.args[0].full_url)
+
+    def test_unknown_publication_allowed_only_for_energy_execution_period(self):
+        url = 'https://energydc.cn/policy/shandong/2026-10/fef4ddf4-bb12-11f1-959b-ce30ac533824'
+        item = observation(id='powerShandong', value=.3405, unit='元/千瓦时',
+            url=url,publishedAt='',quote='当月平均购电价格0.3405元/千瓦时',
+            periodEvidence='执行时间2026年10月1日至31日',yoy=None,yoyQuote='')
+        page = item['quote'] + item['periodEvidence']
+        result = m.validate_research('aluminum','2026-10',{'observations':[item]}, {url}, fetch=lambda _:page)
+        self.assertEqual(result['facts'][0]['publicationStatus'],'not_stated')
+        item.update(url=URL)
+        result = m.validate_research('aluminum','2026-10',{'observations':[item]}, {URL}, fetch=lambda _:page)
+        self.assertFalse(result['facts'])
+
     def test_deepseek_selection_never_uses_openai_key(self):
         env = {'DEEPSEEK_API_KEY':'deepseek-test', 'DEEPSEEK_MODEL':'deepseek-v4-pro',
                'OPENAI_API_KEY':'openai-test', 'OPENAI_MODEL':'gpt-6.1-terra'}

@@ -61,3 +61,13 @@ python automation/monthly.py --month 2026-10
 第二条需要环境变量中的密钥和模型；未配置时在联网前停止。没有把密钥写入任何文件的步骤。
 
 实现依据：[OpenAI联网搜索](https://developers.openai.com/api/docs/guides/tools-web-search)、[结构化输出](https://developers.openai.com/api/docs/guides/structured-outputs)、[GitHub定时事件](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule)。
+# 固定来源同步
+
+`source-catalog.json` 从原工作台台账导出；`SOURCES.md` 是便于阅读的对应表。
+每次提取会向模型传入指标口径、单位、历史来源链接与计算规则，不传历史数值。
+DeepSeek 路径先重读最多12个已有链接，再用搜索寻找补充或新月份发布。
+统计期与逐字原文核验继续生效，失败记录在 `source-attempts.json`。
+修改旧台账或指标清单后运行 `python automation/build_source_catalog.py` 重建目录。
+来源目录包含累计差分的四项输入规则；当前自动核验仍不接纳模型自行计算的差分，须人工核验。
+PDF、图片和无法读取的网页目前会记录为缺失，不代表已经自动采集成功。
+

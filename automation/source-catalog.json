@@ -1,0 +1,6262 @@
+{
+  "schemaVersion": 1,
+  "origin": "Existing workbench manually reviewed source ledgers",
+  "rules": [
+    "旧值仅作历史对照；新月份必须重新读取对应原文。",
+    "同一指标固定来源、统计期、单位和规格；换来源需保留差异并人工确认。",
+    "累计差分由程序计算并标估算；缺少输入不推算；1—2月合并值不拆月。",
+    "月末价格代理为当月下旬均价；库存为期末存量；不把上期旬比当月环比。",
+    "未知发布日期保留未知；不能编造日期；发布日不等于统计月份。"
+  ],
+  "sources": {
+    "s1fca86713972": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html",
+      "title": "国家统计局 · 9月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-10-19",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sadb000cde584": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+      "title": "国家统计局 · PMI历史月表",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-10-31",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "observations",
+        "pmi"
+      ],
+      "metricIds": [
+        "newOrders",
+        "pmi"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2c300d485990": {
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=474636",
+      "title": "有色协会 · 9月铝冶炼景气报告",
+      "host": "www.cnmn.com.cn",
+      "format": "html",
+      "publishedAt": "2026-10-15",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "industry",
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s96a1d5461e4e": {
+      "url": "https://news.metal.com/newscontent/104171871-smm-statistics-changes-in-aluminum-ingot-and-billet-inventory-before-and-after-national-day-2020-2026-as-of-october-22",
+      "title": "SMM · 节前后库存回顾",
+      "host": "news.metal.com",
+      "format": "html",
+      "publishedAt": "2026-10-22",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "smm"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4e7995304f54": {
+      "url": "https://www.nea.gov.cn/20261021/bab7b2135e424adeaacf169cb40115ae/c.html",
+      "title": "国家能源局 · 9月用电量",
+      "host": "www.nea.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-10-21",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "energy",
+        "indicators",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s3cc88bcd5750": {
+      "url": "https://youse.mysteel.com/a/26093016/3475A218AC76AFCA.html",
+      "title": "Mysteel · 9月氧化铝月评",
+      "host": "youse.mysteel.com",
+      "format": "html",
+      "publishedAt": "2026-09-30",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "observations",
+        "oxide",
+        "review2"
+      ],
+      "metricIds": [
+        "alumina"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s50e8a3598619": {
+      "url": "https://news.smm.cn/news/104169003",
+      "title": "SMM整理海关 · 9月原铝贸易",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": "2026-10-20",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "customs",
+        "indicators",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "saf06542e46c3": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-september-2026.xlsx",
+      "title": "LME官方 · 9月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s5adad2311ecc": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html",
+      "title": "国家统计局 · 9月社会消费品零售",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-10-19",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "observations",
+        "retail"
+      ],
+      "metricIds": [
+        "applianceRetail"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4d87c08de021": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965615.html",
+      "title": "国家统计局 · 8、9月房屋竣工累计原表",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-10-19",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "observations",
+        "property"
+      ],
+      "metricIds": [
+        "building"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s1524fe764b15": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965310.html",
+      "title": "国家统计局 · 8、9月房屋竣工累计原表",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "property"
+      ],
+      "metricIds": [
+        "building"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s74811c734f89": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202509/t20250930_1961438.html",
+      "title": "国家统计局 · 同期PMI历史表",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-09-30",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "pmiBase"
+      ],
+      "metricIds": [
+        "newOrders",
+        "pmi"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s5e3d694883fd": {
+      "url": "https://news.smm.cn/news/104166685",
+      "title": "SMM · 9月原铝进出口分析",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "tradeAnalysis"
+      ],
+      "metricIds": [
+        "primaryExport",
+        "primaryImport"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sb11569c50212": {
+      "url": "https://hq.smm.cn/aluminum/content/104140206",
+      "title": "SMM · 9月30日电解铝锭社会库存",
+      "host": "hq.smm.cn",
+      "format": "html",
+      "publishedAt": "2026-09-30",
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "socialMonthEnd"
+      ],
+      "metricIds": [
+        "stock"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sbf7d265f7c2a": {
+      "url": "https://news.smm.cn/news/104142882",
+      "title": "SMM · 9月5次龙头加工调查汇总",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": "2026-09-30",
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "components",
+        "indicators",
+        "processingMonthlyProxy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd65f513825ef": {
+      "url": "https://steel.smm.cn/news/13877/104086861",
+      "title": "SMM · 8月31日主流消费地铝锭库存",
+      "host": "steel.smm.cn",
+      "format": "html",
+      "publishedAt": "2026-08-31",
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-08",
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "observations",
+        "socialMonthEnd",
+        "socialPrevious"
+      ],
+      "metricIds": [
+        "stock"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s9f0fb4e9893a": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202602/t20260228_1962662.html",
+      "title": "国家统计局 · 2025年统计公报",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-02-28",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "annual",
+        "indicators",
+        "previousYearOutput"
+      ],
+      "metricIds": [
+        "outputPriorYear"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sf1ca61ab6d2d": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202510/t20251020_1961609.html",
+      "title": "国家统计局 · 2025年1—9月房地产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-10-20",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "baseSources",
+        "propertyBase9"
+      ],
+      "metricIds": [
+        "building"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s7eba844071d9": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202509/t20250915_1961183.html",
+      "title": "国家统计局 · 2025年1—8月房地产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-09-15",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "baseSources",
+        "propertyBase8"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s7c59d906f539": {
+      "url": "https://pic-test-gjmetal-1324067834.cos.ap-shanghai.myqcloud.com/newsv2/f25e4a1cbb524c02a148fbd7a2ef396320260227083035.pdf",
+      "title": "国贸期货 · 铝产业链报告，第29页",
+      "host": "pic-test-gjmetal-1324067834.cos.ap-shanghai.myqcloud.com",
+      "format": "pdf",
+      "publishedAt": "2026-02-26",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "regionalProduction",
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s36568366f25c": {
+      "url": "https://market.cnal.com/historical/lcckl.html",
+      "title": "世铝网 · 海关铝产品进出口历史表（万吨取整）",
+      "host": "market.cnal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "tradeHistory"
+      ],
+      "metricIds": [
+        "aluminumExport"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa7958be48209": {
+      "url": "https://market.cnal.com/historical/lcjkl.html",
+      "title": "世铝网 · 海关铝产品进口历史表（万吨取整）",
+      "host": "market.cnal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "importHistory",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa74bc0f8b56c": {
+      "url": "https://pdf.dfcfw.com/pdf/H3_AP202611081831531609_1.pdf",
+      "title": "国信证券 · 电网工程投资，第14页",
+      "host": "pdf.dfcfw.com",
+      "format": "pdf",
+      "publishedAt": "2026-11-07",
+      "access": "public",
+      "method": "",
+      "caveat": "报告整理国家能源局数据；最新观测为2026年9月。",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "gridDemand",
+        "indicators",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s9bc95d0feae1": {
+      "url": "https://m.mysteel.com/a/26020308/116250B49477A2B7_abc.html",
+      "title": "Mysteel · 情绪与基本面复盘",
+      "host": "m.mysteel.com",
+      "format": "html",
+      "publishedAt": "2026-02-03",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sbf2f495a03b8": {
+      "url": "https://www.guosenqh.com.cn/attach/20260126/20260126003240151_685850.pdf",
+      "title": "国信期货 · 月度策略（1月26日）",
+      "host": "www.guosenqh.com.cn",
+      "format": "pdf",
+      "publishedAt": "2026-01-26",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "review2"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s88dd4b43cd65": {
+      "url": "https://m.mysteel.com/a/26030616/8D939F82D372A42F_abc.html",
+      "title": "Mysteel · 月报库存观察（统计日见指标）",
+      "host": "m.mysteel.com",
+      "format": "html",
+      "publishedAt": "2026-03-06",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "marketView",
+        "observations",
+        "review",
+        "stock"
+      ],
+      "metricIds": [
+        "stock"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "se233e7744f42": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-january-2026.xlsx",
+      "title": "LME官方 · 1月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sfc988f4521d0": {
+      "url": "https://mr.minmetals.com.cn/spqh/jbmyj/202604/P020260402359129637970.pdf",
+      "title": "五矿有色 · 月度供需与开工率",
+      "host": "mr.minmetals.com.cn",
+      "format": "pdf",
+      "publishedAt": "2026-04-02（归档日）",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "monthly",
+        "observations",
+        "review2"
+      ],
+      "metricIds": [
+        "alumina"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd5a12b9df181": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-february-2026.xlsx",
+      "title": "LME官方 · 2月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd2b0a05b7b28": {
+      "url": "https://imgqn.smm.cn/shmm/research_center/files/zHvdU20260429084313.pdf",
+      "title": "瑞达期货 · 3月铝产业链月报",
+      "host": "imgqn.smm.cn",
+      "format": "pdf",
+      "publishedAt": "2026-03-30",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sab861e1f6762": {
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202604/t20260416_1963329.html",
+      "title": "国家统计局 · 3月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-04-16",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s736a11d4d3f8": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-march-2026.xlsx",
+      "title": "LME官方 · 3月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s29e6efd76e98": {
+      "url": "https://news.cnal.com/2026/05-13/1778633033663271.shtml",
+      "title": "有色协会 · 4月铝冶炼报告（世铝网刊载）",
+      "host": "news.cnal.com",
+      "format": "html",
+      "publishedAt": "2026-05-13",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s251d616465e6": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202605/t20260518_1963731.html",
+      "title": "国家统计局 · 4月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-05-18",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s10fcff3f3e5b": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-april-2026.xlsx",
+      "title": "LME官方 · 4月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa6acad77343c": {
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=471495",
+      "title": "有色协会 · 5月铝冶炼景气报告",
+      "host": "www.cnmn.com.cn",
+      "format": "html",
+      "publishedAt": "2026-06-11",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s72cc5c0d6f51": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202606/t20260616_1963953.html",
+      "title": "国家统计局 · 5月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-06-16",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "se012080a9f4e": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-may-2026.xlsx",
+      "title": "LME官方 · 5月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sdd2dde3830c7": {
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=472346",
+      "title": "有色协会 · 6月铝冶炼景气报告",
+      "host": "www.cnmn.com.cn",
+      "format": "html",
+      "publishedAt": "2026-07-14",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s3887ca4d8c7d": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260715_1964123.html",
+      "title": "国家统计局 · 6月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-07-15",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s70f2229d3eaf": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-june-2026.xlsx",
+      "title": "LME官方 · 6月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s50f9fe35bdbc": {
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=473019",
+      "title": "有色协会 · 7月铝冶炼景气报告",
+      "host": "www.cnmn.com.cn",
+      "format": "html",
+      "publishedAt": "2026-08-10",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s41309f5c5ae0": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202608/t20260817_1965055.html",
+      "title": "国家统计局 · 7月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-08-17",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s09413cd1c867": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-july-2026.xlsx",
+      "title": "LME官方 · 7月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s23bd85ffc944": {
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=473966",
+      "title": "有色协会 · 8月铝冶炼景气报告",
+      "host": "www.cnmn.com.cn",
+      "format": "html",
+      "publishedAt": "2026-09-14",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "marketView",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2cf97d1fad70": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html",
+      "title": "国家统计局 · 8月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-09-15",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s669e0abed796": {
+      "url": "https://www.lme.com/-/media/files/data/reports-and-data/warehouse-and-stock-reports/stocks-summary/stocks-august-2026.xlsx",
+      "title": "LME官方 · 8月Stocks Summary",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "lmeStocks",
+        "observations"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s55d605a68a49": {
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965311.html",
+      "title": "国家统计局 · 8月社会消费品零售",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-09-15",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "observations",
+        "retail"
+      ],
+      "metricIds": [
+        "applianceRetail"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s97bd6245ba88": {
+      "url": "https://www.ccmn.cn/news/ZX003/202610/70dc743d70de41d3829b7f3e4a07e8d8.html",
+      "title": "长江有色 · 10月铝月报（公开摘要）",
+      "host": "www.ccmn.cn",
+      "format": "html",
+      "publishedAt": "2026-10-30",
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "marketView",
+        "observations",
+        "review"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "se5c6d60f81bc": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html",
+      "title": "国家统计局 · 同期PMI历史表",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-09-30",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "pmiBase"
+      ],
+      "metricIds": [
+        "newOrders",
+        "pmi"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s0f60da69beef": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
+      "title": "国家统计局 · 10月工业生产",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-11-16",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "nbs",
+        "observations",
+        "source"
+      ],
+      "metricIds": [
+        "auto",
+        "electronics",
+        "machineTools",
+        "output",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6c0cd0a637f4": {
+      "url": "https://news.smm.cn/live/detail/HUIC3LPK7647IUMQGOKEWJWK7OQ442SKR73XHFI",
+      "title": "SMM · 10月铝产品出口海关数据",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "tradeLatest"
+      ],
+      "metricIds": [
+        "aluminumExport"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s66897a80ed40": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html",
+      "title": "国家统计局 · 10月房屋竣工累计",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-11-16",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "property"
+      ],
+      "metricIds": [
+        "building"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sfe5de75779f3": {
+      "url": "https://app.www.gov.cn/govdata/gov/202511/14/540051/article.html",
+      "title": "国家统计局 · 2025年1—10月房地产",
+      "host": "app.www.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-11-14",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "propertyBase10"
+      ],
+      "metricIds": [
+        "building"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sc754e31e6205": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html",
+      "title": "国家统计局 · 10月社会消费品零售",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-11-16",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "retail"
+      ],
+      "metricIds": [
+        "applianceRetail"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sda2aafe5de05": {
+      "url": "https://www.miit.gov.cn/jgsj/ycls/ysjs/art/2025/art_a25489f6687e49f9a9ad144ceea88c56.html",
+      "title": "4500万吨产能上限：约束仍在，供给弹性有限",
+      "host": "www.miit.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators",
+        "policyContext"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sbe392c925320": {
+      "url": "https://static.cninfo.com.cn/finalpage/2026-04-25/1225184484.PDF",
+      "title": "创新新材2025年报 · 引用安泰科，第27—28页",
+      "host": "static.cninfo.com.cn",
+      "format": "pdf",
+      "publishedAt": "2026-04-25",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators",
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s21bf69c8f014": {
+      "url": "https://www.ww.gov.cn/openness/public/6603461/41295772.html",
+      "title": "政府公开 · 2026年9月国网安徽代理购电公告",
+      "host": "www.ww.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-08-31",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sfd42677f8c1b": {
+      "url": "https://energydc.cn/policy/shandong/2026-08/9d17875c-8af1-11f1-b774-1a4b378581f8",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s267487217a00": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-08/d8896b8e-8b96-11f1-b774-1a4b378581f8",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa326e787e3d7": {
+      "url": "https://energydc.cn/policy/yunnan/2026-08/bb1d53a4-8cc0-11f1-9faa-32d10e18cf67",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s909ee462a5ce": {
+      "url": "https://energydc.cn/policy/shandong/2026-09/e9792cf6-a30b-11f1-bf2b-5abfe598dc96",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6da8390dfeae": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-09/11fc848a-a73a-11f1-9da3-0661777383c9",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s1094c601ba05": {
+      "url": "https://energydc.cn/policy/yunnan/2026-09/c4194e71-a520-11f1-9ff5-360f4ea078a2",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "indicators",
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sbd663863dd0b": {
+      "url": "https://energydc.cn/policy/shandong/2026-10/fef4ddf4-bb12-11f1-959b-ce30ac533824",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4449d6431d5c": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-10/01aa8f0f-bb4a-11f1-959b-ce30ac533824",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa8671c9512b0": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-10/a24ac153-bbb0-11f1-a54e-ae2e08d0762d",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s8085a3de5f18": {
+      "url": "https://energydc.cn/policy/yunnan/2026-10/9b409413-bcd8-11f1-959b-ce30ac533824",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sfe32308fe6ae": {
+      "url": "https://energydc.cn/policy/shandong/2026-07/d37a3565-7288-11f1-a341-7e046f2b807b",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s8a2e74025e8a": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-07/976c123b-733f-11f1-a341-7e046f2b807b",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s5bd2949bbd22": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-07/8fd74776-7422-11f1-bb9e-2611e034f7df",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sf71c6d1b3e85": {
+      "url": "https://energydc.cn/policy/yunnan/2026-07/1d2e5622-7426-11f1-a341-7e046f2b807b",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sea8372298781": {
+      "url": "https://energydc.cn/policy/shandong/2026-06/401a235e-5ae9-11f1-8013-ce4eb8e14712",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s5df32f74696e": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-06/8d99c4a2-5b11-11f1-8013-ce4eb8e14712",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sdc92d637bf8c": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-06/0fcff7ed-5aec-11f1-8013-ce4eb8e14712",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa1541ba6af65": {
+      "url": "https://energydc.cn/policy/yunnan/2026-06/07c12d65-5bba-11f1-bb9e-2611e034f7df",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd16b41a519f2": {
+      "url": "https://energydc.cn/policy/shandong/2026-05/87f3422e-428e-11f1-8315-6273940eb9df",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sf6dae17f762e": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-05/0b6b43b1-441b-11f1-acf0-ba7d400e37d3",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sf5588564d0fd": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-05/52d0b726-4291-11f1-8315-6273940eb9df",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sab3dd28a284a": {
+      "url": "https://energydc.cn/policy/yunnan/2026-05/c6fd9ba7-42d9-11f1-8315-6273940eb9df",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6bf53660c47a": {
+      "url": "https://energydc.cn/policy/shandong/2026-04/465992f3-2b1b-11f1-a158-8efec135dcb7",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s39b0ad53c863": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-04/546dccf1-2c11-11f1-9e60-f679c2336431",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sc7475cbf78d1": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-04/cd403dcd-2afe-11f1-b834-22cb0bb52e44",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s9cc3e2e4293d": {
+      "url": "https://energydc.cn/policy/yunnan/2026-04/38397800-3875-11f1-b8eb-521700400de1",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s917bc9dda0cc": {
+      "url": "https://energydc.cn/policy/shandong/2026-03/396f493e-14a5-11f1-af42-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4b6812531a28": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-03/697e80fc-1475-11f1-bdef-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s63b4ed7148b3": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-03/e31262ea-14a1-11f1-8295-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4cf8cc246281": {
+      "url": "https://energydc.cn/policy/yunnan/2026-03/8188649e-38a3-11f1-90eb-7a9d0c550edf",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s118495c29c1b": {
+      "url": "https://energydc.cn/policy/shandong/2026-02/c8957f3a-fcb7-11f0-9a61-46a1f660a16f",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s958ec8403278": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-02/2842ecb4-fd9a-11f0-be32-46a1f660a16f",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa68d4695363a": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-02/19353962-fcbd-11f0-9a61-46a1f660a16f",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sab5c312ff58b": {
+      "url": "https://energydc.cn/policy/yunnan/2026-02/7a53c04c-fcbd-11f0-9a61-46a1f660a16f",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s46b1aa518678": {
+      "url": "https://energydc.cn/policy/shandong/2026-01/63aff15e-f21c-11f0-a688-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerShandong"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s16bc4666917b": {
+      "url": "https://energydc.cn/policy/mengxi-grid/2026-01/a57732f6-ef00-11f0-b6bf-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerInnerMongolia"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6c36c947c9b3": {
+      "url": "https://energydc.cn/policy/xinjiang/2026-01/15c12dd0-e567-11f0-99c2-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerXinjiang"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2b976eb4f47a": {
+      "url": "https://energydc.cn/policy/yunnan/2026-01/c9399c96-e583-11f0-87e0-46a1f660a16e",
+      "title": "既有来源",
+      "host": "energydc.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "observations",
+        "regions"
+      ],
+      "metricIds": [
+        "powerYunnan"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sff37e447506b": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202402/t20240202_1947216.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-01"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "se1eba0d60466": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202403/t20240304_1948066.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-02"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s5c48b621c86d": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202404/t20240403_1948249.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-03"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s0eec1618670e": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202405/t20240506_1948962.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-04"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s5b8d52f2fcda": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202406/t20240603_1954218.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-05"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s72bccad88b1e": {
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202407/t20240703_1955359.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-06"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sc265b2c1aa05": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202408/t20240802_1955927.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-07"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2a7e46fd49d8": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202409/t20240903_1956185.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-08"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2cd4f943ba48": {
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202410/t20241008_1956826.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-09"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s3a9bffb5bcb5": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202411/t20241101_1957234.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-10"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sab3b55ed8e75": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202412/t20241203_1957630.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-11"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s33fac86c2388": {
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202501/t20250103_1958140.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2024-12"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s25c4d61e60a0": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202503/t20250304_1958845.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-02"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s813ab7aa487e": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202504/t20250402_1959191.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-03"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s953150ee6b39": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202505/t20250506_1959568.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-04"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s02c213de340f": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202506/t20250603_1959991.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-05"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s56471a8983c2": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202507/t20250703_1960315.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-06"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s556746dd2885": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202508/t20250801_1960583.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-07"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s893794658527": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202509/t20250903_1961000.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-08"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s1f86a64c1963": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202510/t20251009_1961456.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-09"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sdd316e36bbc3": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202511/t20251103_1961784.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-10"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa56de4355d4e": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202512/t20251203_1961979.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-11"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sc3fba3dc23fe": {
+      "url": "https://www.stats.gov.cn/zwfwck/sjfb/202601/t20260104_1962240.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2025-12"
+      ],
+      "sourceKeys": [
+        "price"
+      ],
+      "metricIds": [
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s8ae05ec0d5a4": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202602/t20260204_1962539.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-02-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sba41d1bd5c34": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202603/t20260303_1962691.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-03-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s349277796536": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202604/t20260403_1962983.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-04-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s809633bcdbca": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202605/t20260506_1963594.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-05-07",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4d06fd47df9b": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202606/t20260603_1963874.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-06-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s7ca11f99303a": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202607/t20260703_1964057.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-07-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2b909bc0e0dd": {
+      "url": "https://www.stats.gov.cn/sj/zxfbhjd/202608/t20260803_1964273.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-08-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-07"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa54216845a05": {
+      "url": "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202609/t20260903_1965182.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-09-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sfc6845edf94d": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261008_1965465.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-10-09",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6e41cc8ee4b7": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
+      "title": "国家统计局 · 流通领域下旬价格",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-11-04",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum",
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "price",
+        "priceSource"
+      ],
+      "metricIds": [
+        "coke",
+        "cokingCoal",
+        "price"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s30a5f797cbbe": {
+      "url": "https://www.stats.gov.cn/sj/zxfb/",
+      "title": "既有来源",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s96994e97e156": {
+      "url": "https://www.metal.com/",
+      "title": "既有来源",
+      "host": "www.metal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s98c2ec46b00b": {
+      "url": "https://data.metal.com/",
+      "title": "既有来源",
+      "host": "data.metal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s8852823088b4": {
+      "url": "https://mfs.mysteelcdn.com/group1/M00/EA/CF/rBL64GdFRhmAZ0GqAA-Bw-TXkBU942.pdf",
+      "title": "既有来源",
+      "host": "mfs.mysteelcdn.com",
+      "format": "pdf",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s8aedf01f338c": {
+      "url": "https://www.ndrc.gov.cn/xwdt/tzgg/202407/P020240723623280665889.pdf",
+      "title": "既有来源",
+      "host": "www.ndrc.gov.cn",
+      "format": "pdf",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "scf3052e5fa61": {
+      "url": "https://data.metal.com/item/aluminum/operating-rates",
+      "title": "既有来源",
+      "host": "data.metal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s40496cb47ddc": {
+      "url": "https://news.metal.com/newscontent/103412550/smm-aluminum-downstream-weekly-survey-high-temperature-off-season-coupled-with-weak-demand-drags-aluminum-processing-operating-rate-drop-to-587",
+      "title": "既有来源",
+      "host": "news.metal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2ec5058bc485": {
+      "url": "https://hq.smm.cn/h5/alu-stock",
+      "title": "既有来源",
+      "host": "hq.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s90bde3780736": {
+      "url": "https://www.metal.com/en/newscontent/103390478",
+      "title": "既有来源",
+      "host": "www.metal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s947096f99f37": {
+      "url": "https://www.shfe.cn/",
+      "title": "既有来源",
+      "host": "www.shfe.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s09fbe128f392": {
+      "url": "https://www.stats.gov.cn/zs/tjws/zytjzbqs/zckze/202501/t20250121_1958385.html",
+      "title": "既有来源",
+      "host": "www.stats.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s59022e96b695": {
+      "url": "https://www.safe.gov.cn/safe/rmbhlzjj/",
+      "title": "既有来源",
+      "host": "www.safe.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd9410c83e052": {
+      "url": "https://www.lme.com/en/market-data/reports-and-data/warehouse-and-stocks-reports/stocks-summary",
+      "title": "既有来源",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sb7d5611efcaa": {
+      "url": "https://www.lme.com/en/Market-Data",
+      "title": "既有来源",
+      "host": "www.lme.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "unverified",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sacb42b98510e": {
+      "url": "https://reports.metal.com/3-smm-aluminum-weekly",
+      "title": "既有来源",
+      "host": "reports.metal.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "paywalled",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s34e90f172959": {
+      "url": "https://hq.smm.cn/wirecable/content/104096556",
+      "title": "components",
+      "host": "hq.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "components"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s76def9b32768": {
+      "url": "https://m.smm.cn/wirecable/content/104108717",
+      "title": "components",
+      "host": "m.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "components"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "se95aaa474f09": {
+      "url": "https://hq.smm.cn/aluminum/content/104120893",
+      "title": "components",
+      "host": "hq.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "components"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6ac1efecd264": {
+      "url": "https://news.smm.cn/news/104134422",
+      "title": "components",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "components"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2d5b6c8cea41": {
+      "url": "https://www.azchina-cn.com/e/action/ShowInfo.php?classid=252&id=314920",
+      "title": "既有来源",
+      "host": "www.azchina-cn.com",
+      "format": "html",
+      "publishedAt": null,
+      "access": "paywalled",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "aluminum"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "indicators"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6facc8a304d6": {
+      "url": "https://www.miit.gov.cn/zwgk/zcjd/art/2025/art_2c4df1fee6df4c54bf4252c989c5ef46.html",
+      "title": "",
+      "host": "www.miit.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-02-11",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "policy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s2a568b2fa773": {
+      "url": "https://news.smm.cn/keywords/%E5%BA%93%E5%AD%98?page=35",
+      "title": "SMM铜社会库存",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "只保留一个代表库存；每月最后有效观察，标实际日期，不累计",
+      "caveat": "主流地区样本；无同口径前月基期不计算环比",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "inventory"
+      ],
+      "metricIds": [
+        "stock"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6fe757a46991": {
+      "url": "https://hq.smm.cn/",
+      "title": "SMM/Mysteel加工开工率",
+      "host": "hq.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "优先原生月度率；周转月需完整同系列与明确汇总法",
+      "caveat": "未取得具体月度率，不用新闻标题或其他品类开工率代填",
+      "categories": [
+        "copper",
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "operating"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s44b6bce4240b": {
+      "url": "https://news.smm.cn/news/104142858",
+      "title": "SMM · 9月电解铜产量",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": "2026-09-30",
+      "access": "partial",
+      "method": "SMM月度产量及发布增速，模型亏损非实际企业账单",
+      "caveat": "与NBS样本不同，不拼接序列",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "smmProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output",
+        "outputPriorYear",
+        "outputYtd",
+        "smeltingProfit"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s88bdbb4860f5": {
+      "url": "https://mri.mysteel.com/a/26031910/28B43115C891EAE9.html",
+      "title": "Mysteel · 铜产业链深度研究框架",
+      "host": "mri.mysteel.com",
+      "format": "html",
+      "publishedAt": "2026-03-19",
+      "access": "partial",
+      "method": "2025年度结构，独立于所选月度景气；其他5%为余项",
+      "caveat": "不与全球消费结构或铜材初级下游份额拼接；其他为100%减已披露五类。",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "demandShares",
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s16c590df1974": {
+      "url": "https://www.yhqh.com.cn/upload/cn/file/2025-12/col23/1764575825319.pdf",
+      "title": "SMM月度产量历史核验",
+      "host": "www.yhqh.com.cn",
+      "format": "pdf",
+      "publishedAt": "2025-12-01",
+      "access": "partial",
+      "method": "SMM同系列实际值；2025年1—12月与2026年已核验月份按月份对齐。缺月跨点连线，不插值；虚线表示中间有缺月。不同报告版本可能修订。",
+      "caveat": "排除报告中E预测值；2025年10—12月另用事后实际发布；不与NBS产量拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2025-01",
+        "2025-02",
+        "2025-03",
+        "2025-04",
+        "2025-05",
+        "2025-06",
+        "2025-07",
+        "2025-08",
+        "2025-09",
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "productionHistory",
+        "source"
+      ],
+      "metricIds": [
+        "output",
+        "outputPriorYear",
+        "outputYtd"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s4dd0ec73cb58": {
+      "url": "https://news.mysteel.com/a/25123117/32DCBD77B089F688.html",
+      "title": "Mysteel · 铜冶炼原料依赖分析",
+      "host": "news.mysteel.com",
+      "format": "html",
+      "publishedAt": "2025-12-31",
+      "access": "public",
+      "method": "2025年9月铜精矿进口金属量÷进口与国产金属量合计；结构背景不冒充当月值",
+      "caveat": "铜精矿原料依赖口径，不等于精炼铜进口占消费比；不是2026年当月比率",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "source",
+        "tradeProfile"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sc16ac1158831": {
+      "url": "https://www.yhqh.com.cn/upload/cn/file/2026-02/col23/1772163506083.pdf",
+      "title": "银河期货 · 1月SMM实际产量",
+      "host": "www.yhqh.com.cn",
+      "format": "pdf",
+      "publishedAt": "2026-02-27",
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s1773c9f614f0": {
+      "url": "https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202410/t20241024_1090051.html",
+      "title": "六部门 · 再生铜原料进口管理公告",
+      "host": "www.mee.gov.cn",
+      "format": "html",
+      "publishedAt": "2024-10-24",
+      "access": "public",
+      "method": "2024年第23号公告，2024年11月15日起实施；政策按月归档",
+      "caveat": "须满足原料技术要求；合规进口通道不等于当月进口量必然增长",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "recycledPolicy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s0b3f003bd480": {
+      "url": "https://www.chinatax.gov.cn/chinatax/n810219/n810724/c5223287/content.html",
+      "title": "税务总局 · 资源回收反向开票政策",
+      "host": "www.chinatax.gov.cn",
+      "format": "html",
+      "publishedAt": "2024-04-26",
+      "access": "public",
+      "method": "2024年第5号公告，2024年4月29日起实施；跟踪回收原料合规流转影响",
+      "caveat": "具体执行、票据与回收量需另行观察；不据此直接估算减产量",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "recyclingTax"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s79b610d13571": {
+      "url": "https://www.yhqh.com.cn/upload/cn/file/2026-03/col23/1773563574669.pdf",
+      "title": "银河期货 · 2月SMM实际产量",
+      "host": "www.yhqh.com.cn",
+      "format": "pdf",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-02"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sc5398548a86e": {
+      "url": "https://www.ccbfutures.com/upload/20260424/20260424173343626.pdf",
+      "title": "建信期货 · 3月SMM实际产量",
+      "host": "www.ccbfutures.com",
+      "format": "pdf",
+      "publishedAt": "2026-04-24",
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-03"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sf2b65cf12a7a": {
+      "url": "https://www.yhqh.com.cn/upload/cn/file/2026-05/col23/1779608066036.pdf",
+      "title": "银河期货 · 4月SMM实际产量",
+      "host": "www.yhqh.com.cn",
+      "format": "pdf",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-04"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd885769521e5": {
+      "url": "https://www.ccbfutures.com/upload/20260602/20260602163133640.pdf",
+      "title": "建信期货 · 引用SMM5月实际产量",
+      "host": "www.ccbfutures.com",
+      "format": "pdf",
+      "publishedAt": "2026-06-02",
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-05"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s0a1e84e67d10": {
+      "url": "https://news.smm.cn/news/104007910",
+      "title": "SMM · 6月实际产量回顾",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-06"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "scec1d3590e08": {
+      "url": "https://m.smm.cn/copper/content/104179419",
+      "title": "SMM · 8月实际产量",
+      "host": "m.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "SMM原生月度实际产量；同比与相邻月环比按同系列计算",
+      "caveat": "报告版本可能修订，不能和NBS系列拼接",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-08"
+      ],
+      "sourceKeys": [
+        "seriesProduction",
+        "source"
+      ],
+      "metricIds": [
+        "output"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sa20619c0c644": {
+      "url": "https://news.smm.cn/news/104168865",
+      "title": "SMM整理海关 · 9月铜矿砂及精矿进出口",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "海关当月实物吨转为万吨；同比环比采用同一分项发布",
+      "caveat": "矿砂实物量含非铜成分，不与精炼铜金属吨相加；初值快报与分项明细可能修订",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "tradeOre"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "see6921646b1a": {
+      "url": "https://news.smm.cn/news/104168859",
+      "title": "SMM整理海关 · 9月精炼铜进出口",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "海关当月实物吨转为万吨；同比环比采用同一分项发布",
+      "caveat": "精炼铜分项口径，不与未锻轧铜及铜材混用；净进口为同月进口减出口",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "tradeMetal"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sfcf3730ac1dc": {
+      "url": "https://www.miit.gov.cn/jgsj/ycls/wjfb/art/2025/art_ae05d24fd05e4df8b6343e1dd53f1464.html",
+      "title": "工信部 · 行业政策原文",
+      "host": "www.miit.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-02-11",
+      "access": "public",
+      "method": "政策与公告按发布时间归档，月度总结影响；不拆分季度数值",
+      "caveat": "政策背景不是实际月度产量或价格",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "policy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s889ec0f76ef4": {
+      "url": "https://www.cnmn.com.cn/ShowNews1.aspx?id=474620",
+      "title": "有色协会 · 9月产业月报",
+      "host": "www.cnmn.com.cn",
+      "format": "html",
+      "publishedAt": "2026-10-15",
+      "access": "public",
+      "method": "各市场月均价格独立保留",
+      "caveat": "外盘美元价格不得直接与国内人民币价作价差",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "copperReport"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s903bdec6efad": {
+      "url": "https://www.yhqh.com.cn/upload/cn/file/2025-11/col23/1762333468165.pdf",
+      "title": "银河期货 · 2025年10月实际产量",
+      "host": "www.yhqh.com.cn",
+      "format": "pdf",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2025-10"
+      ],
+      "sourceKeys": [
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s46287e10faca": {
+      "url": "https://www.ccbfutures.com/upload/20251212/20251212175752107.pdf",
+      "title": "建信期货 · 2025年11月实际产量",
+      "host": "www.ccbfutures.com",
+      "format": "pdf",
+      "publishedAt": "2025-12-12",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2025-11"
+      ],
+      "sourceKeys": [
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s55c50ec6203f": {
+      "url": "https://www.ccbfutures.com/upload/20260109/20260109175226619.pdf",
+      "title": "建信期货 · 2025年12月实际产量",
+      "host": "www.ccbfutures.com",
+      "format": "pdf",
+      "publishedAt": "2026-01-09",
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "copper"
+      ],
+      "recordedMonths": [
+        "2025-12"
+      ],
+      "sourceKeys": [
+        "source"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s33991d2f91aa": {
+      "url": "https://www.miit.gov.cn/jgsj/ycls/wjfb/art/2025/art_854c86c1f4484bcfa78a6b634a7fb5b1.html",
+      "title": "",
+      "host": "www.miit.gov.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [],
+      "sourceKeys": [
+        "policy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sefa2ff86f544": {
+      "url": "https://www.miit.gov.cn/zwgk/zcwj/wjfb/tz/art/2025/art_e0b143ab438a4de4973ba9031c75b673.html",
+      "title": "工信部 · 钢铁稳增长方案",
+      "host": "www.miit.gov.cn",
+      "format": "html",
+      "publishedAt": "2025-09-22",
+      "access": "public",
+      "method": "政策按公开时间归档，观察产量压减执行与产品供给变化",
+      "caveat": "行业增加值增长目标不是粗钢产量增长目标；不能换算统一减产幅度",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "growth",
+        "policy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s78562858cf87": {
+      "url": "https://www.mcchina.org.cn/newsinfo/11355835.html",
+      "title": "中钢协重点企业钢材库存（贸促会转引）",
+      "host": "www.mcchina.org.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "partial",
+      "method": "只保留一个代表库存；每月最后有效观察，标实际日期，不累计",
+      "caveat": "重点企业厂内钢材库存，不等于全国社会库存或热卷单品库存",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-01",
+        "2026-02",
+        "2026-03",
+        "2026-04",
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "inventory"
+      ],
+      "metricIds": [
+        "stock"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd5cc5e1e4be2": {
+      "url": "https://www.miit.gov.cn/jgsj/ycls/gt/art/2026/art_ab23ac96a98f47d7b4777421ee713513.html",
+      "title": "工信部 · 2026年产能置换办法解读",
+      "host": "www.miit.gov.cn",
+      "format": "html",
+      "publishedAt": "2026-05-18",
+      "access": "public",
+      "method": "政策按公开发布日期归入月份；作为中期供给约束，不折算月度减产量",
+      "caveat": "一般置换比例有差异化例外与过渡安排；设计产能退出不等于当月实际减产",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-05",
+        "2026-06",
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "policy"
+      ],
+      "metricIds": [],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s22e973c11420": {
+      "url": "https://news.mysteel.com/a/26110308/15391A475E01E613.html",
+      "title": "中钢协 · 9月钢铁进出口月报（Mysteel转载）",
+      "host": "news.mysteel.com",
+      "format": "html",
+      "publishedAt": "2026-11-03",
+      "access": "public",
+      "method": "海关月度钢材总量；与铁矿石原料分开",
+      "caveat": "",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09"
+      ],
+      "sourceKeys": [
+        "trade"
+      ],
+      "metricIds": [
+        "oreImport",
+        "steelExport",
+        "steelImport"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s6485d0c6d07a": {
+      "url": "https://news.smm.cn/live/detail/XHWB4M5B76WTOBOHDXO467VXA7BBQGLDC7T27QY",
+      "title": "SMM · 10月钢材出口同比环比",
+      "host": "news.smm.cn",
+      "format": "html",
+      "publishedAt": null,
+      "access": "public",
+      "method": "",
+      "caveat": "",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-09",
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "tradeRate"
+      ],
+      "metricIds": [
+        "steelExport"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "s59aa0644133b": {
+      "url": "https://www.cnfin.com/dz-lb/detail/20261106/4492370_1.html",
+      "title": "中钢协 · 10月下旬重点企业钢材库存（新华财经转引）",
+      "host": "www.cnfin.com",
+      "format": "html",
+      "publishedAt": "2026-11-06",
+      "access": "public",
+      "method": "下旬期末库存；环比为上月同旬比较，非上一旬",
+      "caveat": "",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "inventory"
+      ],
+      "metricIds": [
+        "stock"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    },
+    "sd750545346a3": {
+      "url": "https://news.mysteel.com/a/26111010/E44E5EE5F321C7DD.html",
+      "title": "海关总署 · 10月钢铁进出口（Mysteel转载）",
+      "host": "news.mysteel.com",
+      "format": "html",
+      "publishedAt": "2026-11-10",
+      "access": "public",
+      "method": "海关月度钢材总量；与铁矿石原料分开",
+      "caveat": "",
+      "categories": [
+        "iron"
+      ],
+      "recordedMonths": [
+        "2026-10"
+      ],
+      "sourceKeys": [
+        "trade"
+      ],
+      "metricIds": [
+        "oreImport",
+        "steelExport",
+        "steelImport"
+      ],
+      "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
+    }
+  },
+  "categories": {
+    "aluminum": {
+      "name": "铝",
+      "metrics": {
+        "price": {
+          "label": "A00铝锭当月下旬价格代理",
+          "section": "price",
+          "unit": "元/吨",
+          "basis": "month_end_proxy",
+          "sourceIds": [
+            "sff37e447506b",
+            "se1eba0d60466",
+            "s5c48b621c86d",
+            "s0eec1618670e",
+            "s5b8d52f2fcda",
+            "s72bccad88b1e",
+            "sc265b2c1aa05",
+            "s2a7e46fd49d8",
+            "s2cd4f943ba48",
+            "s3a9bffb5bcb5",
+            "sab3b55ed8e75",
+            "s33fac86c2388",
+            "s25c4d61e60a0",
+            "s813ab7aa487e",
+            "s953150ee6b39",
+            "s02c213de340f",
+            "s56471a8983c2",
+            "s556746dd2885",
+            "s893794658527",
+            "s1f86a64c1963",
+            "sdd316e36bbc3",
+            "sa56de4355d4e",
+            "sc3fba3dc23fe",
+            "s8ae05ec0d5a4",
+            "sba41d1bd5c34",
+            "s349277796536",
+            "s809633bcdbca",
+            "s4d06fd47df9b",
+            "s7ca11f99303a",
+            "s2b909bc0e0dd",
+            "sa54216845a05",
+            "sfc6845edf94d",
+            "s6e41cc8ee4b7"
+          ],
+          "method": "month_end_proxy",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "output": {
+          "label": "原铝单月产量",
+          "section": "supply",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "outputYtd": {
+          "label": "原铝年初至今累计产量",
+          "section": "supply",
+          "unit": "万吨",
+          "basis": "ytd",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "ytd",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "outputPriorYear": {
+          "label": "原铝去年全年产量",
+          "section": "supply",
+          "unit": "万吨",
+          "basis": "annual",
+          "sourceIds": [
+            "s9f0fb4e9893a"
+          ],
+          "method": "annual",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "building": {
+          "label": "房屋竣工面积",
+          "section": "demand",
+          "unit": "万平方米/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s4d87c08de021",
+            "s1524fe764b15",
+            "sf1ca61ab6d2d",
+            "s66897a80ed40",
+            "sfe5de75779f3"
+          ],
+          "method": "cumulative_difference_estimate",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值",
+          "calculation": {
+            "formula": "current_ytd - previous_month_ytd",
+            "yoyFormula": "((current_ytd - previous_month_ytd)/(prior_year_ytd - prior_year_previous_ytd)-1)*100",
+            "inputs": [
+              "同年本月累计",
+              "同年上月累计",
+              "上年同月累计",
+              "上年上月累计"
+            ],
+            "caveat": "跨发布版累计差分是估算；保留每个输入来源、年份、统计月、单位，缺值不算。"
+          }
+        },
+        "electronics": {
+          "label": "集成电路产量",
+          "section": "demand",
+          "unit": "亿块/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "applianceRetail": {
+          "label": "家电音像零售额",
+          "section": "demand",
+          "unit": "亿元/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s5adad2311ecc",
+            "s55d605a68a49",
+            "sc754e31e6205"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "auto": {
+          "label": "汽车产量",
+          "section": "demand",
+          "unit": "万辆/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "stock": {
+          "label": "铝锭社会库存月末值",
+          "section": "demand",
+          "unit": "万吨",
+          "basis": "month_end",
+          "sourceIds": [
+            "sb11569c50212",
+            "sd65f513825ef",
+            "s88dd4b43cd65"
+          ],
+          "method": "month_end",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "alumina": {
+          "label": "氧化铝国内现货月均价",
+          "section": "inputs",
+          "unit": "元/吨",
+          "basis": "monthly_average",
+          "sourceIds": [
+            "s3cc88bcd5750",
+            "sfc988f4521d0"
+          ],
+          "method": "monthly_average",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "powerShandong": {
+          "label": "山东代理购电价格分项",
+          "section": "inputs",
+          "unit": "元/千瓦时",
+          "basis": "monthly",
+          "sourceIds": [
+            "sfd42677f8c1b",
+            "s909ee462a5ce",
+            "sbd663863dd0b",
+            "sfe32308fe6ae",
+            "sea8372298781",
+            "sd16b41a519f2",
+            "s6bf53660c47a",
+            "s917bc9dda0cc",
+            "s118495c29c1b",
+            "s46b1aa518678"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "powerInnerMongolia": {
+          "label": "蒙西代理购电价格分项",
+          "section": "inputs",
+          "unit": "元/千瓦时",
+          "basis": "monthly",
+          "sourceIds": [
+            "s267487217a00",
+            "s6da8390dfeae",
+            "s4449d6431d5c",
+            "s8a2e74025e8a",
+            "s5df32f74696e",
+            "sf6dae17f762e",
+            "s39b0ad53c863",
+            "s4b6812531a28",
+            "s958ec8403278",
+            "s16bc4666917b"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "powerXinjiang": {
+          "label": "新疆代理购电价格分项",
+          "section": "inputs",
+          "unit": "元/千瓦时",
+          "basis": "monthly",
+          "sourceIds": [
+            "sa8671c9512b0",
+            "s5bd2949bbd22",
+            "sdc92d637bf8c",
+            "sf5588564d0fd",
+            "sc7475cbf78d1",
+            "s63b4ed7148b3",
+            "sa68d4695363a",
+            "s6c36c947c9b3"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "powerYunnan": {
+          "label": "云南代理购电价格分项",
+          "section": "inputs",
+          "unit": "元/千瓦时",
+          "basis": "monthly",
+          "sourceIds": [
+            "sa326e787e3d7",
+            "s1094c601ba05",
+            "s8085a3de5f18",
+            "sf71c6d1b3e85",
+            "sa1541ba6af65",
+            "sab3dd28a284a",
+            "s9cc3e2e4293d",
+            "s4cf8cc246281",
+            "sab5c312ff58b",
+            "s2b976eb4f47a"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "primaryImport": {
+          "label": "原铝进口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s5e3d694883fd"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "primaryExport": {
+          "label": "原铝出口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s5e3d694883fd"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "aluminumExport": {
+          "label": "未锻轧铝及铝材出口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s36568366f25c",
+            "s6c0cd0a637f4"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "pmi": {
+          "label": "制造业PMI",
+          "section": "macro",
+          "unit": "%",
+          "basis": "index",
+          "sourceIds": [
+            "sadb000cde584",
+            "s74811c734f89",
+            "se5c6d60f81bc"
+          ],
+          "method": "index",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "newOrders": {
+          "label": "制造业新订单指数",
+          "section": "macro",
+          "unit": "%",
+          "basis": "index",
+          "sourceIds": [
+            "sadb000cde584",
+            "s74811c734f89",
+            "se5c6d60f81bc"
+          ],
+          "method": "index",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        }
+      },
+      "monthlySourceIds": {
+        "2026-09": {
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d"
+          ],
+          "electronics": [
+            "s1fca86713972"
+          ],
+          "applianceRetail": [
+            "s5adad2311ecc"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "sb11569c50212"
+          ],
+          "alumina": [
+            "s3cc88bcd5750"
+          ],
+          "primaryImport": [
+            "s5e3d694883fd"
+          ],
+          "primaryExport": [
+            "s5e3d694883fd"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-01": {
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-02": {
+          "alumina": [
+            "sfc988f4521d0"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-03": {
+          "output": [
+            "sab861e1f6762"
+          ],
+          "outputYtd": [
+            "sab861e1f6762"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "sab861e1f6762"
+          ],
+          "auto": [
+            "sab861e1f6762"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-04": {
+          "output": [
+            "s251d616465e6"
+          ],
+          "outputYtd": [
+            "s251d616465e6"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s251d616465e6"
+          ],
+          "auto": [
+            "s251d616465e6"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-05": {
+          "output": [
+            "s72cc5c0d6f51"
+          ],
+          "outputYtd": [
+            "s72cc5c0d6f51"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s72cc5c0d6f51"
+          ],
+          "auto": [
+            "s72cc5c0d6f51"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-06": {
+          "output": [
+            "s3887ca4d8c7d"
+          ],
+          "outputYtd": [
+            "s3887ca4d8c7d"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s3887ca4d8c7d"
+          ],
+          "auto": [
+            "s3887ca4d8c7d"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-07": {
+          "output": [
+            "s41309f5c5ae0"
+          ],
+          "outputYtd": [
+            "s41309f5c5ae0"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s41309f5c5ae0"
+          ],
+          "auto": [
+            "s41309f5c5ae0"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-08": {
+          "output": [
+            "s2cf97d1fad70"
+          ],
+          "outputYtd": [
+            "s2cf97d1fad70"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "electronics": [
+            "s2cf97d1fad70"
+          ],
+          "applianceRetail": [
+            "s55d605a68a49"
+          ],
+          "auto": [
+            "s2cf97d1fad70"
+          ],
+          "stock": [
+            "sd65f513825ef"
+          ],
+          "aluminumExport": [
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-10": {
+          "output": [
+            "s0f60da69beef"
+          ],
+          "outputYtd": [
+            "s0f60da69beef"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "electronics": [
+            "s0f60da69beef"
+          ],
+          "applianceRetail": [
+            "sc754e31e6205"
+          ],
+          "auto": [
+            "s0f60da69beef"
+          ],
+          "aluminumExport": [
+            "s6c0cd0a637f4",
+            "s36568366f25c"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ]
+        }
+      }
+    },
+    "copper": {
+      "name": "铜",
+      "metrics": {
+        "price": {
+          "label": "1号电解铜当月下旬价格代理",
+          "section": "price",
+          "unit": "元/吨",
+          "basis": "month_end_proxy",
+          "sourceIds": [
+            "s8ae05ec0d5a4",
+            "sba41d1bd5c34",
+            "s349277796536",
+            "s809633bcdbca",
+            "s4d06fd47df9b",
+            "s7ca11f99303a",
+            "s2b909bc0e0dd",
+            "sa54216845a05",
+            "sfc6845edf94d",
+            "s6e41cc8ee4b7"
+          ],
+          "method": "month_end_proxy",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "output": {
+          "label": "电解铜单月产量",
+          "section": "supply",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s44b6bce4240b",
+            "s16c590df1974",
+            "sc16ac1158831",
+            "s79b610d13571",
+            "sc5398548a86e",
+            "sf2b65cf12a7a",
+            "sd885769521e5",
+            "s0a1e84e67d10",
+            "scec1d3590e08"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "outputYtd": {
+          "label": "电解铜年初至今累计产量",
+          "section": "supply",
+          "unit": "万吨",
+          "basis": "ytd",
+          "sourceIds": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "method": "ytd",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "outputPriorYear": {
+          "label": "电解铜去年全年产量",
+          "section": "supply",
+          "unit": "万吨",
+          "basis": "annual",
+          "sourceIds": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "method": "annual",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "building": {
+          "label": "房屋竣工面积",
+          "section": "demand",
+          "unit": "万平方米/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d",
+            "s66897a80ed40",
+            "sfe5de75779f3"
+          ],
+          "method": "cumulative_difference_estimate",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值",
+          "calculation": {
+            "formula": "current_ytd - previous_month_ytd",
+            "yoyFormula": "((current_ytd - previous_month_ytd)/(prior_year_ytd - prior_year_previous_ytd)-1)*100",
+            "inputs": [
+              "同年本月累计",
+              "同年上月累计",
+              "上年同月累计",
+              "上年上月累计"
+            ],
+            "caveat": "跨发布版累计差分是估算；保留每个输入来源、年份、统计月、单位，缺值不算。"
+          }
+        },
+        "auto": {
+          "label": "汽车产量",
+          "section": "demand",
+          "unit": "万辆/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "applianceRetail": {
+          "label": "家电音像零售额",
+          "section": "demand",
+          "unit": "亿元/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s5adad2311ecc",
+            "s55d605a68a49",
+            "sc754e31e6205"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "stock": {
+          "label": "铜社会库存月末值",
+          "section": "demand",
+          "unit": "万吨",
+          "basis": "month_end",
+          "sourceIds": [
+            "s2a568b2fa773"
+          ],
+          "method": "month_end",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "oreImport": {
+          "label": "铜矿砂及精矿进口实物量",
+          "section": "inputs",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "smeltingProfit": {
+          "label": "现货铜冶炼模型盈亏",
+          "section": "inputs",
+          "unit": "元/吨",
+          "basis": "monthly",
+          "sourceIds": [
+            "s44b6bce4240b"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "refinedImport": {
+          "label": "精炼铜进口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "refinedExport": {
+          "label": "精炼铜出口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "pmi": {
+          "label": "制造业PMI",
+          "section": "macro",
+          "unit": "%",
+          "basis": "index",
+          "sourceIds": [
+            "sadb000cde584",
+            "s74811c734f89",
+            "se5c6d60f81bc"
+          ],
+          "method": "index",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "newOrders": {
+          "label": "制造业新订单指数",
+          "section": "macro",
+          "unit": "%",
+          "basis": "index",
+          "sourceIds": [
+            "sadb000cde584",
+            "s74811c734f89",
+            "se5c6d60f81bc"
+          ],
+          "method": "index",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        }
+      },
+      "monthlySourceIds": {
+        "2026-01": {
+          "price": [
+            "s8ae05ec0d5a4"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-02": {
+          "price": [
+            "sba41d1bd5c34"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-03": {
+          "price": [
+            "s349277796536"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "sab861e1f6762"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-04": {
+          "price": [
+            "s809633bcdbca"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s251d616465e6"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-05": {
+          "price": [
+            "s4d06fd47df9b"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s72cc5c0d6f51"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-06": {
+          "price": [
+            "s7ca11f99303a"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s3887ca4d8c7d"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-07": {
+          "price": [
+            "s2b909bc0e0dd"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s41309f5c5ae0"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-08": {
+          "price": [
+            "sa54216845a05"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "auto": [
+            "s2cf97d1fad70"
+          ],
+          "applianceRetail": [
+            "s55d605a68a49"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-09": {
+          "price": [
+            "sfc6845edf94d"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "building": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "applianceRetail": [
+            "s5adad2311ecc"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-10": {
+          "price": [
+            "s6e41cc8ee4b7"
+          ],
+          "output": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputYtd": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "outputPriorYear": [
+            "s44b6bce4240b",
+            "s16c590df1974"
+          ],
+          "building": [
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "auto": [
+            "s0f60da69beef"
+          ],
+          "applianceRetail": [
+            "sc754e31e6205"
+          ],
+          "stock": [
+            "s2a568b2fa773"
+          ],
+          "smeltingProfit": [
+            "s44b6bce4240b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ]
+        }
+      }
+    },
+    "iron": {
+      "name": "钢材",
+      "metrics": {
+        "price": {
+          "label": "热轧普通板卷当月下旬价格代理",
+          "section": "price",
+          "unit": "元/吨",
+          "basis": "month_end_proxy",
+          "sourceIds": [
+            "s8ae05ec0d5a4",
+            "sba41d1bd5c34",
+            "s349277796536",
+            "s809633bcdbca",
+            "s4d06fd47df9b",
+            "s7ca11f99303a",
+            "s2b909bc0e0dd",
+            "sa54216845a05",
+            "sfc6845edf94d",
+            "s6e41cc8ee4b7"
+          ],
+          "method": "month_end_proxy",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "output": {
+          "label": "粗钢单月产量",
+          "section": "supply",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "outputYtd": {
+          "label": "粗钢年初至今累计产量",
+          "section": "supply",
+          "unit": "万吨",
+          "basis": "ytd",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "ytd",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "outputPriorYear": {
+          "label": "粗钢去年全年产量",
+          "section": "supply",
+          "unit": "万吨",
+          "basis": "annual",
+          "sourceIds": [
+            "s9f0fb4e9893a"
+          ],
+          "method": "annual",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "building": {
+          "label": "房屋竣工面积",
+          "section": "demand",
+          "unit": "万平方米/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s4d87c08de021",
+            "s1524fe764b15",
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "method": "cumulative_difference_estimate",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值",
+          "calculation": {
+            "formula": "current_ytd - previous_month_ytd",
+            "yoyFormula": "((current_ytd - previous_month_ytd)/(prior_year_ytd - prior_year_previous_ytd)-1)*100",
+            "inputs": [
+              "同年本月累计",
+              "同年上月累计",
+              "上年同月累计",
+              "上年上月累计"
+            ],
+            "caveat": "跨发布版累计差分是估算；保留每个输入来源、年份、统计月、单位，缺值不算。"
+          }
+        },
+        "machineTools": {
+          "label": "金属切削机床产量",
+          "section": "demand",
+          "unit": "万台/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "auto": {
+          "label": "汽车产量",
+          "section": "demand",
+          "unit": "万辆/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s1fca86713972",
+            "sab861e1f6762",
+            "s251d616465e6",
+            "s72cc5c0d6f51",
+            "s3887ca4d8c7d",
+            "s41309f5c5ae0",
+            "s2cf97d1fad70",
+            "s0f60da69beef"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "applianceRetail": {
+          "label": "家电音像零售额",
+          "section": "demand",
+          "unit": "亿元/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s5adad2311ecc",
+            "s55d605a68a49",
+            "sc754e31e6205"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "stock": {
+          "label": "重点企业钢材库存月末值",
+          "section": "demand",
+          "unit": "万吨",
+          "basis": "month_end",
+          "sourceIds": [
+            "s78562858cf87",
+            "s59aa0644133b"
+          ],
+          "method": "month_end",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "cokingCoal": {
+          "label": "焦煤当月下旬价格代理",
+          "section": "inputs",
+          "unit": "元/吨",
+          "basis": "month_end_proxy",
+          "sourceIds": [
+            "s8ae05ec0d5a4",
+            "sba41d1bd5c34",
+            "s349277796536",
+            "s809633bcdbca",
+            "s4d06fd47df9b",
+            "s7ca11f99303a",
+            "s2b909bc0e0dd",
+            "sa54216845a05",
+            "sfc6845edf94d",
+            "s6e41cc8ee4b7"
+          ],
+          "method": "month_end_proxy",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "coke": {
+          "label": "准一级冶金焦当月下旬价格代理",
+          "section": "inputs",
+          "unit": "元/吨",
+          "basis": "month_end_proxy",
+          "sourceIds": [
+            "s8ae05ec0d5a4",
+            "sba41d1bd5c34",
+            "s349277796536",
+            "s809633bcdbca",
+            "s4d06fd47df9b",
+            "s7ca11f99303a",
+            "s2b909bc0e0dd",
+            "sa54216845a05",
+            "sfc6845edf94d",
+            "s6e41cc8ee4b7"
+          ],
+          "method": "month_end_proxy",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "oreImport": {
+          "label": "铁矿砂及精矿进口实物量",
+          "section": "inputs",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s22e973c11420",
+            "sd750545346a3"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "steelImport": {
+          "label": "钢材进口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s22e973c11420",
+            "sd750545346a3"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "steelExport": {
+          "label": "钢材出口",
+          "section": "macro",
+          "unit": "万吨/月",
+          "basis": "monthly",
+          "sourceIds": [
+            "s22e973c11420",
+            "s6485d0c6d07a",
+            "sd750545346a3"
+          ],
+          "method": "monthly",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "pmi": {
+          "label": "制造业PMI",
+          "section": "macro",
+          "unit": "%",
+          "basis": "index",
+          "sourceIds": [
+            "sadb000cde584",
+            "s74811c734f89",
+            "se5c6d60f81bc"
+          ],
+          "method": "index",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        },
+        "newOrders": {
+          "label": "制造业新订单指数",
+          "section": "macro",
+          "unit": "%",
+          "basis": "index",
+          "sourceIds": [
+            "sadb000cde584",
+            "s74811c734f89",
+            "se5c6d60f81bc"
+          ],
+          "method": "index",
+          "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
+        }
+      },
+      "monthlySourceIds": {
+        "2026-01": {
+          "price": [
+            "s8ae05ec0d5a4"
+          ],
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "machineTools": [
+            "s1fca86713972"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s8ae05ec0d5a4"
+          ],
+          "coke": [
+            "s8ae05ec0d5a4"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-02": {
+          "price": [
+            "sba41d1bd5c34"
+          ],
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "machineTools": [
+            "s1fca86713972"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "sba41d1bd5c34"
+          ],
+          "coke": [
+            "sba41d1bd5c34"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-03": {
+          "price": [
+            "s349277796536"
+          ],
+          "output": [
+            "sab861e1f6762"
+          ],
+          "outputYtd": [
+            "sab861e1f6762"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "sab861e1f6762"
+          ],
+          "auto": [
+            "sab861e1f6762"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s349277796536"
+          ],
+          "coke": [
+            "s349277796536"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-04": {
+          "price": [
+            "s809633bcdbca"
+          ],
+          "output": [
+            "s251d616465e6"
+          ],
+          "outputYtd": [
+            "s251d616465e6"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s251d616465e6"
+          ],
+          "auto": [
+            "s251d616465e6"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s809633bcdbca"
+          ],
+          "coke": [
+            "s809633bcdbca"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-05": {
+          "price": [
+            "s4d06fd47df9b"
+          ],
+          "output": [
+            "s72cc5c0d6f51"
+          ],
+          "outputYtd": [
+            "s72cc5c0d6f51"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s72cc5c0d6f51"
+          ],
+          "auto": [
+            "s72cc5c0d6f51"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s4d06fd47df9b"
+          ],
+          "coke": [
+            "s4d06fd47df9b"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-06": {
+          "price": [
+            "s7ca11f99303a"
+          ],
+          "output": [
+            "s3887ca4d8c7d"
+          ],
+          "outputYtd": [
+            "s3887ca4d8c7d"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s3887ca4d8c7d"
+          ],
+          "auto": [
+            "s3887ca4d8c7d"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s7ca11f99303a"
+          ],
+          "coke": [
+            "s7ca11f99303a"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-07": {
+          "price": [
+            "s2b909bc0e0dd"
+          ],
+          "output": [
+            "s41309f5c5ae0"
+          ],
+          "outputYtd": [
+            "s41309f5c5ae0"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s41309f5c5ae0"
+          ],
+          "auto": [
+            "s41309f5c5ae0"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "s2b909bc0e0dd"
+          ],
+          "coke": [
+            "s2b909bc0e0dd"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-08": {
+          "price": [
+            "sa54216845a05"
+          ],
+          "output": [
+            "s2cf97d1fad70"
+          ],
+          "outputYtd": [
+            "s2cf97d1fad70"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "machineTools": [
+            "s2cf97d1fad70"
+          ],
+          "auto": [
+            "s2cf97d1fad70"
+          ],
+          "applianceRetail": [
+            "s55d605a68a49"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "sa54216845a05"
+          ],
+          "coke": [
+            "sa54216845a05"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-09": {
+          "price": [
+            "sfc6845edf94d"
+          ],
+          "output": [
+            "s1fca86713972"
+          ],
+          "outputYtd": [
+            "s1fca86713972"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s4d87c08de021",
+            "sf1ca61ab6d2d"
+          ],
+          "machineTools": [
+            "s1fca86713972"
+          ],
+          "auto": [
+            "s1fca86713972"
+          ],
+          "applianceRetail": [
+            "s5adad2311ecc"
+          ],
+          "stock": [
+            "s78562858cf87"
+          ],
+          "cokingCoal": [
+            "sfc6845edf94d"
+          ],
+          "coke": [
+            "sfc6845edf94d"
+          ],
+          "oreImport": [
+            "s22e973c11420"
+          ],
+          "steelImport": [
+            "s22e973c11420"
+          ],
+          "steelExport": [
+            "s22e973c11420",
+            "s6485d0c6d07a"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "s74811c734f89"
+          ]
+        },
+        "2026-10": {
+          "price": [
+            "s6e41cc8ee4b7"
+          ],
+          "output": [
+            "s0f60da69beef"
+          ],
+          "outputYtd": [
+            "s0f60da69beef"
+          ],
+          "outputPriorYear": [
+            "s9f0fb4e9893a"
+          ],
+          "building": [
+            "s66897a80ed40",
+            "sf1ca61ab6d2d",
+            "sfe5de75779f3"
+          ],
+          "machineTools": [
+            "s0f60da69beef"
+          ],
+          "auto": [
+            "s0f60da69beef"
+          ],
+          "applianceRetail": [
+            "sc754e31e6205"
+          ],
+          "stock": [
+            "s59aa0644133b"
+          ],
+          "cokingCoal": [
+            "s6e41cc8ee4b7"
+          ],
+          "coke": [
+            "s6e41cc8ee4b7"
+          ],
+          "oreImport": [
+            "sd750545346a3"
+          ],
+          "steelImport": [
+            "sd750545346a3"
+          ],
+          "steelExport": [
+            "sd750545346a3",
+            "s6485d0c6d07a"
+          ],
+          "pmi": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ],
+          "newOrders": [
+            "sadb000cde584",
+            "se5c6d60f81bc"
+          ]
+        }
+      }
+    }
+  }
+}
