@@ -38,6 +38,15 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_building_cumulative_cannot_masquerade_as_monthly(self):
+        item = observation(id='building',value=25544,unit='万平方米/月',
+            definition='1—10月房屋竣工面积累计值',quote='1—10月房屋竣工面积25544万平方米',
+            periodEvidence='2026年10月份房地产开发投资情况')
+        page = '2026-11-16。' + item['periodEvidence'] + item['quote']
+        result = m.validate_research('aluminum','2026-10',{'observations':[item]}, {URL}, fetch=lambda _:page)
+        self.assertFalse(result['facts'])
+        self.assertIn('累计',result['rejected'][0]['reason'])
+
     def test_padded_chinese_publication_date_and_period_in_numeric_quote(self):
         item = observation(publishedAt='2026-11-06',
             quote='2026年10月份原铝产量385万吨，同比增长1.8%', periodEvidence='10月份原铝产量')
