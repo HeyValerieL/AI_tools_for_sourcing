@@ -461,7 +461,8 @@ def markdown(report):
     for category, result in report['categories'].items():
         lines += [f"## {CONFIG['categories'][category]['name']}", '']
         if result.get('error'):
-            lines += [f"采集未完成：{result['error']}", '']
+            lines += [f"采集未完成：{result['error']}",
+                      '校验拦截：' + json.dumps(result.get('rejected', []), ensure_ascii=False), '']
             continue
         lines += ['|指标|数值与口径|同比|环比|来源|', '|---|---|---|---|---|']
         for fact in result['facts']:
@@ -478,21 +479,28 @@ def markdown(report):
     return '\n'.join(lines)
 
 
-def run(month, root=ROOT):
+def run(month, root=ROOT, only_category=None):
     client = Client()
     if hasattr(client, 'verify_model'):
         client.verify_model()
     public_path = root / 'data/ai-monthly.json'
     public = json.loads(public_path.read_text(encoding='utf-8')) if public_path.exists() else {'schemaVersion': 1, 'reports': {}}
     report = {'month': month, 'generatedAt': dt.datetime.now(dt.timezone.utc).isoformat(), 'categories': {}}
-    for category, config in CONFIG['categories'].items():
+    selected = {key:value for key,value in CONFIG['categories'].items() if not only_category or key == only_category}
+    if not selected:
+        raise ValueError('未知试采品类')
+    for category, config in selected.items():
+        checked = {}
         try:
             research, citations = client.request(RESEARCH_INSTRUCTIONS, {
                 'category': config['name'], 'month': month,
                 'today': dt.date.today().isoformat(),
                 'metricColumns': ['id', 'section', 'label', 'unit', 'basis'], 'metrics': config['metrics'],
             }, RESEARCH_SCHEMA, search=True)
+            dump(root / f'automation/output/extraction-{category}.json', research)
             checked = validate_research(category, month, research, citations)
+            dump(root / f'automation/output/validation-{category}.json', checked)
+            print(f"{config['name']}：原文提取{len(research.get('observations', []))}项，核验通过{len(checked['facts'])}项，拦截{len(checked['rejected'])}项", flush=True)
             if len(checked['facts']) < 3:
                 raise ValueError('有效事实少于3项；保留旧版，不生成新结论')
             history = [fact for key, old in public['reports'].items() if key < month
@@ -507,12 +515,12 @@ def run(month, root=ROOT):
         except ApiFailure as exc:
             report['categories'][category] = {'error': str(exc)}
             print(f"{config['name']}：{exc}")
-            for remaining in CONFIG['categories']:
+            for remaining in selected:
                 if remaining not in report['categories']:
                     report['categories'][remaining] = {'error': 'API请求已暂停，未继续调用：' + str(exc)}
             break
         except (ValueError, RuntimeError, KeyError, TypeError, OSError) as exc:
-            report['categories'][category] = {'error': str(exc)}
+            report['categories'][category] = dict(checked, error=str(exc))
     output = root / 'automation/output'
     dump(output / 'draft.json', report)
     dump(output / 'usage.json', {'provider':getattr(client, 'provider', 'test'),
@@ -533,9 +541,10 @@ def run(month, root=ROOT):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--month')
+    parser.add_argument('--category', choices=list(CONFIG['categories']))
     args = parser.parse_args()
     try:
-        report = run(target_month(args.month))
+        report = run(target_month(args.month), only_category=args.category)
         print('月报草稿已生成，等待人工审核；未直接发布。')
     except (ValueError, RuntimeError, OSError) as exc:
         raise SystemExit(str(exc))

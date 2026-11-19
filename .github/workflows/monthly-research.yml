@@ -76,10 +76,14 @@ jobs:
           python - <<'PY'
           import json, os, subprocess, sys
           month = os.environ.get('TARGET_MONTH', '')
+          command = [sys.executable, '-u', 'automation/monthly.py']
           if os.environ['TRIGGER_EVENT'] == 'push':
               with open('automation/run-request.json', encoding='utf-8') as f:
-                  month = json.load(f)['month']
-          subprocess.run([sys.executable, 'automation/monthly.py', '--month', month], check=True)
+                  request = json.load(f)
+              month = request['month']
+              if request.get('category'):
+                  command += ['--category', request['category']]
+          subprocess.run(command + ['--month', month], check=True)
           PY
       - name: Keep review and usage records
         if: always() && steps.config.outputs.ready == 'true'
