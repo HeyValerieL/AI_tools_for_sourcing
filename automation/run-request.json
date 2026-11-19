@@ -1,5 +1,5 @@
 {
   "month": "2026-10",
-  "mode": "publish_existing",
-  "request": "verify-corrected-draft-and-36-source-tests-2026-11-19"
+  "category": "copper",
+  "request": "verify-copper-targeted-discovery-and-backup-sources-2026-11-19"
 }

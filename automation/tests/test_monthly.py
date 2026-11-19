@@ -38,6 +38,66 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_verified_trade_tonnes_are_converted_by_program(self):
+        item = observation(id='refinedImport',value=311551.74,unit='吨/月',yoy=None,yoyQuote='',
+            quote='2026年10月精炼铜进口311551.74吨',periodEvidence='2026年10月精炼铜进口',definition='海关精炼铜分项')
+        page='2026-11-16。'+item['quote']
+        result=m.validate_research('copper','2026-10',{'observations':[item]}, {URL},fetch=lambda _:page)
+        fact=result['facts'][0]
+        self.assertAlmostEqual(fact['value'],31.155174)
+        self.assertEqual(fact['reportedValue'],311551.74)
+        self.assertEqual(fact['unit'],'万吨/月')
+        item.update(quote='2026年10月精炼铜进口311551.74万吨')
+        result=m.validate_research('copper','2026-10',{'observations':[item]}, {URL},fetch=lambda _:'2026-11-16。'+item['quote'])
+        self.assertFalse(result['facts'])
+
+    def test_copper_production_cannot_silently_switch_to_nbs(self):
+        result=m.validate_research('copper','2026-10',{'observations':[observation()]},{URL},fetch=lambda _:PAGE)
+        self.assertFalse(result['facts'])
+        self.assertIn('SMM',result['rejected'][0]['reason'])
+
+    def test_stock_uses_actual_last_working_day(self):
+        item=observation(id='stock',value=12.3,unit='万吨',basis='month_end',period='2026-10-30',
+            quote='截至2026年10月30日铜社会库存12.3万吨',periodEvidence='截至2026年10月30日',yoy=None,yoyQuote='')
+        page='2026-11-16。'+item['quote']
+        result=m.validate_research('copper','2026-10',{'observations':[item]},{URL},fetch=lambda _:page)
+        self.assertEqual(result['facts'][0]['period'],'2026-10-30')
+        item['period']='2026-10-31'
+        result=m.validate_research('copper','2026-10',{'observations':[item]},{URL},fetch=lambda _:page)
+        self.assertFalse(result['facts'])
+
+    def test_followup_merges_only_missing_ids_and_preserves_other_categories(self):
+        class FakeClient:
+            provider='deepseek'
+            calls=0
+            usage=[]
+            extraction_rejections=[]
+            raw_research={}
+            payloads=[]
+            def request(self,instructions,payload,schema,search=False):
+                self.calls+=1
+                self.payloads.append(payload)
+                if search:return {'observations':[],'policies':[],'missing':[]},set()
+                return analysis(),set()
+        initial={'facts':[dict(observation(),label='产量'),dict(observation(id='auto'),label='汽车'),dict(observation(id='pmi'),label='PMI')],
+                 'policies':[],'missing':['stock'],'rejected':[],'sourceHashes':{URL:'first'}}
+        extra={'facts':[dict(observation(id='stock'),label='库存'),dict(observation(id='output',value=999),label='产量')],
+               'policies':[],'missing':[],'rejected':[],'sourceHashes':{URL:'second'}}
+        client=FakeClient()
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder)
+            (root/'automation/output').mkdir(parents=True)
+            kept={'facts':[],'analysis':analysis(),'policies':[],'missing':[],'rejected':[]}
+            (root/'automation/output/previous-draft.json').write_text(json.dumps({'month':'2026-10','categories':{'iron':kept}}),encoding='utf-8')
+            with patch.object(m,'Client',return_value=client),patch.object(m,'validate_research',side_effect=[copy.deepcopy(initial),copy.deepcopy(extra)]):
+                report=m.run('2026-10',root,only_category='aluminum')
+            facts=report['categories']['aluminum']['facts']
+            self.assertEqual(next(f['value'] for f in facts if f['id']=='output'),385)
+            self.assertIn('stock',{f['id'] for f in facts})
+            self.assertEqual(client.payloads[1]['searchPhase'],'followup')
+            self.assertIn('iron',report['categories'])
+            self.assertEqual(client.calls,3)
+
     def test_gzip_source_is_decoded_before_extracting_text(self):
         import gzip
         from email.message import Message

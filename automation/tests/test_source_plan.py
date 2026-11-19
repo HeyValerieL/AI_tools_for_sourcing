@@ -13,7 +13,7 @@ class SourcePlanTests(unittest.TestCase):
         catalog = {'rules':[], 'sources':{'old':source('2026-09'),
                    'current':source('2026-10'),'future':source('2026-11')},
                    'categories':{'aluminum':{'metrics':{'output':{
-                       'sourceIds':['old','future','current'],'unit':'万吨/月'}}}}}
+                       'sourceIds':['old','future','current'],'unit':'万吨/月','label':'产量','section':'supply','basis':'monthly'}}}}}
         result = plan('aluminum','2026-10',catalog)
         self.assertEqual(result['seeds'][0]['url'],'https://www.stats.gov.cn/2026-10')
         self.assertEqual(len(result['seeds']),1)
