@@ -12,6 +12,9 @@ import re
 import urllib.error
 import urllib.parse
 import urllib.request
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from source_plan import plan as source_plan
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = json.loads((ROOT / 'automation/config.json').read_text(encoding='utf-8'))
@@ -208,6 +211,26 @@ class Client:
                  f'{period} {inputs}', f'{period} {name} 进口 出口 海关 月度',
                  f'{period} {name} 月末库存 供给 政策']
         pages, seen, total = [], set(), 0
+        fixed = payload.get('sourcePlan', {})
+        attempts = []
+        for seed in fixed.get('seeds', [])[:12]:
+            url = seed['url']
+            if not allowed(url):
+                attempts.append({'url':url,'status':'domain_not_allowed'})
+                continue
+            try:
+                content = fetch_page(url)[:14000]
+            except (OSError, ValueError, LookupError) as exc:
+                attempts.append({'url':url,'status':'unreadable','reason':type(exc).__name__})
+                continue
+            if total + len(content) > 100000:
+                break
+            seen.add(url)
+            total += len(content)
+            pages.append({'url':url,'title':seed['title'],'content':content,
+                          'metricIds':seed['targetMetricIds'],'sourceKind':'existing_source_retrieved_again'})
+            attempts.append({'url':url,'status':'retrieved'})
+        self.source_attempts = getattr(self, 'source_attempts', []) + attempts
         for query in terms[:CONFIG['maxSearchCallsPerCategory']]:
             self.search_calls += 1
             if self.search_calls > 18:
@@ -504,6 +527,7 @@ def run(month, root=ROOT, only_category=None):
                 'category': config['name'], 'month': month,
                 'today': dt.date.today().isoformat(),
                 'metricColumns': ['id', 'section', 'label', 'unit', 'basis'], 'metrics': config['metrics'],
+                'sourcePlan': source_plan(category, month),
             }, RESEARCH_SCHEMA, search=True)
             dump(root / f'automation/output/extraction-{category}.json', research)
             checked = validate_research(category, month, research, citations)
@@ -530,6 +554,7 @@ def run(month, root=ROOT, only_category=None):
         except (ValueError, RuntimeError, KeyError, TypeError, OSError) as exc:
             report['categories'][category] = dict(checked, error=str(exc))
     output = root / 'automation/output'
+    dump(output / 'source-attempts.json', getattr(client, 'source_attempts', []))
     dump(output / 'draft.json', report)
     dump(output / 'usage.json', {'provider':getattr(client, 'provider', 'test'),
                                 'model':getattr(client, 'model', 'test'), 'requests': client.calls,
