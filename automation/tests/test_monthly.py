@@ -86,6 +86,18 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(len(result['facts']), 1)
         self.assertEqual(result['facts'][0]['yoy'], 1.8)
 
+    def test_table_cell_separators_preserve_numbers(self):
+        self.assertTrue(m.number_in(385, '原铝（万吨）\n385\n1.8\n3885\n3.5'))
+        self.assertTrue(m.number_in(1.8, '原铝（万吨）\n385\n1.8\n3885\n3.5'))
+        self.assertFalse(m.number_in(3.1, '增长13.1%'))
+
+    def test_same_source_host_alias_still_requires_original_quote(self):
+        alias = URL.replace('/sj/zxfb/', '/sj/zxfbhjd/')
+        valid = m.validate_research('aluminum','2026-10',{'observations':[observation(url=alias)]},{URL},fetch=lambda _:PAGE)
+        self.assertEqual(len(valid['facts']),1)
+        invalid = m.validate_research('aluminum','2026-10',{'observations':[observation(url=alias)]},{URL},fetch=lambda _:'unrelated page')
+        self.assertFalse(invalid['facts'])
+
     def test_rejects_invalid_source_numbers_units_and_periods(self):
         for changes in [{'value': 999}, {'period': '2026-09'}, {'unit': '吨/月'},
                         {'url': 'https://attacker.example/'}, {'publishedAt': '2099-01-01'},

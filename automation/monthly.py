@@ -317,7 +317,8 @@ actions给1—3条当前行情下的特别采购举动：例如确定订单分�
 
 
 def number_in(value, text):
-    text = normalize(text)
+    # Keep cell separators: removing whitespace turns "385\n1.8" into 3851.8.
+    text = html.unescape(str(text)).replace(',', '').replace('，', '').replace('−', '-')
     # Exact numeric tokens avoid accepting 3.1 in 13.1 or 31.
     return any(math.isclose(float(n), value, rel_tol=0, abs_tol=1e-9)
                for n in re.findall(r'(?<![\d.])-?\d+(?:\.\d+)?(?![\d.])', text))
@@ -341,7 +342,8 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
 
     def page(item):
         url = item['url']
-        if url not in cited_urls or not allowed(url):
+        cited_hosts = {urllib.parse.urlsplit(link).hostname for link in cited_urls if allowed(link)}
+        if not allowed(url) or urllib.parse.urlsplit(url).hostname not in cited_hosts:
             raise ValueError('未在联网搜索引用来源中，或域名不在白名单')
         if url not in pages:
             if len(pages) >= CONFIG['maxSourcePagesPerCategory']:
@@ -386,7 +388,8 @@ def validate_research(category, month, research, cited_urls, fetch=fetch_page):
                     or re.search(rf'(?<!\d)0?{mon}月', evidence)):
                 raise ValueError('统计期证据未明确对应月份')
             if item['basis'] == 'month_end_proxy' and ('stats.gov.cn' not in urllib.parse.urlsplit(item['url']).hostname
-                    or not re.search(r'21\s*[—–－至-]\s*\d+', item['periodEvidence'])):
+                    or not (re.search(r'21\s*[—–－至-]\s*\d+', item['periodEvidence'])
+                            or '下旬' in item['periodEvidence'])):
                 raise ValueError('月末代理必须来自国家统计局下旬原始发布')
             value = dict(item, label=metric[2], section=metric[1], validation='machine_checked')
             for change in ('yoy', 'mom'):
