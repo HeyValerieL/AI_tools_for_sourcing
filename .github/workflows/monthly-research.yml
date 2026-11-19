@@ -77,6 +77,24 @@ jobs:
                   f.write('尚未启用付费AI调用：请配置对应服务商的API_KEY secret和MODEL variable，见配置步骤日志。\n')
               raise SystemExit('配置缺失，采集尚未启动；请核对仓库级变量。')
           PY
+      - name: Preserve other categories for a single-category trial
+        if: github.event_name == 'push' && steps.mode.outputs.publish_existing != 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const request = JSON.parse(fs.readFileSync('automation/run-request.json','utf8'));
+            if (!request.category) return;
+            if (!['aluminum','copper','iron'].includes(request.category)) throw new Error('Invalid category');
+            if (!/^\d{4}-(0[1-9]|1[0-2])$/.test(request.month)) throw new Error('Invalid month');
+            try {
+              const response = await github.rest.repos.getContent({...context.repo,path:'data/ai-monthly.json',ref:'ai/monthly-' + request.month});
+              const data = JSON.parse(Buffer.from(response.data.content,'base64').toString('utf8'));
+              const report = data.reports[request.month];
+              if (!report) return;
+              fs.mkdirSync('automation/output',{recursive:true});
+              fs.writeFileSync('automation/output/previous-draft.json',JSON.stringify(report,null,2));
+            } catch(e) { if (e.status !== 404) throw e; }
       - name: Collect, validate and draft
         if: steps.config.outputs.ready == 'true' && steps.mode.outputs.publish_existing != 'true'
         env:

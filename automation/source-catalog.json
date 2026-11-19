@@ -4080,7 +4080,9 @@
       "sourceKeys": [
         "tradeOre"
       ],
-      "metricIds": [],
+      "metricIds": [
+        "oreImport"
+      ],
       "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
     },
     "see6921646b1a": {
@@ -4101,7 +4103,10 @@
       "sourceKeys": [
         "tradeMetal"
       ],
-      "metricIds": [],
+      "metricIds": [
+        "refinedExport",
+        "refinedImport"
+      ],
       "reviewStatus": "previous_manual_source_record_not_revalidated_by_catalog_export"
     },
     "sfcf3730ac1dc": {
@@ -5171,7 +5176,9 @@
           "section": "inputs",
           "unit": "万吨/月",
           "basis": "monthly",
-          "sourceIds": [],
+          "sourceIds": [
+            "sa20619c0c644"
+          ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
         },
@@ -5191,7 +5198,9 @@
           "section": "macro",
           "unit": "万吨/月",
           "basis": "monthly",
-          "sourceIds": [],
+          "sourceIds": [
+            "see6921646b1a"
+          ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
         },
@@ -5200,7 +5209,9 @@
           "section": "macro",
           "unit": "万吨/月",
           "basis": "monthly",
-          "sourceIds": [],
+          "sourceIds": [
+            "see6921646b1a"
+          ],
           "method": "monthly",
           "missingPolicy": "记录来源失败原因并留空；不得搬用上月值"
         },
@@ -5536,8 +5547,17 @@
           "stock": [
             "s2a568b2fa773"
           ],
+          "oreImport": [
+            "sa20619c0c644"
+          ],
           "smeltingProfit": [
             "s44b6bce4240b"
+          ],
+          "refinedImport": [
+            "see6921646b1a"
+          ],
+          "refinedExport": [
+            "see6921646b1a"
           ],
           "pmi": [
             "sadb000cde584",

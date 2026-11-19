@@ -1,7 +1,9 @@
 {
   "schemaVersion": 1,
   "maxOutputTokens": 9000,
-  "maxSearchCallsPerCategory": 6,
+  "maxSearchCallsPerCategory": 9,
+  "maxSearchCallsPerRun": 27,
+  "maxModelCallsPerRun": 9,
   "maxSourcePagesPerCategory": 18,
   "allowedDomains": [
     "stats.gov.cn",

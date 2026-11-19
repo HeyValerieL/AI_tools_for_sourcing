@@ -64,7 +64,7 @@ def build(root=ROOT):
         'steelExport':['trade','tradeRate'], 'steelImport':['trade'], 'steelNetExport':['trade'],
         'aluminumExport':['tradeLatest','tradeHistory'], 'aluminumImport':['importHistory'],
         'primaryImport':['tradeAnalysis'], 'primaryExport':['tradeAnalysis'],
-        'oreImport':['trade','oreImport'], 'refinedImport':['refinedImport'], 'refinedExport':['refinedExport'],
+        'oreImport':['trade','oreImport','tradeOre'], 'refinedImport':['refinedImport','tradeMetal'], 'refinedExport':['refinedExport','tradeMetal'],
         'cokingCoal':['price'], 'coke':['price'], 'smeltingProfit':['smmProduction'],
     }
     for category in config['categories']:

@@ -3,7 +3,7 @@
   "reports": {
     "2026-10": {
       "month": "2026-10",
-      "generatedAt": "2026-11-19T10:15:41.730319+00:00",
+      "generatedAt": "2026-11-19T13:40:57.774074+00:00",
       "categories": {
         "aluminum": {
           "facts": [
@@ -348,179 +348,6 @@
             }
           ]
         },
-        "copper": {
-          "facts": [
-            {
-              "id": "price",
-              "value": 110175,
-              "unit": "元/吨",
-              "period": "2026-10-31",
-              "basis": "month_end_proxy",
-              "definition": "国家统计局流通领域重要生产资料市场价格中电解铜（1#）2026年10月下旬本期价格，规格为铜与银质量分数≥99.95%，价格为批发和销售价格（含流通费用、利润和税费）",
-              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
-              "title": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
-              "publishedAt": "2026-11-04",
-              "quote": "电解铜（ 1# ） 吨 110175.0 -746.4 -0.7",
-              "periodEvidence": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
-              "yoy": null,
-              "yoyQuote": "",
-              "mom": null,
-              "momQuote": "",
-              "comparisonDefinition": "原文仅给出10月下旬与10月中旬的旬环比涨跌（-0.7%），非月度同比或月度环比，故不填yoy/mom",
-              "label": "1号电解铜当月下旬价格代理",
-              "section": "price",
-              "validation": "machine_checked"
-            },
-            {
-              "id": "auto",
-              "value": 304.5,
-              "unit": "万辆/月",
-              "period": "2026-10",
-              "basis": "monthly",
-              "definition": "规模以上工业汽车产量，10月当月绝对量，统计范围为年主营业务收入2000万元及以上工业企业",
-              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
-              "title": "2026年10月份规模以上工业增加值增长4.8%",
-              "publishedAt": "2026-11-16",
-              "quote": "汽车（万辆） 304.5 -7.7 2641.2 -4.1",
-              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
-              "yoy": -7.7,
-              "yoyQuote": "汽车 304.5 万辆，下降 7.7%",
-              "mom": null,
-              "momQuote": "",
-              "comparisonDefinition": "同比为规模以上工业汽车产量与上年同期可比口径相比，原文未给出月度环比",
-              "label": "汽车产量",
-              "section": "demand",
-              "validation": "machine_checked"
-            },
-            {
-              "id": "applianceRetail",
-              "value": 884,
-              "unit": "亿元/月",
-              "period": "2026-10",
-              "basis": "monthly",
-              "definition": "限额以上单位家用电器和音像器材类零售额当月绝对量，为未扣除价格因素的名义值",
-              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html",
-              "title": "2026年1—10月份社会消费品零售总额增长1.0%",
-              "publishedAt": "2026-11-16",
-              "quote": "家用电器和音像器材类 884 2.5 8902 -4.2",
-              "periodEvidence": "2026年1—10月份社会消费品零售总额增长1.0%",
-              "yoy": 2.5,
-              "yoyQuote": "家用电器和音像器材类 884 2.5 8902 -4.2",
-              "mom": null,
-              "momQuote": "",
-              "comparisonDefinition": "同比为限额以上单位家用电器和音像器材类零售额名义增速，原文未给出该分项月度环比",
-              "label": "家电音像零售额",
-              "section": "demand",
-              "validation": "machine_checked"
-            },
-            {
-              "id": "pmi",
-              "value": 49.3,
-              "unit": "%",
-              "period": "2026-10",
-              "basis": "index",
-              "definition": "中国制造业采购经理指数（经季节调整），调查范围为制造业31个行业大类3200家调查样本",
-              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
-              "title": "2026年10月中国采购经理指数运行情况",
-              "publishedAt": "2026-10-31",
-              "quote": "10 月份，制造业采购经理指数（ PMI ）为 49.3% ，比上月下降 0.8 个百分点，制造业景气水平有所回落。",
-              "periodEvidence": "2026年10月中国采购经理指数运行情况",
-              "yoy": null,
-              "yoyQuote": "",
-              "mom": -0.8,
-              "momQuote": "10 月份，制造业采购经理指数（ PMI ）为 49.3% ，比上月下降 0.8 个百分点",
-              "comparisonDefinition": "环比为较上月变动百分点，指数单位为%，变动单位为百分点",
-              "label": "制造业PMI",
-              "section": "macro",
-              "validation": "machine_checked"
-            },
-            {
-              "id": "newOrders",
-              "value": 49.4,
-              "unit": "%",
-              "period": "2026-10",
-              "basis": "index",
-              "definition": "中国制造业新订单指数（经季节调整），为制造业PMI分类指数",
-              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
-              "title": "2026年10月中国采购经理指数运行情况",
-              "publishedAt": "2026-10-31",
-              "quote": "新订单指数为 49.4% ，比上月下降 1.1 个百分点，表明制造业市场需求景气度下降。",
-              "periodEvidence": "2026年10月中国采购经理指数运行情况",
-              "yoy": null,
-              "yoyQuote": "",
-              "mom": -1.1,
-              "momQuote": "新订单指数为 49.4% ，比上月下降 1.1 个百分点",
-              "comparisonDefinition": "环比为较上月变动百分点，指数单位为%，变动单位为百分点",
-              "label": "制造业新订单指数",
-              "section": "macro",
-              "validation": "machine_checked"
-            }
-          ],
-          "policies": [],
-          "missing": [
-            "output",
-            "outputYtd",
-            "outputPriorYear",
-            "building",
-            "stock",
-            "oreImport",
-            "smeltingProfit",
-            "refinedImport",
-            "refinedExport"
-          ],
-          "rejected": [],
-          "sourceHashes": {
-            "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html": "2a71a74beb001f0f960063ee3f39a80538b713ec08085a2d0636526a9265b7f6",
-            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html": "1de1fab68e182a65bbccdbee9e2417d2c5b33cee35520f352fdb1f722730df81",
-            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html": "625df923b02a8414f1c6e2c0285498c82fd0d0c316ca84772a49e948ad0d7b94",
-            "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html": "876c72fb38d283d3db5da4c934ac555a2c101756cb5a63e8cd00c77e4208d8ed"
-          },
-          "analysis": {
-            "trend": "待观察",
-            "summary": "10月铜价仅有月末代理价110175元/吨一个点位，缺少上月及去年同期可比价格，无法确认环比或同比方向，因此不能判定为上涨或下跌。需求侧信号偏弱：汽车产量304.5万辆、同比下降7.7%，制造业PMI 49.3、环比降0.8个百分点，新订单指数49.4、环比降1.1个百分点，均指向终端与加工需求收缩；家电音像零售额884亿元、同比增2.5%，是唯一正向需求信号，但其为名义值且未扣价格因素，支撑力度有限。供给端冶炼、库存、进出口及矿石数据均缺失，无法判断减产或紧张程度。综合看，价格方向与供需强弱均证据不足，定为待观察。",
-            "shortTerm": "未来1—3个月，需求端偏弱信号较集中，但铜价缺乏可比月数据，方向待观察；需跟踪下一期价格点位与库存、冶炼数据能否形成一致序列，单一月末点位不足以证明趋势。",
-            "mediumTerm": "3—6个月，汽车产量同比下降与PMI、新订单双双回落若延续，将压制铜消费；家电零售名义正增长能否对冲尚不明确。由于产出、库存、矿石进口与冶炼利润等数据缺失，中期供需平衡无法量化，结论待观察。",
-            "supportingEvidenceIds": [
-              "price",
-              "auto",
-              "pmi",
-              "newOrders"
-            ],
-            "conflictingEvidenceIds": [
-              "applianceRetail"
-            ],
-            "actions": [
-              {
-                "title": "按确定订单分批点价，缩短定价窗口",
-                "action": "在铜价方向未确认期间，对已确定的电解铜需求按批次分开点价，避免一次性锁定全部用量；单批规模与间隔按企业实际生产排期确定。",
-                "evidenceIds": [
-                  "price",
-                  "pmi",
-                  "newOrders"
-                ],
-                "adjustWhen": "出现连续两个月可比价格形成明确方向，或PMI与新订单指数回升至50以上时，再评估是否延长或缩短定价窗口。"
-              },
-              {
-                "title": "汽车链条放缓补库节奏",
-                "action": "面向汽车零部件客户的铜材备货，按已确认订单量安排，不提前放大安全库存；交付节点紧的料号优先保障。",
-                "evidenceIds": [
-                  "auto",
-                  "pmi"
-                ],
-                "adjustWhen": "汽车产量同比降幅收窄或转正，且新订单指数回到扩张区间时，恢复常规补库节奏。"
-              },
-              {
-                "title": "家电链条保留交付弹性",
-                "action": "家电音像零售同比正增长，相关铜加工订单可保持正常交付节奏，但仍以确定订单为限，不做超出订单的锁量。",
-                "evidenceIds": [
-                  "applianceRetail"
-                ],
-                "adjustWhen": "家电零售同比转负或该分项数据缺失下一期值时，同步收紧该链条的备料。"
-              }
-            ],
-            "riskNote": "价格仅单月点位且供需数据多项缺失，方向判断易被下期数据推翻。"
-          }
-        },
         "iron": {
           "facts": [
             {
@@ -838,6 +665,489 @@
               }
             ],
             "riskNote": "价格与成本均为单月下旬单点且无环比，库存及进出口缺失，方向确认不足。"
+          }
+        },
+        "copper": {
+          "facts": [
+            {
+              "id": "price",
+              "value": 110175,
+              "unit": "元/吨",
+              "period": "2026-10-31",
+              "basis": "month_end_proxy",
+              "definition": "国家统计局流通领域重要生产资料市场价格，电解铜（1#），铜与银质量分数≥99.95%，全国31省区市300多个交易市场近2000家批发商、代理商、经销商监测，2026年10月下旬价格",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html",
+              "title": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "publishedAt": "2026-11-04",
+              "quote": "电解铜（ 1# ） 吨 110175.0 -746.4 -0.7",
+              "periodEvidence": "2026年10月下旬流通领域重要生产资料市场价格变动情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "",
+              "label": "1号电解铜当月下旬价格代理",
+              "section": "price",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "output",
+              "value": 108.47,
+              "unit": "万吨/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "SMM统计口径国内电解铜产量，SMM预计2026年10月值（非9月已发布实际值）",
+              "url": "https://news.smm.cn/news/104142858",
+              "title": "国内电解铜产量继续下修 检修+减产双行【SMM分析】",
+              "publishedAt": "2026-09-30",
+              "quote": "SMM预计，10月国内电解铜产量为108.47万吨，或降至2026年内最低水平。",
+              "periodEvidence": "SMM预计，10月国内电解铜产量为108.47万吨，或降至2026年内最低水平。",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "",
+              "label": "电解铜单月产量",
+              "section": "supply",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "auto",
+              "value": 304.5,
+              "unit": "万辆/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "国家统计局规模以上工业产品产量，汽车，2026年10月当月绝对量",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "汽车（万辆） 304.5 -7.7 2641.2 -4.1",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": -7.7,
+              "yoyQuote": "汽车 304.5 万辆，下降 7.7%",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为规模以上工业汽车产量较上年同月名义增速",
+              "label": "汽车产量",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "applianceRetail",
+              "value": 884,
+              "unit": "亿元/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "国家统计局社会消费品零售总额中家用电器和音像器材类当月零售额，名义值，未扣除价格因素",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html",
+              "title": "2026年1—10月份社会消费品零售总额增长1.0%",
+              "publishedAt": "2026-11-16",
+              "quote": "家用电器和音像器材类 884 2.5 8902 -4.2",
+              "periodEvidence": "2026年1—10月份社会消费品零售总额增长1.0%",
+              "yoy": 2.5,
+              "yoyQuote": "家用电器和音像器材类 884 2.5 8902 -4.2",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为限额以上单位家用电器和音像器材类零售额名义增速（同比口径与统计范围年度一致）",
+              "label": "家电音像零售额",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "pmi",
+              "value": 49.3,
+              "unit": "%",
+              "period": "2026-10",
+              "basis": "index",
+              "definition": "国家统计局、中国物流与采购联合会制造业采购经理指数（PMI），经季节调整，调查范围制造业31个行业大类3200家样本",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+              "title": "2026年10月中国采购经理指数运行情况",
+              "publishedAt": "2026-10-31",
+              "quote": "10 月份，制造业采购经理指数（ PMI ）为 49.3% ，比上月下降 0.8 个百分点，制造业景气水平有所回落。",
+              "periodEvidence": "2026年10月中国采购经理指数运行情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "指数较上月变动单位为百分点：比上月下降0.8个百分点",
+              "label": "制造业PMI",
+              "section": "macro",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "newOrders",
+              "value": 49.4,
+              "unit": "%",
+              "period": "2026-10",
+              "basis": "index",
+              "definition": "国家统计局、中国物流与采购联合会制造业PMI分类指数中新订单指数，经季节调整，扩散指数",
+              "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html",
+              "title": "2026年10月中国采购经理指数运行情况",
+              "publishedAt": "2026-10-31",
+              "quote": "新订单指数为 49.4% ，比上月下降 1.1 个百分点，表明制造业市场需求景气度下降。",
+              "periodEvidence": "2026年10月中国采购经理指数运行情况",
+              "yoy": null,
+              "yoyQuote": "",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "指数较上月变动单位为百分点：比上月下降1.1个百分点",
+              "label": "制造业新订单指数",
+              "section": "macro",
+              "validation": "machine_checked"
+            }
+          ],
+          "policies": [],
+          "missing": [
+            "outputYtd",
+            "outputPriorYear",
+            "building",
+            "stock",
+            "oreImport",
+            "smeltingProfit",
+            "refinedImport",
+            "refinedExport"
+          ],
+          "rejected": [
+            {
+              "id": "outputPriorYear",
+              "reason": "模型JSON字段$.observations[2].value类型或枚举不符（null）"
+            },
+            {
+              "id": "outputYtd",
+              "reason": "统计期证据未明确对应年份"
+            },
+            {
+              "id": "stock",
+              "reason": "统计期证据未明确对应年份"
+            },
+            {
+              "id": "oreImport",
+              "reason": "单位或统计口径不符"
+            },
+            {
+              "id": "refinedImport",
+              "reason": "单位或统计口径不符"
+            }
+          ],
+          "sourceHashes": {
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261103_1965738.html": "2a71a74beb001f0f960063ee3f39a80538b713ec08085a2d0636526a9265b7f6",
+            "https://news.smm.cn/news/104142858": "18fe3cc9a6499eddf10da72ad7832ad26c6bc475dfda438cf2b004a44fc77819",
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html": "1de1fab68e182a65bbccdbee9e2417d2c5b33cee35520f352fdb1f722730df81",
+            "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html": "625df923b02a8414f1c6e2c0285498c82fd0d0c316ca84772a49e948ad0d7b94",
+            "https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html": "876c72fb38d283d3db5da4c934ac555a2c101756cb5a63e8cd00c77e4208d8ed",
+            "https://news-pro.smm.cn/article/1961509": "bf2f3025fae5178eda606c0da56f471bb1485ae6526681c3591e472f4db54db2",
+            "https://news.smm.cn/news/104187688": "f53851622909262fd4ebbc88e131dadd3fc3586c62aa97dafaa0ff00e9b3934f"
+          },
+          "resolvedRejections": [],
+          "missingDetails": [
+            {
+              "id": "outputYtd",
+              "label": "电解铜年初至今累计产量",
+              "status": "evidence_incomplete",
+              "publicationState": "unconfirmed",
+              "reason": "统计期证据未明确对应年份",
+              "attemptedUrls": [
+                "https://news.smm.cn/news/104142858",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1",
+                "https://news.smm.cn/keywords/%20?page=386",
+                "https://news.smm.cn/keywords/%e5%bc%80%e5%b7%a5%e7%8e%87?page=18",
+                "https://news-pro.smm.cn/article/1961509",
+                "https://news-pro.smm.cn/article/PCKYAADPNJPGE4YDAMQYEBLHA26Q3N73FSCHZ3A",
+                "https://www.mysteel.com/hot/1197318.html",
+                "https://www.mysteel.com/hot/1199558.html",
+                "https://www.mysteel.com/hot/1189003.html",
+                "https://www.mysteel.com/hot/1186475.html"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn",
+                "2026年10月 电解铜产量 SMM site:smm.cn",
+                "2026年10月 电解铜产量 SMM site:mysteel.com"
+              ]
+            },
+            {
+              "id": "outputPriorYear",
+              "label": "电解铜去年全年产量",
+              "status": "evidence_incomplete",
+              "publicationState": "unconfirmed",
+              "reason": "模型JSON字段$.observations[2].value类型或枚举不符（null）",
+              "attemptedUrls": [
+                "https://news.smm.cn/news/104142858",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1",
+                "https://news.smm.cn/keywords/%20?page=386",
+                "https://news.smm.cn/keywords/%e5%bc%80%e5%b7%a5%e7%8e%87?page=18",
+                "https://news-pro.smm.cn/article/1961509",
+                "https://news-pro.smm.cn/article/PCKYAADPNJPGE4YDAMQYEBLHA26Q3N73FSCHZ3A",
+                "https://www.mysteel.com/hot/1197318.html",
+                "https://www.mysteel.com/hot/1199558.html",
+                "https://www.mysteel.com/hot/1189003.html",
+                "https://www.mysteel.com/hot/1186475.html"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn",
+                "2026年10月 电解铜产量 SMM site:smm.cn",
+                "2026年10月 电解铜产量 SMM site:mysteel.com"
+              ]
+            },
+            {
+              "id": "building",
+              "label": "房屋竣工面积",
+              "status": "calculation_required",
+              "publicationState": "unconfirmed",
+              "reason": "累计差分仍需核验四项输入",
+              "attemptedUrls": [
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn"
+              ]
+            },
+            {
+              "id": "stock",
+              "label": "铜社会库存月末值",
+              "status": "evidence_incomplete",
+              "publicationState": "unconfirmed",
+              "reason": "统计期证据未明确对应年份",
+              "attemptedUrls": [
+                "https://news.smm.cn/keywords/%E5%BA%93%E5%AD%98?page=35",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1",
+                "https://news.smm.cn/live/detail/104188933",
+                "https://news.smm.cn/news/104187688",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=7#!",
+                "https://news.smm.cn/keywords/%e9%93%9c%e6%9d%90",
+                "https://www.mysteel.com/hot/1199842.html",
+                "https://www.mysteel.com/hot/1199682.html",
+                "https://list1.m.mysteel.com/zhishi/dianjietongjiage.html#1",
+                "https://www.mysteel.com/hot/1198054.html"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn",
+                "2026年10月 铜 社会库存 月末 site:smm.cn",
+                "2026年10月 铜 社会库存 月末 site:mysteel.com"
+              ]
+            },
+            {
+              "id": "oreImport",
+              "label": "铜矿砂及精矿进口实物量",
+              "status": "definition_mismatch",
+              "publicationState": "unconfirmed",
+              "reason": "单位或统计口径不符",
+              "attemptedUrls": [
+                "https://news.smm.cn/news/104168865",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1",
+                "https://news.smm.cn/hotwords/%E8%BF%9B%E5%87%BA%E5%8F%A3#!",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=13#!",
+                "https://news.smm.cn/keywords/%20?page=1305",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=35#!"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn",
+                "2026年10月 铜矿砂 精矿 精炼铜 进口 出口 海关分项 site:customs.gov.cn",
+                "2026年10月 铜矿砂 精矿 精炼铜 进口 出口 海关分项 site:smm.cn"
+              ]
+            },
+            {
+              "id": "smeltingProfit",
+              "label": "现货铜冶炼模型盈亏",
+              "status": "not_found_in_checked_sources",
+              "publicationState": "unconfirmed",
+              "reason": "在本次有限补查中未取得通过核验的目标月份数值，不能据此断言尚未发布",
+              "attemptedUrls": [
+                "https://news.smm.cn/news/104142858",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn"
+              ]
+            },
+            {
+              "id": "refinedImport",
+              "label": "精炼铜进口",
+              "status": "definition_mismatch",
+              "publicationState": "unconfirmed",
+              "reason": "单位或统计口径不符",
+              "attemptedUrls": [
+                "https://news.smm.cn/news/104168859",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1",
+                "https://news.smm.cn/hotwords/%E8%BF%9B%E5%87%BA%E5%8F%A3#!",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=13#!",
+                "https://news.smm.cn/keywords/%20?page=1305",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=35#!"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn",
+                "2026年10月 铜矿砂 精矿 精炼铜 进口 出口 海关分项 site:customs.gov.cn",
+                "2026年10月 铜矿砂 精矿 精炼铜 进口 出口 海关分项 site:smm.cn"
+              ]
+            },
+            {
+              "id": "refinedExport",
+              "label": "精炼铜出口",
+              "status": "not_found_in_checked_sources",
+              "publicationState": "unconfirmed",
+              "reason": "在本次有限补查中未取得通过核验的目标月份数值，不能据此断言尚未发布",
+              "attemptedUrls": [
+                "https://news.smm.cn/news/104168859",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2016/202302/P020230218542540574771.pdf#1#3#1",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2025/202602/P020260228491669169807.pdf#57#141#57",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2014/202302/P020230218541725105849.pdf#4#4#4",
+                "https://www.stats.gov.cn/zt_18555/ztsj/jzgj/jz2017/202302/P020230218543580267736.pdf#1#2#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261023_1965679.html#1",
+                "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261103_1965738.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202610/t20261023_1965679.html#2",
+                "https://www.stats.gov.cn/english/PressRelease/202611/t20261104_1965741.html#1",
+                "https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965840.html#1",
+                "https://www.stats.gov.cn/xxgk/sjfb/zxfb2020/202610/t20261019_1965615.html#1",
+                "https://data.stats.gov.cn/dg/website/page.html#/pc/national/home",
+                "https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965310.html#1",
+                "https://news.smm.cn/hotwords/%E8%BF%9B%E5%87%BA%E5%8F%A3#!",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=13#!",
+                "https://news.smm.cn/keywords/%20?page=1305",
+                "https://news.smm.cn/keywords/%e8%bf%9b%e5%87%ba%e5%8f%a3?page=35#!"
+              ],
+              "queries": [
+                "2026年10月 工业生产 铜 产量 累计 site:stats.gov.cn",
+                "2026年10月21—31日 流通领域 价格 铜 site:stats.gov.cn",
+                "2026年10月 房屋竣工面积 家用电器音像器材 零售额 site:stats.gov.cn",
+                "2026年10月 铜矿砂 精矿 精炼铜 进口 出口 海关分项 site:customs.gov.cn",
+                "2026年10月 铜矿砂 精矿 精炼铜 进口 出口 海关分项 site:smm.cn"
+              ]
+            }
+          ],
+          "analysis": {
+            "trend": "待观察",
+            "summary": "10月下旬1号电解铜价格代理为110175元/吨，但仅有单月单点数据，且无环比、同比，不能确认上涨或下跌。10月电解铜产量108.47万吨为SMM预计值、非实际值，也没有对比月份。需求侧汽车产量同比-7.7%，制造业PMI 49.3、新订单指数49.4均处收缩区间；家电音像零售同比+2.5%为正。短期1—3个月铜价与供需方向待观察；中期3—6个月缺少实际产量、库存、进出口及冶炼利润等序列，同样待观察。",
+            "shortTerm": "1—3个月：价格方向待观察；仅见需求指标偏弱与家电零售正增长并存，不能据此确认趋势。",
+            "mediumTerm": "3—6个月：缺少实际产量、库存、进口、冶炼利润等可比数据，方向待观察。",
+            "supportingEvidenceIds": [
+              "auto",
+              "pmi",
+              "newOrders"
+            ],
+            "conflictingEvidenceIds": [
+              "applianceRetail"
+            ],
+            "actions": [
+              {
+                "title": "确定订单分批定价",
+                "action": "对已确定订单采用分批点价并缩短定价窗口，不一次性锁定全月用量；当前仅以单点价格代理作参考。",
+                "evidenceIds": [
+                  "price",
+                  "pmi",
+                  "newOrders"
+                ],
+                "adjustWhen": "出现连续两个月可比价格且新订单指数回升至50以上时，再评估是否延长锁价窗口。"
+              },
+              {
+                "title": "汽车链补库节奏条件化",
+                "action": "汽车相关铜材按已确定订单分批补库，不因单月价格点扩大库存；若汽车产量同比负增长延续，则放慢补库。",
+                "evidenceIds": [
+                  "auto"
+                ],
+                "adjustWhen": "汽车产量同比转正或订单能见度提升时，恢复常规补库节奏。"
+              },
+              {
+                "title": "家电链关键交付保障",
+                "action": "家电相关确定订单可提前锁量保障交付，但仅限已确定订单；若家电零售同比转负，则转为放慢补库。",
+                "evidenceIds": [
+                  "applianceRetail",
+                  "newOrders"
+                ],
+                "adjustWhen": "家电音像零售同比由正转负或新订单指数继续走弱时，下调锁量。"
+              }
+            ],
+            "riskNote": "单月价格代理与预计产量均不可外推为趋势，需待可比月度数据确认。"
           }
         }
       }
