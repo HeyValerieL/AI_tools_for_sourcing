@@ -38,10 +38,10 @@
 |汽车产量|monthly · 万辆/月|[国家统计局 · 9月工业生产](https://www.stats.gov.cn/sj/zxfb/202610/t20261019_1965617.html)；[国家统计局 · 10月工业生产](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965842.html)；[国家统计局 · 8月工业生产](https://www.stats.gov.cn/sj/zxfb/202609/t20260915_1965308.html)|
 |家电音像零售额|monthly · 亿元/月|[国家统计局 · 10月社会消费品零售](https://www.stats.gov.cn/sj/zxfb/202611/t20261116_1965839.html)；[国家统计局 · 9月社会消费品零售](https://www.stats.gov.cn/sj/zxfbhjd/202610/t20261019_1965614.html)；[国家统计局 · 8月社会消费品零售](https://www.stats.gov.cn/zwfwck/sjfb/202609/t20260915_1965311.html)|
 |铜社会库存月末值|month_end · 万吨|[SMM铜社会库存](https://news.smm.cn/keywords/%E5%BA%93%E5%AD%98?page=35)|
-|铜矿砂及精矿进口实物量|monthly · 万吨/月|现有台账无直接来源，按固定提供方补查|
+|铜矿砂及精矿进口实物量|monthly · 万吨/月|[SMM整理海关 · 9月铜矿砂及精矿进出口](https://news.smm.cn/news/104168865)|
 |现货铜冶炼模型盈亏|monthly · 元/吨|[SMM · 9月电解铜产量](https://news.smm.cn/news/104142858)|
-|精炼铜进口|monthly · 万吨/月|现有台账无直接来源，按固定提供方补查|
-|精炼铜出口|monthly · 万吨/月|现有台账无直接来源，按固定提供方补查|
+|精炼铜进口|monthly · 万吨/月|[SMM整理海关 · 9月精炼铜进出口](https://news.smm.cn/news/104168859)|
+|精炼铜出口|monthly · 万吨/月|[SMM整理海关 · 9月精炼铜进出口](https://news.smm.cn/news/104168859)|
 |制造业PMI|index · %|[国家统计局 · PMI历史月表](https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202509/t20250930_1961438.html)|
 |制造业新订单指数|index · %|[国家统计局 · PMI历史月表](https://www.stats.gov.cn/sj/zxfb/202610/t20261031_1965718.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202609/t20260930_1965449.html)；[国家统计局 · 同期PMI历史表](https://www.stats.gov.cn/sj/zxfb/202509/t20250930_1961438.html)|
 

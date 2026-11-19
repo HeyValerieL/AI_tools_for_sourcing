@@ -38,6 +38,28 @@ def analysis(**changes):
 
 
 class ValidationTests(unittest.TestCase):
+    def test_gzip_source_is_decoded_before_extracting_text(self):
+        import gzip
+        from email.message import Message
+        response = io.BytesIO(gzip.compress('<p>2026年9月电解铜产量112.06万吨</p>'.encode()))
+        response.headers = Message()
+        response.headers['Content-Type'] = 'text/html; charset=utf-8'
+        response.headers['Content-Encoding'] = 'gzip'
+        with patch('urllib.request.build_opener') as opener:
+            opener.return_value.open.return_value = response
+            self.assertIn('112.06万吨',m.fetch_page(URL))
+
+    def test_gzip_expanded_content_is_bounded(self):
+        import gzip
+        from email.message import Message
+        response = io.BytesIO(gzip.compress(b'x' * 2_000_001))
+        response.headers = Message()
+        response.headers['Content-Type'] = 'text/html; charset=utf-8'
+        with patch('urllib.request.build_opener') as opener:
+            opener.return_value.open.return_value = response
+            with self.assertRaisesRegex(ValueError,'解压后'):
+                m.fetch_page(URL)
+
     def test_building_cumulative_cannot_masquerade_as_monthly(self):
         item = observation(id='building',value=25544,unit='万平方米/月',
             definition='1—10月房屋竣工面积累计值',quote='1—10月房屋竣工面积25544万平方米',

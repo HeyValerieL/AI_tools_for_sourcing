@@ -3,7 +3,9 @@ import argparse
 import calendar
 import datetime as dt
 import hashlib
+import gzip
 import html
+import io
 import json
 import math
 import os
@@ -114,6 +116,11 @@ def fetch_page(url):
         if len(raw) > 2_000_000:
             raise ValueError('来源页面超过读取限制')
         charset = response.headers.get_content_charset()
+    if raw.startswith(b'\x1f\x8b'):
+        with gzip.GzipFile(fileobj=io.BytesIO(raw)) as compressed:
+            raw = compressed.read(2_000_001)
+        if len(raw) > 2_000_000:
+            raise ValueError('来源解压后超过读取限制')
     if not charset:
         match = re.search(rb'charset=["\s]*([\w-]+)', raw[:4000], re.I)
         charset = match.group(1).decode('ascii') if match else 'utf-8'
