@@ -1,4 +1,212 @@
 {
   "schemaVersion": 1,
-  "reports": {}
+  "reports": {
+    "2026-10": {
+      "month": "2026-10",
+      "generatedAt": "2026-11-19T08:32:31.058262+00:00",
+      "categories": {
+        "aluminum": {
+          "facts": [
+            {
+              "id": "output",
+              "value": 385,
+              "unit": "万吨/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "规模以上工业企业原铝（电解铝）当月产量，统计范围为年主营业务收入2000万元及以上工业企业，单位万吨/月。",
+              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": 1.8,
+              "yoyQuote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为原铝（电解铝）产量与上年同期可比口径比较（统计范围尽可能一致），单位%；原文未给出环比。",
+              "label": "原铝单月产量",
+              "section": "supply",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "outputYtd",
+              "value": 3885,
+              "unit": "万吨",
+              "period": "2026-01/2026-10",
+              "basis": "ytd",
+              "definition": "规模以上工业企业原铝（电解铝）1—10月累计产量，年主营业务收入2000万元及以上工业企业，单位万吨。",
+              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": 3.5,
+              "yoyQuote": "其中：原铝（电解铝）（万吨）\n\n385\n\n1.8\n\n3885\n\n3.5",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为累计产量与上年同期可比口径比较，单位%；原文未给出环比。",
+              "label": "原铝年初至今累计产量",
+              "section": "supply",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "electronics",
+              "value": 532,
+              "unit": "亿块/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "规模以上工业企业集成电路当月产量，年主营业务收入2000万元及以上工业企业，单位亿块/月。",
+              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "集成电路（亿块）\n\n532\n\n21.9\n\n4976\n\n23.0",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": 21.9,
+              "yoyQuote": "集成电路（亿块）\n\n532\n\n21.9\n\n4976\n\n23.0",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为与上年同期可比口径比较（%）；原文未给出环比。",
+              "label": "集成电路产量",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "auto",
+              "value": 304.5,
+              "unit": "万辆/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "规模以上工业企业汽车当月产量（含轿车、SUV、新能源汽车等全部汽车），年主营业务收入2000万元及以上工业企业，单位万辆/月。",
+              "url": "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2",
+              "title": "2026年10月份规模以上工业增加值增长4.8%",
+              "publishedAt": "2026-11-16",
+              "quote": "汽车（万辆）\n\n304.5\n\n-7.7\n\n2641.2\n\n-4.1",
+              "periodEvidence": "2026年10月份规模以上工业增加值增长4.8%",
+              "yoy": -7.7,
+              "yoyQuote": "汽车（万辆）\n\n304.5\n\n-7.7\n\n2641.2\n\n-4.1",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为与上年同期可比口径比较（%）；原文未给出环比。",
+              "label": "汽车产量",
+              "section": "demand",
+              "validation": "machine_checked"
+            },
+            {
+              "id": "aluminumExport",
+              "value": 59,
+              "unit": "万吨/月",
+              "period": "2026-10",
+              "basis": "monthly",
+              "definition": "海关总署口径，中国出口未锻轧铝及铝材当月数量，单位万吨/月。",
+              "url": "https://news.mysteel.com/a/26111811/E7A9AB47B5AB5D5B.html",
+              "title": "海关总署：10月中国出口未锻轧铝及铝材59万吨，同比增18.0%",
+              "publishedAt": "2026-11-18",
+              "quote": "海关总署最新数据显示，2026年10月，中国出口未锻轧铝及铝材59万吨，同比增18.0%；1-10月累计出口591万吨，同比增17.8%。",
+              "periodEvidence": "2026年10月，中国出口未锻轧铝及铝材59万吨",
+              "yoy": 18.0,
+              "yoyQuote": "2026年10月，中国出口未锻轧铝及铝材59万吨，同比增18.0%",
+              "mom": null,
+              "momQuote": "",
+              "comparisonDefinition": "同比为与上年同月比较（%），原文明确给出；原文未给出环比。",
+              "label": "未锻轧铝及铝材出口",
+              "section": "macro",
+              "validation": "machine_checked"
+            }
+          ],
+          "policies": [
+            {
+              "title": "工信部：深化产能治理，严格执行电解铝产能置换政策，严控氧化铝、铜等冶炼新增产能，修订铜、铝等行业规范条例",
+              "impact": "限制国内电解铝及氧化铝冶炼新增供给、遏制低水平重复建设，对国内原铝供给形成约束。",
+              "url": "https://list1.m.mysteel.com/zhishi/ljjghhlm.html#1",
+              "quote": "其中提到重点深化产能治理，实施重点产品产能风险监测预警，严格执行电解铝产能置换政策，严控氧化铝、铜等冶炼新增产能，修订铜、铝等行业规范条例，坚决遏制低水平重复建设，营造公平健康有序的市场环境。",
+              "publishedAt": "2026-10-20",
+              "id": "policy1",
+              "validation": "machine_checked"
+            }
+          ],
+          "missing": [
+            "price",
+            "outputPriorYear",
+            "building",
+            "applianceRetail",
+            "stock",
+            "alumina",
+            "powerShandong",
+            "powerInnerMongolia",
+            "powerXinjiang",
+            "powerYunnan",
+            "primaryImport",
+            "primaryExport",
+            "pmi"
+          ],
+          "rejected": [
+            {
+              "id": "price",
+              "reason": "统计期不符；不沿用旧月值"
+            },
+            {
+              "id": "building",
+              "reason": "统计期证据未明确对应年份"
+            },
+            {
+              "id": "pmi",
+              "reason": "HTTP Error 404: Not Found"
+            }
+          ],
+          "sourceHashes": {
+            "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965842.html#2": "cb551c4db192e6a8ec60e852a97daa6071c5cddbdc5012224a11d9866aa1bd92",
+            "https://www.stats.gov.cn/sj/zxfbhjd/202611/t20261116_1965840.html#1": "962ab189a8707df22b8a72568ead37f775fbd031382b3afcede42f3efa12fe62",
+            "https://news.mysteel.com/a/26111811/E7A9AB47B5AB5D5B.html": "435270699c563e21e734149b4e8a349fef4513052d2a33d75e7866a1f6682169",
+            "https://list1.m.mysteel.com/zhishi/ljjghhlm.html#1": "8a900cdfa3f8cb6fea39c0b200e6975517093e08cf1c78fac8b25e20e599e2a6"
+          },
+          "analysis": {
+            "trend": "待观察",
+            "summary": "2026年10月铝市可见供需分化：原铝单月产量385万吨、同比增1.8%，1—10月累计3885万吨、同比增3.5%，供给端保持增长；需求端集成电路产量同比增21.9%、未锻轧铝及铝材出口同比增18.0%，但汽车产量同比降7.7%，终端拉动不一致。政策面强调严格执行电解铝产能置换、严控新增冶炼产能，对中期供给形成约束。输入缺少价格、库存、氧化铝及电力等关键数据，无法确认价格涨跌方向，短期与中期均需待观察。",
+            "shortTerm": "1—3个月，原铝产量同比小幅增长、出口和电子相关需求偏强，但汽车产量同比下降形成拖累；因无价格和库存数据，不能判定上涨或下跌，方向待观察。",
+            "mediumTerm": "3—6个月，电解铝产能置换和严控新增政策对供给形成约束，但需求端汽车走弱与电子、出口偏强并存；缺乏连续月度产量、库存和价格数据，尚不能证明长期趋势，维持待观察。",
+            "supportingEvidenceIds": [
+              "electronics",
+              "aluminumExport",
+              "policy1"
+            ],
+            "conflictingEvidenceIds": [
+              "auto",
+              "output"
+            ],
+            "actions": [
+              {
+                "title": "分批定价、缩短窗口",
+                "action": "对11—12月确定订单按周或半月分批询价定价，不因单月出口和电子数据偏强而单边锁价；出口和电子相关订单优先保障交付。",
+                "evidenceIds": [
+                  "electronics",
+                  "aluminumExport",
+                  "auto"
+                ],
+                "adjustWhen": "若后续出现可核验的价格连续回落或库存累积，放慢补库；若出口和电子产量增速维持而汽车降幅收窄，再维持分批锁量。"
+              },
+              {
+                "title": "核实中期供给弹性",
+                "action": "结合电解铝产能置换和严控新增政策，与供应商确认合规产能及3—6个月交付弹性，提前锁量仅覆盖确定订单，不超订单囤货。",
+                "evidenceIds": [
+                  "policy1",
+                  "outputYtd"
+                ],
+                "adjustWhen": "若后续月度产量同比持续高于累计增速或政策执行出现松动，放宽锁量；若交付周期拉长，则对确定订单提前锁量。"
+              },
+              {
+                "title": "汽车相关需求放慢补库",
+                "action": "汽车产量同比降7.7%，对汽车相关铝需求按确定订单放慢补库并缩短定价窗口，避免把库存单点变化当作消费回暖。",
+                "evidenceIds": [
+                  "auto",
+                  "output"
+                ],
+                "adjustWhen": "若汽车产量同比转正或降幅明显收窄，恢复常规补库；若降幅扩大，进一步缩短定价窗口并压降非确定订单备货。"
+              }
+            ],
+            "riskNote": "价格与库存数据缺失，当前方向判断可靠性有限，需防单月数据误读。"
+          }
+        }
+      }
+    }
+  }
 }
